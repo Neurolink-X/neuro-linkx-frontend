@@ -16,7 +16,6 @@ import {
   CpuIcon, 
   Network2, 
   DatabaseZap, 
-  Server2, 
   Cloud2, 
   GitBranch2, 
   Boxes2, 
@@ -24,7 +23,6 @@ import {
   Brain2, 
   Zap2, 
   Shield2, 
-  Globe2, 
   Database2, 
   Network3, 
   Server3, 
@@ -51,9 +49,7 @@ import {
   Server5, 
   Code5,
   Smartphone,
-  Globe2,
-  Layout,
-  Server2
+  Layout
 } from 'lucide-react'
 
 const services = [
