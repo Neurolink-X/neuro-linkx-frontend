@@ -22,12 +22,9 @@ import Workflow from "@/components/sections/workflow"
 import Footer from "@/components/layout/footer"
 import Testimonials from "@/components/sections/testimonials"
 
-
-
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background w-full">
-      {/* <Header /> */}
+    <div className="min-h-screen bg-background w-full relative">
       <main>
         <Header />
         <Hero />
@@ -41,18 +38,8 @@ export default function HomePage() {
         <Workflow />
         <CompanyCulture />
         <WhatMakesUs />
-
-        {/* <Features /> */}
-        {/* <Security /> */}
-        {/* <Stats /> */}
-        
-        {/* <Culture />  */}
-
-{/* 
-        <Clients />
-        <Resources /> */}
       </main>
-      {/* <ChatWidget /> */}
+      <ChatWidget />
       <Footer />
     </div>
   )

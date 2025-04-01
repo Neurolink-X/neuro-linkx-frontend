@@ -383,7 +383,7 @@ export default function Testimonials() {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                </div>
                     <div>
                       <h5 className="text-sm font-medium text-gray-500 mb-2">Future Roadmap</h5>
                       <ul className="space-y-2">
@@ -398,7 +398,7 @@ export default function Testimonials() {
                   </div>
                 </div>
               ))}
-            </div>
+              </div>
           </div>
         </div>
       </div>
