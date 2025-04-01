@@ -1,156 +1,156 @@
-&apos;use client&apos;
+'use client';
 
 import { 
   Brain, 
-  Users, 
-  Target, 
-  Lightbulb, 
-  LineChart, 
+  Network, 
   Shield, 
-  Globe, 
-  Award,
-  ArrowRight,
-  Smartphone,
-  Code,
-  Server,
-  Zap,
-  Cloud,
-  Database,
+  Zap, 
+  BarChart2, 
+  Settings, 
+  Lock, 
   GitBranch,
-  Cpu,
-  Network,
-  CircuitBoard
-} from &apos;lucide-react&apos;
+  Sparkles,
+  Target,
+  LineChart,
+  BrainCircuit,
+  CheckCircle2,
+  Globe,
+  Languages,
+  Clock,
+  Users2
+} from 'lucide-react';
+import { motion } from 'framer-react';
+import Link from 'next/link';
 
 const stats = [
   {
-    title: &quot;Automation Rate&quot;,
-    value: &quot;95%&quot;,
-    description: &quot;Tasks Automated Through AI & Robotics&quot;,
+    title: "Automation Rate",
+    value: "95%",
+    description: "Tasks Automated Through AI & Robotics",
     icon: Zap,
-    color: &quot;from-blue-600 to-indigo-600&quot;
+    color: "from-blue-600 to-indigo-600"
   },
   {
-    title: &quot;Cost Savings&quot;,
-    value: &quot;60%+&quot;,
-    description: &quot;Reduction in Operational Costs&quot;,
+    title: "Cost Savings",
+    value: "60%+",
+    description: "Reduction in Operational Costs",
     icon: LineChart,
-    color: &quot;from-purple-600 to-pink-600&quot;
+    color: "from-purple-600 to-pink-600"
   },
   {
-    title: &quot;Future-Ready&quot;,
-    value: &quot;100%&quot;,
-    description: &quot;Robotics & AI Integration&quot;,
+    title: "Future-Ready",
+    value: "100%",
+    description: "Robotics & AI Integration",
     icon: CircuitBoard,
-    color: &quot;from-orange-600 to-red-600&quot;
+    color: "from-orange-600 to-red-600"
   },
   {
-    title: &quot;Customer Satisfaction&quot;,
-    value: &quot;99%&quot;,
-    description: &quot;AI & Robotics Support Success&quot;,
+    title: "Customer Satisfaction",
+    value: "99%",
+    description: "AI & Robotics Support Success",
     icon: Users,
-    color: &quot;from-green-600 to-emerald-600&quot;
+    color: "from-green-600 to-emerald-600"
   }
 ]
 
 const values = [
   {
-    title: &quot;Innovation First&quot;,
-    description: &quot;Leading the future with cutting-edge robotics and AI solutions.&quot;,
+    title: "Innovation First",
+    description: "Leading the future with cutting-edge robotics and AI solutions.",
     icon: Lightbulb,
-    color: &quot;from-blue-600 to-indigo-600&quot;
+    color: "from-blue-600 to-indigo-600"
   },
   {
-    title: &quot;Cost-Effective&quot;,
-    description: &quot;Maximizing ROI through intelligent automation and robotics.&quot;,
+    title: "Cost-Effective",
+    description: "Maximizing ROI through intelligent automation and robotics.",
     icon: LineChart,
-    color: &quot;from-purple-600 to-pink-600&quot;
+    color: "from-purple-600 to-pink-600"
   },
   {
-    title: &quot;Customer-Centric&quot;,
-    description: &quot;AI-powered support and personalized robotics solutions.&quot;,
+    title: "Customer-Centric",
+    description: "AI-powered support and personalized robotics solutions.",
     icon: Users,
-    color: &quot;from-orange-600 to-red-600&quot;
+    color: "from-orange-600 to-red-600"
   }
 ]
 
 const services = [
   {
-    title: &quot;Robotics Solutions&quot;,
-    description: &quot;Advanced robotics systems for manufacturing, healthcare, and service industries.&quot;,
+    title: "Robotics Solutions",
+    description: "Advanced robotics systems for manufacturing, healthcare, and service industries.",
     features: [
-      &quot;Industrial Automation&quot;,
-      &quot;Medical Robotics&quot;,
-      &quot;Service Robots&quot;,
-      &quot;AI-Powered Control Systems&quot;,
-      &quot;Robotic Process Automation&quot;,
-      &quot;Human-Robot Collaboration&quot;
+      "Industrial Automation",
+      "Medical Robotics",
+      "Service Robots",
+      "AI-Powered Control Systems",
+      "Robotic Process Automation",
+      "Human-Robot Collaboration"
     ],
     icon: CircuitBoard,
-    color: &quot;from-blue-600 to-indigo-600&quot;
+    color: "from-blue-600 to-indigo-600"
   },
   {
-    title: &quot;AI & Automation&quot;,
-    description: &quot;Intelligent automation solutions that revolutionize business operations.&quot;,
+    title: "AI & Automation",
+    description: "Intelligent automation solutions that revolutionize business operations.",
     features: [
-      &quot;Process Automation&quot;,
-      &quot;Workflow Optimization&quot;,
-      &quot;RPA Solutions&quot;,
-      &quot;Task Automation&quot;,
-      &quot;AI Decision Making&quot;,
-      &quot;Smart Manufacturing&quot;
+      "Process Automation",
+      "Workflow Optimization",
+      "RPA Solutions",
+      "Task Automation",
+      "AI Decision Making",
+      "Smart Manufacturing"
     ],
     icon: Brain,
-    color: &quot;from-purple-600 to-pink-600&quot;
+    color: "from-purple-600 to-pink-600"
   },
   {
-    title: &quot;Future-Ready SaaS&quot;,
-    description: &quot;Cloud-based solutions with robotics and AI integration.&quot;,
+    title: "Future-Ready SaaS",
+    description: "Cloud-based solutions with robotics and AI integration.",
     features: [
-      &quot;Robotics as a Service&quot;,
-      &quot;AI-Powered Analytics&quot;,
-      &quot;Enterprise Solutions&quot;,
-      &quot;Custom Integrations&quot;,
-      &quot;Real-time Monitoring&quot;,
-      &quot;Predictive Maintenance&quot;
+      "Robotics as a Service",
+      "AI-Powered Analytics",
+      "Enterprise Solutions",
+      "Custom Integrations",
+      "Real-time Monitoring",
+      "Predictive Maintenance"
     ],
     icon: Server,
-    color: &quot;from-orange-600 to-red-600&quot;
+    color: "from-orange-600 to-red-600"
   },
   {
-    title: &quot;Smart Infrastructure&quot;,
-    description: &quot;Intelligent systems for modern business operations.&quot;,
+    title: "Smart Infrastructure",
+    description: "Intelligent systems for modern business operations.",
     features: [
-      &quot;IoT Integration&quot;,
-      &quot;Smart Buildings&quot;,
-      &quot;Energy Management&quot;,
-      &quot;Security Systems&quot;,
-      &quot;Environmental Control&quot;,
-      &quot;Resource Optimization&quot;
+      "IoT Integration",
+      "Smart Buildings",
+      "Energy Management",
+      "Security Systems",
+      "Environmental Control",
+      "Resource Optimization"
     ],
     icon: Network,
-    color: &quot;from-green-600 to-emerald-600&quot;
+    color: "from-green-600 to-emerald-600"
   }
 ]
 
 export default function About() {
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900&quot;>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
-      <section className=&quot;relative py-32&quot;>
-        <div className=&quot;absolute inset-0&quot;>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]&quot; />
+      <section className="relative py-32">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]"></div>
         </div>
-        <div className=&quot;container relative mx-auto max-w-7xl px-4&quot;>
-          <div className=&quot;text-center&quot;>
-            <h1 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight&quot;>
+        <div className="container relative mx-auto max-w-7xl px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               About{&apos; &apos;}
-              <span className=&quot;bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient&quot;>
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
                 Neurolink
               </span>
             </h1>
-            <p className=&quot;text-gray-400 text-lg max-w-2xl mx-auto&quot;>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Pioneering the future with robotics, AI, and automation solutions
             </p>
           </div>
@@ -158,20 +158,20 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className=&quot;py-20&quot;>
-        <div className=&quot;container mx-auto max-w-7xl px-4&quot;>
-          <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
+      <section className="py-20">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div
                 key={stat.title}
-                className=&quot;group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300&quot;
+                className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/20`}>
-                  <stat.icon className=&quot;w-6 h-6 text-white&quot; />
+                  <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.value}</h3>
-                <p className=&quot;text-xl font-semibold text-gray-300 mb-1&quot;>{stat.title}</p>
-                <p className=&quot;text-gray-400&quot;>{stat.description}</p>
+                <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
+                <p className="text-xl font-semibold text-gray-300 mb-1">{stat.title}</p>
+                <p className="text-gray-400">{stat.description}</p>
               </div>
             ))}
           </div>
@@ -179,20 +179,20 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className=&quot;py-20&quot;>
-        <div className=&quot;container mx-auto max-w-7xl px-4&quot;>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Our Values</h2>
-          <div className=&quot;grid md:grid-cols-3 gap-8&quot;>
+      <section className="py-20">
+        <div className="container mx-auto max-w-7xl px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
+          <div className="grid md:grid-cols-3 gap-8">
             {values.map((value) => (
               <div
                 key={value.title}
-                className=&quot;group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300&quot;
+                className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/20`}>
-                  <value.icon className=&quot;w-6 h-6 text-white&quot; />
+                  <value.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{value.title}</h3>
-                <p className=&quot;text-gray-400&quot;>{value.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
+                <p className="text-gray-400">{value.description}</p>
               </div>
             ))}
           </div>
@@ -200,24 +200,24 @@ export default function About() {
       </section>
 
       {/* Services Section */}
-      <section className=&quot;py-20&quot;>
-        <div className=&quot;container mx-auto max-w-7xl px-4&quot;>
-          <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Our Core Services</h2>
-          <div className=&quot;grid md:grid-cols-2 gap-8&quot;>
+      <section className="py-20">
+        <div className="container mx-auto max-w-7xl px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Core Services</h2>
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service) => (
               <div
                 key={service.title}
-                className=&quot;group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300&quot;
+                className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-blue-500/20`}>
-                  <service.icon className=&quot;w-6 h-6 text-white&quot; />
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{service.title}</h3>
-                <p className=&quot;text-gray-400 mb-4&quot;>{service.description}</p>
-                <ul className=&quot;space-y-2&quot;>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <ul className="space-y-2">
                   {service.features.map((feature) => (
-                    <li key={feature} className=&quot;flex items-center gap-2 text-gray-300&quot;>
-                      <div className=&quot;w-1.5 h-1.5 rounded-full bg-blue-500&quot; />
+                    <li key={feature} className="flex items-center gap-2 text-gray-300">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                       {feature}
                     </li>
                   ))}
@@ -229,20 +229,20 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className=&quot;py-20&quot;>
-        <div className=&quot;container mx-auto max-w-7xl px-4&quot;>
-          <div className=&quot;relative rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 md:p-12&quot;>
-            <div className=&quot;absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] rounded-3xl&quot; />
-            <div className=&quot;relative&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>
+      <section className="py-20">
+        <div className="container mx-auto max-w-7xl px-4">
+          <div className="relative rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 md:p-12">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] rounded-3xl"></div>
+            <div className="relative">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business with Robotics?
               </h2>
-              <p className=&quot;text-blue-100 text-lg mb-8 max-w-2xl&quot;>
+              <p className="text-blue-100 text-lg mb-8 max-w-2xl">
                 Join us in shaping the future of automation and robotics technology.
               </p>
-              <button className=&quot;inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-medium hover:bg-blue-50 transition-colors duration-300&quot;>
+              <button className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-medium hover:bg-blue-50 transition-colors duration-300">
                 Get Started
-                <ArrowRight className=&quot;w-5 h-5&quot; />
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
