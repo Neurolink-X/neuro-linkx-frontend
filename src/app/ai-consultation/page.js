@@ -546,7 +546,7 @@ export default function AIConsultationPage() {
                     <h2 className="text-2xl font-bold text-[#1e2942] mb-3">Thank You!</h2>
                     <p className="text-gray-600 mb-4">Your consultation request has been received.</p>
                     <p className="text-sm text-gray-500">
-                      We'll send you a confirmation email shortly with the next steps.
+                      We&apos;ll send you a confirmation email shortly with the next steps.
                     </p>
                   </motion.div>
                 ) : (

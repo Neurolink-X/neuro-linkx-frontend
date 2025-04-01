@@ -120,7 +120,7 @@ export default function About() {
               </span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              We're revolutionizing technology with cutting-edge AI and cloud solutions
+              We&apos;re revolutionizing technology with cutting-edge AI and cloud solutions
             </p>
           </div>
         </div>
