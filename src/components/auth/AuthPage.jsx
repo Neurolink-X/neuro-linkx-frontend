@@ -1,6 +1,6 @@
-&apos;use client&apos;
+'use client';
 
-import React, { useState } from &apos;react&apos;
+import React, { useState } from 'react';
 import { 
   LogIn, 
   UserPlus, 
@@ -13,109 +13,109 @@ import {
   Linkedin,
   Loader2,
   AlertCircle
-} from &apos;lucide-react&apos;
+} from 'lucide-react';
 
-export default function AuthPage({ initialMode = &apos;login&apos; }) {
-  const [isLogin, setIsLogin] = useState(initialMode === &apos;login&apos;)
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState(&apos;&apos;)
+export default function AuthPage({ initialMode = 'login' }) {
+  const [isLogin, setIsLogin] = useState(initialMode === 'login');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setError(&apos;&apos;)
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
       if (isLogin) {
         // Handle login
-        console.log(&apos;Login submitted&apos;)
+        console.log('Login submitted');
       } else {
         // Handle signup
-        console.log(&apos;Signup submitted&apos;)
+        console.log('Signup submitted');
       }
     } catch (err) {
-      setError(&apos;An error occurred. Please try again.&apos;)
+      setError('An error occurred. Please try again.');
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8&quot;>
-      <div className=&quot;absolute inset-0&quot;>
-        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]&quot; />
-        <div className=&quot;absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]&quot; />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]"></div>
       </div>
 
-      <div className=&quot;relative max-w-md w-full space-y-8 bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10&quot;>
-        <div className=&quot;text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold text-white&quot;>
-            {isLogin ? &apos;Welcome Back&apos; : &apos;Create Account&apos;}
+      <div className="relative max-w-md w-full space-y-8 bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white">
+            {isLogin ? 'Welcome Back' : 'Create Account'}
           </h2>
-          <p className=&quot;mt-2 text-gray-400&quot;>
-            {isLogin ? &apos;Sign in to your account&apos; : &apos;Join us to get started&apos;}
+          <p className="mt-2 text-gray-400">
+            {isLogin ? 'Sign in to your account' : 'Join us to get started'}
           </p>
         </div>
 
         {error && (
-          <div className=&quot;bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-lg flex items-center gap-2&quot;>
-            <AlertCircle className=&quot;w-5 h-5&quot; />
+          <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-lg flex items-center gap-2">
+            <AlertCircle className="w-5 h-5" />
             {error}
           </div>
         )}
 
-        <form className=&quot;mt-8 space-y-6&quot; onSubmit={handleSubmit}>
-          <div className=&quot;space-y-4&quot;>
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <div className="space-y-4">
             <div>
-              <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-300&quot;>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-300">
                 Email address
               </label>
-              <div className=&quot;mt-1 relative&quot;>
-                <div className=&quot;absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none&quot;>
-                  <Mail className=&quot;h-5 w-5 text-gray-400&quot; />
+              <div className="mt-1 relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Mail className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
-                  id=&quot;email&quot;
-                  name=&quot;email&quot;
-                  type=&quot;email&quot;
-                  autoComplete=&quot;email&quot;
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
                   required
-                  className=&quot;appearance-none block w-full pl-10 pr-3 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                  placeholder=&quot;Enter your email&quot;
+                  className="appearance-none block w-full pl-10 pr-3 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your email"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor=&quot;password&quot; className=&quot;block text-sm font-medium text-gray-300&quot;>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-300">
                 Password
               </label>
-              <div className=&quot;mt-1 relative&quot;>
-                <div className=&quot;absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none&quot;>
-                  <Lock className=&quot;h-5 w-5 text-gray-400&quot; />
+              <div className="mt-1 relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Lock className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
-                  id=&quot;password&quot;
-                  name=&quot;password&quot;
-                  type={showPassword ? &quot;text&quot; : &quot;password&quot;}
-                  autoComplete={isLogin ? &quot;current-password&quot; : &quot;new-password&quot;}
+                  id="password"
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  autoComplete={isLogin ? "current-password" : "new-password"}
                   required
-                  className=&quot;appearance-none block w-full pl-10 pr-10 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                  placeholder=&quot;Enter your password&quot;
+                  className="appearance-none block w-full pl-10 pr-10 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Enter your password"
                 />
                 <button
-                  type=&quot;button&quot;
+                  type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className=&quot;absolute inset-y-0 right-0 pr-3 flex items-center&quot;
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
                 >
                   {showPassword ? (
-                    <EyeOff className=&quot;h-5 w-5 text-gray-400 hover:text-gray-300&quot; />
+                    <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />
                   ) : (
-                    <Eye className=&quot;h-5 w-5 text-gray-400 hover:text-gray-300&quot; />
+                    <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
                   )}
                 </button>
               </div>
@@ -123,21 +123,21 @@ export default function AuthPage({ initialMode = &apos;login&apos; }) {
 
             {!isLogin && (
               <div>
-                <label htmlFor=&quot;confirmPassword&quot; className=&quot;block text-sm font-medium text-gray-300&quot;>
+                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-300">
                   Confirm Password
                 </label>
-                <div className=&quot;mt-1 relative&quot;>
-                  <div className=&quot;absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none&quot;>
-                    <Lock className=&quot;h-5 w-5 text-gray-400&quot; />
+                <div className="mt-1 relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Lock className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
-                    id=&quot;confirmPassword&quot;
-                    name=&quot;confirmPassword&quot;
-                    type={showPassword ? &quot;text&quot; : &quot;password&quot;}
-                    autoComplete=&quot;new-password&quot;
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="new-password"
                     required
-                    className=&quot;appearance-none block w-full pl-10 pr-10 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
-                    placeholder=&quot;Confirm your password&quot;
+                    className="appearance-none block w-full pl-10 pr-10 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Confirm your password"
                   />
                 </div>
               </div>
@@ -146,63 +146,63 @@ export default function AuthPage({ initialMode = &apos;login&apos; }) {
 
           <div>
             <button
-              type=&quot;submit&quot;
+              type="submit"
               disabled={isLoading}
-              className=&quot;w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed&quot;
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? (
-                <Loader2 className=&quot;w-5 h-5 animate-spin&quot; />
+                <Loader2 className="w-5 h-5 animate-spin" />
               ) : isLogin ? (
-                <LogIn className=&quot;w-5 h-5&quot; />
+                <LogIn className="w-5 h-5" />
               ) : (
-                <UserPlus className=&quot;w-5 h-5&quot; />
+                <UserPlus className="w-5 h-5" />
               )}
             </button>
           </div>
         </form>
 
-        <div className=&quot;mt-6&quot;>
-          <div className=&quot;relative&quot;>
-            <div className=&quot;absolute inset-0 flex items-center&quot;>
-              <div className=&quot;w-full border-t border-white/10&quot; />
+        <div className="mt-6">
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-white/10" />
             </div>
-            <div className=&quot;relative flex justify-center text-sm&quot;>
-              <span className=&quot;px-2 bg-gray-900 text-gray-400&quot;>Or continue with</span>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-2 bg-gray-900 text-gray-400">Or continue with</span>
             </div>
           </div>
 
-          <div className=&quot;mt-6 grid grid-cols-3 gap-3&quot;>
-            <button className=&quot;w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors&quot;>
-              <Github className=&quot;w-5 h-5&quot; />
+          <div className="mt-6 grid grid-cols-3 gap-3">
+            <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
+              <Github className="w-5 h-5" />
             </button>
-            <button className=&quot;w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors&quot;>
-              <Twitter className=&quot;w-5 h-5&quot; />
+            <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
+              <Twitter className="w-5 h-5" />
             </button>
-            <button className=&quot;w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors&quot;>
-              <Linkedin className=&quot;w-5 h-5&quot; />
+            <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
+              <Linkedin className="w-5 h-5" />
             </button>
           </div>
         </div>
 
-        <div className=&quot;text-center&quot;>
+        <div className="text-center">
           <button
             onClick={() => setIsLogin(!isLogin)}
-            className=&quot;text-sm text-gray-400 hover:text-white transition-colors&quot;
+            className="text-sm text-gray-400 hover:text-white transition-colors"
           >
             {isLogin ? (
               <>
-                Don&apos;t have an account?{&apos; &apos;}
-                <span className=&quot;text-blue-400 hover:text-blue-300&quot;>Sign up</span>
+                Don't have an account?{' '}
+                <span className="text-blue-400 hover:text-blue-300">Sign up</span>
               </>
             ) : (
               <>
-                Already have an account?{&apos; &apos;}
-                <span className=&quot;text-blue-400 hover:text-blue-300&quot;>Sign in</span>
+                Already have an account?{' '}
+                <span className="text-blue-400 hover:text-blue-300">Sign in</span>
               </>
             )}
           </button>
         </div>
       </div>
     </div>
-  )
+  );
 } 

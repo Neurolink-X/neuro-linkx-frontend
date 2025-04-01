@@ -1,30 +1,30 @@
-import Header from &quot;@/components/layout/header&quot;
-import Hero from &quot;@/components/sections/hero&quot;
-import Services from &quot;@/components/sections/services&quot;
-import DigitalTransformation from &quot;@/components/sections/digital-transformation&quot;
-import Industries from &quot;@/components/sections/industries&quot;
-import CompanyStats from &quot;@/components/sections/company-stats&quot;
-//import Clients from &quot;@/components/sections/clients&quot;
-import Resources from &quot;@/components/sections/resources&quot;
-import CompanyCulture from &quot;@/components/sections/company-culture&quot;
-import ChatWidget from &quot;@/components/chat-widget&quot;
-import WhatMakesUs from &quot;@/components/sections/what-make-us&quot;
+import Header from '@/components/layout/header'
+import Hero from '@/components/sections/hero'
+import Services from '@/components/sections/services'
+import DigitalTransformation from '@/components/sections/digital-transformation'
+import Industries from '@/components/sections/industries'
+import CompanyStats from '@/components/sections/company-stats'
+//import Clients from '@/components/sections/clients'
+import Resources from '@/components/sections/resources'
+import CompanyCulture from '@/components/sections/company-culture'
+import ChatWidget from '@/components/chat-widget'
+import WhatMakesUs from '@/components/sections/what-make-us'
 
-import Culture from &quot;@/components/sections/culture&quot;
-import Features from &quot;@/components/sections/features&quot;
+import Culture from '@/components/sections/culture'
+import Features from '@/components/sections/features'
 
-import Performance from &quot;@/components/sections/performance&quot;
-import Security from &quot;@/components/sections/security&quot;
-import Stats from &quot;@/components/sections/stats&quot;
-import Terminal from &quot;@/components/sections/terminal&quot;
-import Workflow from &quot;@/components/sections/workflow&quot;
+import Performance from '@/components/sections/performance'
+import Security from '@/components/sections/security'
+import Stats from '@/components/sections/stats'
+import Terminal from '@/components/sections/terminal'
+import Workflow from '@/components/sections/workflow'
 
-import Footer from &quot;@/components/layout/footer&quot;
-import Testimonials from &quot;@/components/sections/testimonials&quot;
+import Footer from '@/components/layout/footer'
+import Testimonials from '@/components/sections/testimonials'
 
 export default function HomePage() {
   return (
-    <div className=&quot;min-h-screen bg-background w-full relative&quot;>
+    <div className='min-h-screen bg-background w-full relative'>
       <main>
         <Header />
         <Hero />
