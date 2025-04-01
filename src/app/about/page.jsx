@@ -17,9 +17,14 @@ import {
   Globe,
   Languages,
   Clock,
-  Users2
+  Users2,
+  CircuitBoard,
+  Lightbulb,
+  Server,
+  Users,
+  ArrowRight
 } from 'lucide-react';
-import { motion } from 'framer-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const stats = [
@@ -145,7 +150,7 @@ export default function About() {
         <div className="container relative mx-auto max-w-7xl px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              About{&apos; &apos;}
+              About{' '}
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
                 Neurolink
               </span>
