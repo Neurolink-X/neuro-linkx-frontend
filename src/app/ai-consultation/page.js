@@ -222,7 +222,7 @@ export default function AIConsultationPage() {
             <motion.div
               initial={{ scale: 0.8, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
               className="inline-block mb-8 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
@@ -538,7 +538,7 @@ export default function AIConsultationPage() {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                      transition={{ type: 'spring', stiffness: 200, damping: 10 }}
                       className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
                     >
                       <Check className="w-10 h-10 text-green-500" />
@@ -546,7 +546,7 @@ export default function AIConsultationPage() {
                     <h2 className="text-2xl font-bold text-[#1e2942] mb-3">Thank You!</h2>
                     <p className="text-gray-600 mb-4">Your consultation request has been received.</p>
                     <p className="text-sm text-gray-500">
-                      We&apos;ll send you a confirmation email shortly with the next steps.
+                      We'll send you a confirmation email shortly with the next steps.
                     </p>
                   </motion.div>
                 ) : (

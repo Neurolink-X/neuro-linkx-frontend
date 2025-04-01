@@ -11,8 +11,49 @@ import {
   Network, 
   Server, 
   Code, 
+  CircuitBoard, 
+  Binary, 
+  CpuIcon, 
+  Network2, 
+  DatabaseZap, 
+  Server2, 
+  Cloud2, 
+  GitBranch2, 
+  Boxes2, 
+  Code2, 
+  Brain2, 
+  Zap2, 
+  Shield2, 
+  Globe2, 
+  Database2, 
+  Network3, 
+  Server3, 
+  Cpu2, 
+  Code3, 
+  DatabaseZap2, 
+  Network4, 
+  Shield3, 
+  Globe3, 
+  Cpu3, 
+  Cloud3, 
+  GitBranch3, 
+  Boxes3, 
+  Server4, 
+  Code4, 
+  DatabaseZap3, 
+  Network5, 
+  Shield4, 
+  Globe4, 
+  Cpu4, 
+  Cloud4, 
+  GitBranch4, 
+  Boxes4, 
+  Server5, 
+  Code5,
   Smartphone,
-  Layout
+  Globe2,
+  Layout,
+  Server2
 } from 'lucide-react'
 
 const services = [
@@ -126,7 +167,7 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}

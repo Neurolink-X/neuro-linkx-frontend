@@ -1,7 +1,7 @@
-'use client';
+&apos;use client&apos;;
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from &apos;react&apos;;
+import { motion } from &apos;framer-motion&apos;;
 import { 
   ArrowRight, 
   Globe, 
@@ -27,21 +27,21 @@ import {
   Clock,
   Shield,
   Zap
-} from 'lucide-react';
-import Link from 'next/link';
+} from &apos;lucide-react&apos;;
+import Link from &apos;next/link&apos;;
 
 function getServicePath(title) {
   const paths = {
-    'Web App Development': 'web-app-development',
-    'Custom Website Development': 'custom-website',
-    'UI & UX Designing': 'ui-ux-designing',
-    'E-Commerce Development': 'e-commerce-development',
-    'API Development & Integration': 'api-development',
-    'Front-End Development': 'front-end-development',
-    'Back-End Development': 'back-end-development',
-    'DevOps & Cloud Services': 'devops-cloud-services'
+    &apos;Web App Development&apos;: &apos;web-app-development&apos;,
+    &apos;Custom Website Development&apos;: &apos;custom-website&apos;,
+    &apos;UI & UX Designing&apos;: &apos;ui-ux-designing&apos;,
+    &apos;E-Commerce Development&apos;: &apos;e-commerce-development&apos;,
+    &apos;API Development & Integration&apos;: &apos;api-development&apos;,
+    &apos;Front-End Development&apos;: &apos;front-end-development&apos;,
+    &apos;Back-End Development&apos;: &apos;back-end-development&apos;,
+    &apos;DevOps & Cloud Services&apos;: &apos;devops-cloud-services&apos;
   };
-  return paths[title] || title.toLowerCase().replace(/\s+/g, '-');
+  return paths[title] || title.toLowerCase().replace(/\s+/g, &apos;-&apos;);
 }
 
 export default function WebDevelopmentPage() {
@@ -50,118 +50,118 @@ export default function WebDevelopmentPage() {
   const services = [
     {
       id: 1,
-      title: 'Web App Development',
-      description: 'Create powerful and scalable web applications with modern technologies',
+      title: &apos;Web App Development&apos;,
+      description: &apos;Create powerful and scalable web applications with modern technologies&apos;,
       icon: Globe,
-      features: ['Custom Web Applications', 'Progressive Web Apps', 'Cross-platform Solutions'],
-      color: 'from-blue-500 to-blue-600',
-      stats: { projects: '500+', clients: '200+', satisfaction: '98%' }
+      features: [&apos;Custom Web Applications&apos;, &apos;Progressive Web Apps&apos;, &apos;Cross-platform Solutions&apos;],
+      color: &apos;from-blue-500 to-blue-600&apos;,
+      stats: { projects: &apos;500+&apos;, clients: &apos;200+&apos;, satisfaction: &apos;98%&apos; }
     },
     {
       id: 2,
-      title: 'Custom Website Development',
-      description: 'Tailored website solutions that match your brand and business needs',
+      title: &apos;Custom Website Development&apos;,
+      description: &apos;Tailored website solutions that match your brand and business needs&apos;,
       icon: Code,
-      features: ['Brand-aligned Design', 'Responsive Layouts', 'SEO Optimization'],
-      color: 'from-purple-500 to-purple-600',
-      stats: { projects: '300+', clients: '150+', satisfaction: '99%' }
+      features: [&apos;Brand-aligned Design&apos;, &apos;Responsive Layouts&apos;, &apos;SEO Optimization&apos;],
+      color: &apos;from-purple-500 to-purple-600&apos;,
+      stats: { projects: &apos;300+&apos;, clients: &apos;150+&apos;, satisfaction: &apos;99%&apos; }
     },
     {
       id: 3,
-      title: 'UI & UX Designing',
-      description: 'Create intuitive and engaging user experiences',
+      title: &apos;UI & UX Designing&apos;,
+      description: &apos;Create intuitive and engaging user experiences&apos;,
       icon: Layout,
-      features: ['User Research', 'Wireframing', 'Prototyping'],
-      color: 'from-pink-500 to-pink-600',
-      stats: { projects: '400+', clients: '180+', satisfaction: '97%' }
+      features: [&apos;User Research&apos;, &apos;Wireframing&apos;, &apos;Prototyping&apos;],
+      color: &apos;from-pink-500 to-pink-600&apos;,
+      stats: { projects: &apos;400+&apos;, clients: &apos;180+&apos;, satisfaction: &apos;97%&apos; }
     },
     {
       id: 4,
-      title: 'E-Commerce Development',
-      description: 'Build powerful online stores and shopping experiences',
+      title: &apos;E-Commerce Development&apos;,
+      description: &apos;Build powerful online stores and shopping experiences&apos;,
       icon: ShoppingCart,
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing'],
-      color: 'from-green-500 to-green-600',
-      stats: { projects: '250+', clients: '120+', satisfaction: '98%' }
+      features: [&apos;Payment Integration&apos;, &apos;Inventory Management&apos;, &apos;Order Processing&apos;],
+      color: &apos;from-green-500 to-green-600&apos;,
+      stats: { projects: &apos;250+&apos;, clients: &apos;120+&apos;, satisfaction: &apos;98%&apos; }
     },
     {
       id: 5,
-      title: 'API Development & Integration',
-      description: 'Create and integrate robust APIs for your applications',
+      title: &apos;API Development & Integration&apos;,
+      description: &apos;Create and integrate robust APIs for your applications&apos;,
       icon: Network,
-      features: ['RESTful APIs', 'GraphQL', 'Third-party Integration'],
-      color: 'from-yellow-500 to-yellow-600',
-      stats: { projects: '350+', clients: '160+', satisfaction: '99%' }
+      features: [&apos;RESTful APIs&apos;, &apos;GraphQL&apos;, &apos;Third-party Integration&apos;],
+      color: &apos;from-yellow-500 to-yellow-600&apos;,
+      stats: { projects: &apos;350+&apos;, clients: &apos;160+&apos;, satisfaction: &apos;99%&apos; }
     },
     {
       id: 6,
-      title: 'Front-End Development',
-      description: 'Build modern and responsive user interfaces',
+      title: &apos;Front-End Development&apos;,
+      description: &apos;Build modern and responsive user interfaces&apos;,
       icon: Monitor,
-      features: ['React/Next.js', 'Vue.js', 'Angular'],
-      color: 'from-indigo-500 to-indigo-600',
-      stats: { projects: '450+', clients: '190+', satisfaction: '98%' }
+      features: [&apos;React/Next.js&apos;, &apos;Vue.js&apos;, &apos;Angular&apos;],
+      color: &apos;from-indigo-500 to-indigo-600&apos;,
+      stats: { projects: &apos;450+&apos;, clients: &apos;190+&apos;, satisfaction: &apos;98%&apos; }
     },
     {
       id: 7,
-      title: 'Back-End Development',
-      description: 'Develop powerful server-side solutions',
+      title: &apos;Back-End Development&apos;,
+      description: &apos;Develop powerful server-side solutions&apos;,
       icon: Database,
-      features: [ 'Java','Node.js', 'Python','framework'],
-      color: 'from-red-500 to-red-600',
-      stats: { projects: '400+', clients: '170+', satisfaction: '99%' }
+      features: [ &apos;Java&apos;,&apos;Node.js&apos;, &apos;Python&apos;,&apos;framework&apos;],
+      color: &apos;from-red-500 to-red-600&apos;,
+      stats: { projects: &apos;400+&apos;, clients: &apos;170+&apos;, satisfaction: &apos;99%&apos; }
     },
     {
       id: 8,
-      title: 'DevOps & Cloud Services',
-      description: 'Streamline development and deployment processes',
+      title: &apos;DevOps & Cloud Services&apos;,
+      description: &apos;Streamline development and deployment processes&apos;,
       icon: Wrench,
-      features: ['CI/CD Pipelines', 'Cloud Deployment', 'Container Orchestration'],
-      color: 'from-orange-500 to-orange-600',
-      stats: { projects: '300+', clients: '140+', satisfaction: '98%' }
+      features: [&apos;CI/CD Pipelines&apos;, &apos;Cloud Deployment&apos;, &apos;Container Orchestration&apos;],
+      color: &apos;from-orange-500 to-orange-600&apos;,
+      stats: { projects: &apos;300+&apos;, clients: &apos;140+&apos;, satisfaction: &apos;98%&apos; }
     }
   ];
 
   const stats = [
-    { icon: Users, label: 'Happy Clients', value: '1000+' },
-    { icon: Award, label: 'Projects Completed', value: '3000+' },
-    { icon: Star, label: 'Client Satisfaction', value: '98%' },
-    { icon: Clock, label: 'Years Experience', value: '10+' }
+    { icon: Users, label: &apos;Happy Clients&apos;, value: &apos;1000+&apos; },
+    { icon: Award, label: &apos;Projects Completed&apos;, value: &apos;3000+&apos; },
+    { icon: Star, label: &apos;Client Satisfaction&apos;, value: &apos;98%&apos; },
+    { icon: Clock, label: &apos;Years Experience&apos;, value: &apos;10+&apos; }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    <div className=&quot;min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50&quot;>
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative overflow-hidden min-h-screen flex items-center"
+        className=&quot;relative overflow-hidden min-h-screen flex items-center&quot;
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 animate-gradient-x"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 animate-gradient-x&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[url(&apos;/grid.svg&apos;)] opacity-10&quot;></div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative"
+          className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative&quot;
         >
-          <div className="text-center">
+          <div className=&quot;text-center&quot;>
             <motion.div
               initial={{ scale: 0.8, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-              className="inline-block mb-8 relative"
+              transition={{ duration: 0.8, type: &quot;spring&quot;, stiffness: 100 }}
+              className=&quot;inline-block mb-8 relative&quot;
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <Globe className="w-24 h-24 text-blue-600 animate-float" />
+              <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-2xl animate-pulse&quot;></div>
+              <Globe className=&quot;w-24 h-24 text-blue-600 animate-float&quot; />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-blue-600"
+              className=&quot;text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-blue-600&quot;
             >
               Web Development Services
             </motion.h1>
@@ -169,7 +169,7 @@ export default function WebDevelopmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12"
+              className=&quot;text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12&quot;
             >
               Transform your digital presence with cutting-edge web solutions
             </motion.p>
@@ -177,17 +177,17 @@ export default function WebDevelopmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex justify-center space-x-4"
+              className=&quot;flex justify-center space-x-4&quot;
             >
               <Link
-                href="/contact"
-                className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300"
+                href=&quot;/contact&quot;
+                className=&quot;px-8 py-4 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300&quot;
               >
                 Get Started
               </Link>
               <Link
-                href="#services"
-                className="px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300"
+                href=&quot;#services&quot;
+                className=&quot;px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300&quot;
               >
                 Explore Services
               </Link>
@@ -201,22 +201,22 @@ export default function WebDevelopmentPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="text-center"
+              className=&quot;text-center&quot;
             >
-              <div className="inline-block p-4 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full mb-4">
-                <stat.icon className="w-8 h-8 text-blue-600" />
+              <div className=&quot;inline-block p-4 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-full mb-4&quot;>
+                <stat.icon className=&quot;w-8 h-8 text-blue-600&quot; />
               </div>
-              <h3 className="text-3xl font-bold text-[#1e2942] mb-2">{stat.value}</h3>
-              <p className="text-gray-600">{stat.label}</p>
+              <h3 className=&quot;text-3xl font-bold text-[#1e2942] mb-2&quot;>{stat.value}</h3>
+              <p className=&quot;text-gray-600&quot;>{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -227,66 +227,66 @@ export default function WebDevelopmentPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;
       >
-        <h2 className="text-4xl font-bold text-[#1e2942] mb-12 text-center">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className=&quot;text-4xl font-bold text-[#1e2942] mb-12 text-center&quot;>Why Choose Us?</h2>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
-            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            className=&quot;bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300&quot;
           >
-            <div className="p-3 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-lg w-fit mb-4">
-              <Shield className="w-6 h-6 text-blue-600" />
+            <div className=&quot;p-3 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-lg w-fit mb-4&quot;>
+              <Shield className=&quot;w-6 h-6 text-blue-600&quot; />
             </div>
-            <h3 className="text-lg font-semibold text-[#1e2942] mb-2">Enterprise Security</h3>
-            <p className="text-gray-600">Advanced security measures to protect your data.</p>
+            <h3 className=&quot;text-lg font-semibold text-[#1e2942] mb-2&quot;>Enterprise Security</h3>
+            <p className=&quot;text-gray-600&quot;>Advanced security measures to protect your data.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
-            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            className=&quot;bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300&quot;
           >
-            <div className="p-3 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-lg w-fit mb-4">
-              <Zap className="w-6 h-6 text-purple-600" />
+            <div className=&quot;p-3 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-lg w-fit mb-4&quot;>
+              <Zap className=&quot;w-6 h-6 text-purple-600&quot; />
             </div>
-            <h3 className="text-lg font-semibold text-[#1e2942] mb-2">Fast Performance</h3>
-            <p className="text-gray-600">Optimized solutions for maximum speed.</p>
+            <h3 className=&quot;text-lg font-semibold text-[#1e2942] mb-2&quot;>Fast Performance</h3>
+            <p className=&quot;text-gray-600&quot;>Optimized solutions for maximum speed.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
-            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            className=&quot;bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300&quot;
           >
-            <div className="p-3 bg-gradient-to-br from-green-500/10 to-green-600/10 rounded-lg w-fit mb-4">
-              <CheckCircle2 className="w-6 h-6 text-green-600" />
+            <div className=&quot;p-3 bg-gradient-to-br from-green-500/10 to-green-600/10 rounded-lg w-fit mb-4&quot;>
+              <CheckCircle2 className=&quot;w-6 h-6 text-green-600&quot; />
             </div>
-            <h3 className="text-lg font-semibold text-[#1e2942] mb-2">Quality Assurance</h3>
-            <p className="text-gray-600">Rigorous testing and quality checks.</p>
+            <h3 className=&quot;text-lg font-semibold text-[#1e2942] mb-2&quot;>Quality Assurance</h3>
+            <p className=&quot;text-gray-600&quot;>Rigorous testing and quality checks.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
-            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+            className=&quot;bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300&quot;
           >
-            <div className="p-3 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-lg w-fit mb-4">
-              <Users className="w-6 h-6 text-orange-600" />
+            <div className=&quot;p-3 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-lg w-fit mb-4&quot;>
+              <Users className=&quot;w-6 h-6 text-orange-600&quot; />
             </div>
-            <h3 className="text-lg font-semibold text-[#1e2942] mb-2">Expert Support</h3>
-            <p className="text-gray-600">24/7 dedicated support team.</p>
+            <h3 className=&quot;text-lg font-semibold text-[#1e2942] mb-2&quot;>Expert Support</h3>
+            <p className=&quot;text-gray-600&quot;>24/7 dedicated support team.</p>
           </motion.div>
         </div>
       </motion.div>
 
       {/* Services Grid */}
       <motion.div
-        id="services"
+        id=&quot;services&quot;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32"
+        className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32&quot;
       >
-        <h2 className="text-4xl font-bold text-[#1e2942] mb-12 text-center">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 className=&quot;text-4xl font-bold text-[#1e2942] mb-12 text-center&quot;>Our Services</h2>
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -296,44 +296,44 @@ export default function WebDevelopmentPage() {
               whileHover={{ y: -5, scale: 1.02 }}
               onHoverStart={() => setActiveService(service.id)}
               onHoverEnd={() => setActiveService(null)}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className=&quot;bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300&quot;
             >
-              <div className="flex items-center space-x-3 mb-6">
+              <div className=&quot;flex items-center space-x-3 mb-6&quot;>
                 <div className={`p-2 bg-gradient-to-br ${service.color} rounded-lg text-white`}>
-                  <service.icon className="w-6 h-6" />
+                  <service.icon className=&quot;w-6 h-6&quot; />
                 </div>
-                <h3 className="text-xl font-semibold text-[#1e2942]">{service.title}</h3>
+                <h3 className=&quot;text-xl font-semibold text-[#1e2942]&quot;>{service.title}</h3>
               </div>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              <ul className="space-y-3 mb-6">
+              <p className=&quot;text-gray-600 mb-6&quot;>{service.description}</p>
+              <ul className=&quot;space-y-3 mb-6&quot;>
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center space-x-2 text-gray-600">
-                    <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  <li key={idx} className=&quot;flex items-center space-x-2 text-gray-600&quot;>
+                    <CheckCircle2 className=&quot;w-4 h-4 text-blue-600&quot; />
                     <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-              <div className="grid grid-cols-3 gap-4 mb-6 text-sm">
-                <div className="text-center">
-                  <div className="font-bold text-[#1e2942]">{service.stats.projects}</div>
-                  <div className="text-gray-600">Projects</div>
+              <div className=&quot;grid grid-cols-3 gap-4 mb-6 text-sm&quot;>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;font-bold text-[#1e2942]&quot;>{service.stats.projects}</div>
+                  <div className=&quot;text-gray-600&quot;>Projects</div>
                 </div>
-                <div className="text-center">
-                  <div className="font-bold text-[#1e2942]">{service.stats.clients}</div>
-                  <div className="text-gray-600">Clients</div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;font-bold text-[#1e2942]&quot;>{service.stats.clients}</div>
+                  <div className=&quot;text-gray-600&quot;>Clients</div>
                 </div>
-                <div className="text-center">
-                  <div className="font-bold text-[#1e2942]">{service.stats.satisfaction}</div>
-                  <div className="text-gray-600">Satisfaction</div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;font-bold text-[#1e2942]&quot;>{service.stats.satisfaction}</div>
+                  <div className=&quot;text-gray-600&quot;>Satisfaction</div>
                 </div>
               </div>
               <motion.button
                 whileHover={{ x: 5 }}
-                className="mt-6 flex items-center text-blue-600 hover:text-blue-700 font-medium group"
+                className=&quot;mt-6 flex items-center text-blue-600 hover:text-blue-700 font-medium group&quot;
               >
                 <Link href={`/web-development/${getServicePath(service.title)}`}>
                   <span>Learn more</span>
-                  <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className=&quot;w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300&quot; />
                 </Link>
               </motion.button>
             </motion.div>
@@ -346,21 +346,21 @@ export default function WebDevelopmentPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32"
+        className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32&quot;
       >
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-          <div className="relative">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Digital Presence?</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+        <div className=&quot;bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-center relative overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-[url(&apos;/grid.svg&apos;)] opacity-10&quot;></div>
+          <div className=&quot;relative&quot;>
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Digital Presence?</h2>
+            <p className=&quot;text-xl text-white/90 mb-8 max-w-2xl mx-auto&quot;>
               Join thousands of satisfied clients who have trusted us with their web development needs.
             </p>
             <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+              href=&quot;/contact&quot;
+              className=&quot;inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300&quot;
             >
               Get Started
-              <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className=&quot;w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300&quot; />
             </Link>
           </div>
         </div>

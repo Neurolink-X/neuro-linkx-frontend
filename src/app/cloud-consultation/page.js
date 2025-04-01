@@ -1,8 +1,8 @@
-'use client';
+&apos;use client&apos;;
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Cloud, Server, Shield, Database, Calendar, Clock, Video, Check, X, Sparkles, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from &apos;react&apos;;
+import { motion, AnimatePresence, useScroll, useTransform } from &apos;framer-motion&apos;;
+import { ArrowRight, Cloud, Server, Shield, Database, Calendar, Clock, Video, Check, X, Sparkles, ChevronRight } from &apos;lucide-react&apos;;
 
 export default function CloudConsultationPage() {
   const { scrollYProgress } = useScroll();
@@ -13,13 +13,13 @@ export default function CloudConsultationPage() {
   const [showScheduler, setShowScheduler] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    preferredDate: '',
-    preferredTime: '',
-    message: ''
+    name: &apos;&apos;,
+    email: &apos;&apos;,
+    company: &apos;&apos;,
+    phone: &apos;&apos;,
+    preferredDate: &apos;&apos;,
+    preferredTime: &apos;&apos;,
+    message: &apos;&apos;
   });
 
   const handleInputChange = (e) => {
@@ -33,20 +33,20 @@ export default function CloudConsultationPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you can add your form submission logic
-    console.log('Form submitted:', formData);
+    console.log(&apos;Form submitted:&apos;, formData);
     
     // Show success message
     setShowSuccess(true);
     
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      preferredDate: '',
-      preferredTime: '',
-      message: ''
+      name: &apos;&apos;,
+      email: &apos;&apos;,
+      company: &apos;&apos;,
+      phone: &apos;&apos;,
+      preferredDate: &apos;&apos;,
+      preferredTime: &apos;&apos;,
+      message: &apos;&apos;
     });
 
     // Close modal after 3 seconds
@@ -58,83 +58,83 @@ export default function CloudConsultationPage() {
 
   const services = [
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Hosting",
-      description: "Scalable and reliable cloud hosting solutions for your applications"
+      icon: <Cloud className=&quot;w-8 h-8&quot; />,
+      title: &quot;Cloud Hosting&quot;,
+      description: &quot;Scalable and reliable cloud hosting solutions for your applications&quot;
     },
     {
-      icon: <Server className="w-8 h-8" />,
-      title: "Server Management",
-      description: "Professional server management and maintenance services"
+      icon: <Server className=&quot;w-8 h-8&quot; />,
+      title: &quot;Server Management&quot;,
+      description: &quot;Professional server management and maintenance services&quot;
     },
     {
-      icon: <Database className="w-8 h-8" />,
-      title: "Data Backup",
-      description: "Secure and automated data backup solutions"
+      icon: <Database className=&quot;w-8 h-8&quot; />,
+      title: &quot;Data Backup&quot;,
+      description: &quot;Secure and automated data backup solutions&quot;
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Cloud Security",
-      description: "Comprehensive cloud security and compliance services"
+      icon: <Shield className=&quot;w-8 h-8&quot; />,
+      title: &quot;Cloud Security&quot;,
+      description: &quot;Comprehensive cloud security and compliance services&quot;
     }
   ];
 
   const consultationTypes = [
     {
-      title: "30-Min Discovery Call",
-      description: "Quick consultation to understand your cloud needs",
-      duration: "30 minutes",
-      price: "Free"
+      title: &quot;30-Min Discovery Call&quot;,
+      description: &quot;Quick consultation to understand your cloud needs&quot;,
+      duration: &quot;30 minutes&quot;,
+      price: &quot;Free&quot;
     },
     {
-      title: "1-Hour Strategy Session",
-      description: "Detailed discussion about your cloud infrastructure",
-      duration: "1 hour",
-      price: "$99"
+      title: &quot;1-Hour Strategy Session&quot;,
+      description: &quot;Detailed discussion about your cloud infrastructure&quot;,
+      duration: &quot;1 hour&quot;,
+      price: &quot;$99&quot;
     },
     {
-      title: "2-Hour Deep Dive",
-      description: "Comprehensive analysis and planning session",
-      duration: "2 hours",
-      price: "$199"
+      title: &quot;2-Hour Deep Dive&quot;,
+      description: &quot;Comprehensive analysis and planning session&quot;,
+      duration: &quot;2 hours&quot;,
+      price: &quot;$199&quot;
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-24">
+    <div className=&quot;min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-24&quot;>
       {/* Hero Section with Enhanced Animations */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative overflow-hidden min-h-[80vh] flex items-center"
+        className=&quot;relative overflow-hidden min-h-[80vh] flex items-center&quot;
         style={{ opacity, scale }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-gradient-x"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
+        <div className=&quot;absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-gradient-x&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[url(&apos;/grid.svg&apos;)] opacity-10&quot;></div>
+        <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white&quot;></div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative"
+          className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative&quot;
         >
-          <div className="text-center">
+          <div className=&quot;text-center&quot;>
             <motion.div
               initial={{ scale: 0.8, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-              className="inline-block mb-6 relative"
+              transition={{ duration: 0.8, type: &quot;spring&quot;, stiffness: 100 }}
+              className=&quot;inline-block mb-6 relative&quot;
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#ff3b30]/20 to-orange-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <Cloud className="w-16 h-16 text-[#ff3b30] animate-float" />
+              <div className=&quot;absolute inset-0 bg-gradient-to-r from-[#ff3b30]/20 to-orange-500/20 rounded-full blur-2xl animate-pulse&quot;></div>
+              <Cloud className=&quot;w-16 h-16 text-[#ff3b30] animate-float&quot; />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-5xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-[#ff3b30]"
+              className=&quot;text-5xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-[#ff3b30]&quot;
             >
               Cloud Services Consultation
             </motion.h1>
@@ -142,7 +142,7 @@ export default function CloudConsultationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+              className=&quot;text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed&quot;
             >
               Get expert guidance on cloud solutions, server management, and security for your business
             </motion.p>
@@ -150,17 +150,17 @@ export default function CloudConsultationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8"
+              className=&quot;mt-8&quot;
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowScheduler(true)}
-                className="bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-4 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 mx-auto"
+                className=&quot;bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-4 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 mx-auto&quot;
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className=&quot;w-5 h-5&quot; />
                 <span>Schedule Free Consultation</span>
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className=&quot;w-5 h-5&quot; />
               </motion.button>
             </motion.div>
           </div>
@@ -172,19 +172,19 @@ export default function CloudConsultationPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative"
+        className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative&quot;
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/50 to-transparent"></div>
-        <h2 className="text-3xl font-bold text-[#1e2942] mb-12 text-center relative">
+        <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/50 to-transparent&quot;></div>
+        <h2 className=&quot;text-3xl font-bold text-[#1e2942] mb-12 text-center relative&quot;>
           Our Cloud Services
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: 100 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 bg-gradient-to-r from-[#ff3b30] to-orange-500 rounded-full"
+            className=&quot;absolute bottom-0 left-1/2 transform -translate-x-1/2 h-1 bg-gradient-to-r from-[#ff3b30] to-orange-500 rounded-full&quot;
           />
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative&quot;>
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -192,25 +192,25 @@ export default function CloudConsultationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
+              className=&quot;bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden&quot;
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative mb-6">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff3b30]/20 to-orange-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative text-[#ff3b30] transform group-hover:scale-110 transition-transform duration-300">
+              <div className=&quot;absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
+              <div className=&quot;relative mb-6&quot;>
+                <div className=&quot;absolute inset-0 bg-gradient-to-r from-[#ff3b30]/20 to-orange-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300&quot;></div>
+                <div className=&quot;relative text-[#ff3b30] transform group-hover:scale-110 transition-transform duration-300&quot;>
                   {service.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#1e2942] mb-3">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
+              <h3 className=&quot;text-xl font-semibold text-[#1e2942] mb-3&quot;>{service.title}</h3>
+              <p className=&quot;text-gray-600 leading-relaxed&quot;>{service.description}</p>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="mt-4 flex items-center text-[#ff3b30] group-hover:translate-x-2 transition-transform duration-300"
+                className=&quot;mt-4 flex items-center text-[#ff3b30] group-hover:translate-x-2 transition-transform duration-300&quot;
               >
-                <span className="text-sm font-medium">Learn more</span>
-                <ChevronRight className="w-4 h-4 ml-1" />
+                <span className=&quot;text-sm font-medium&quot;>Learn more</span>
+                <ChevronRight className=&quot;w-4 h-4 ml-1&quot; />
               </motion.div>
             </motion.div>
           ))}
@@ -222,24 +222,24 @@ export default function CloudConsultationPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-white to-gray-50 rounded-3xl relative overflow-hidden mb-32"
+        className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-b from-white to-gray-50 rounded-3xl relative overflow-hidden mb-32&quot;
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5"></div>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#1e2942] mb-4 relative inline-block">
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5&quot;></div>
+        <div className=&quot;text-center mb-12&quot;>
+          <h2 className=&quot;text-3xl font-bold text-[#1e2942] mb-4 relative inline-block&quot;>
             Consultation Options
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: 100 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#ff3b30] to-orange-500 rounded-full"
+              className=&quot;absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#ff3b30] to-orange-500 rounded-full&quot;
             />
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className=&quot;text-xl text-gray-600 max-w-2xl mx-auto&quot;>
             Choose the consultation package that best fits your needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
           {consultationTypes.map((type, index) => (
             <motion.div
               key={type.title}
@@ -247,26 +247,26 @@ export default function CloudConsultationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
+              className=&quot;bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden&quot;
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-[#1e2942]">{type.title}</h3>
-                  <span className="text-[#ff3b30] font-semibold">{type.price}</span>
+              <div className=&quot;absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
+              <div className=&quot;relative&quot;>
+                <div className=&quot;flex items-center justify-between mb-4&quot;>
+                  <h3 className=&quot;text-xl font-semibold text-[#1e2942]&quot;>{type.title}</h3>
+                  <span className=&quot;text-[#ff3b30] font-semibold&quot;>{type.price}</span>
                 </div>
-                <p className="text-gray-600 mb-6">{type.description}</p>
-                <div className="flex items-center text-gray-500 mb-6">
-                  <Clock className="w-4 h-4 mr-2" />
+                <p className=&quot;text-gray-600 mb-6&quot;>{type.description}</p>
+                <div className=&quot;flex items-center text-gray-500 mb-6&quot;>
+                  <Clock className=&quot;w-4 h-4 mr-2&quot; />
                   <span>{type.duration}</span>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowScheduler(true)}
-                  className="w-full bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white py-3 rounded-xl hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 flex items-center justify-center space-x-2"
+                  className=&quot;w-full bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white py-3 rounded-xl hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 flex items-center justify-center space-x-2&quot;
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className=&quot;w-5 h-5&quot; />
                   <span>Schedule Consultation</span>
                 </motion.button>
               </div>
@@ -280,28 +280,28 @@ export default function CloudConsultationPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-t shadow-lg py-4 z-50"
+        className=&quot;fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-t shadow-lg py-4 z-50&quot;
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex items-center space-x-2">
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex flex-col sm:flex-row justify-between items-center gap-4&quot;>
+            <div className=&quot;flex items-center space-x-2&quot;>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
-                <Check className="w-5 h-5 text-green-500" />
+                <Check className=&quot;w-5 h-5 text-green-500&quot; />
               </motion.div>
-              <span className="text-gray-600">Free 30-minute consultation available</span>
+              <span className=&quot;text-gray-600&quot;>Free 30-minute consultation available</span>
             </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowScheduler(true)}
-              className="bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-3 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30"
+              className=&quot;bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-3 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30&quot;
             >
-              <Calendar className="w-5 h-5" />
+              <Calendar className=&quot;w-5 h-5&quot; />
               <span>Schedule Free Consultation</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className=&quot;w-5 h-5&quot; />
             </motion.button>
           </div>
         </div>
@@ -314,20 +314,20 @@ export default function CloudConsultationPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4&quot;
           >
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-8 relative overflow-hidden"
+              className=&quot;bg-white rounded-2xl shadow-xl max-w-2xl w-full p-8 relative overflow-hidden&quot;
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5"></div>
+              <div className=&quot;absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5&quot;></div>
               <button
                 onClick={() => setShowScheduler(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                className=&quot;absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200&quot;
               >
-                <X className="w-6 h-6" />
+                <X className=&quot;w-6 h-6&quot; />
               </button>
 
               <AnimatePresence>
@@ -336,136 +336,136 @@ export default function CloudConsultationPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className="text-center py-12"
+                    className=&quot;text-center py-12&quot;
                   >
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                      className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
+                      transition={{ type: &quot;spring&quot;, stiffness: 200, damping: 10 }}
+                      className=&quot;w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6&quot;
                     >
-                      <Check className="w-10 h-10 text-green-500" />
+                      <Check className=&quot;w-10 h-10 text-green-500&quot; />
                     </motion.div>
-                    <h2 className="text-2xl font-bold text-[#1e2942] mb-3">Thank You!</h2>
-                    <p className="text-gray-600 mb-4">Your consultation request has been received.</p>
-                    <p className="text-sm text-gray-500">
-                      We'll send you a confirmation email shortly with the next steps.
+                    <h2 className=&quot;text-2xl font-bold text-[#1e2942] mb-3&quot;>Thank You!</h2>
+                    <p className=&quot;text-gray-600 mb-4&quot;>Your consultation request has been received.</p>
+                    <p className=&quot;text-sm text-gray-500&quot;>
+                      We&apos;ll send you a confirmation email shortly with the next steps.
                     </p>
                   </motion.div>
                 ) : (
                   <>
-                    <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-[#1e2942] mb-3">Schedule Your Free Consultation</h2>
-                      <p className="text-gray-600">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
+                    <div className=&quot;text-center mb-8&quot;>
+                      <h2 className=&quot;text-2xl font-bold text-[#1e2942] mb-3&quot;>Schedule Your Free Consultation</h2>
+                      <p className=&quot;text-gray-600&quot;>Fill out the form below and we&apos;ll get back to you within 24 hours to confirm your appointment.</p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
+                      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                          <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Name</label>
                           <input
-                            type="text"
-                            name="name"
+                            type=&quot;text&quot;
+                            name=&quot;name&quot;
                             value={formData.name}
                             onChange={handleInputChange}
                             required
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
-                            placeholder="Your name"
+                            className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
+                            placeholder=&quot;Your name&quot;
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                          <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Email</label>
                           <input
-                            type="email"
-                            name="email"
+                            type=&quot;email&quot;
+                            name=&quot;email&quot;
                             value={formData.email}
                             onChange={handleInputChange}
                             required
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
-                            placeholder="your@email.com"
+                            className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
+                            placeholder=&quot;your@email.com&quot;
                           />
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                          <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Company</label>
                           <input
-                            type="text"
-                            name="company"
+                            type=&quot;text&quot;
+                            name=&quot;company&quot;
                             value={formData.company}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
-                            placeholder="Your company name"
+                            className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
+                            placeholder=&quot;Your company name&quot;
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                          <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Phone</label>
                           <input
-                            type="tel"
-                            name="phone"
+                            type=&quot;tel&quot;
+                            name=&quot;phone&quot;
                             value={formData.phone}
                             onChange={handleInputChange}
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
-                            placeholder="Your phone number"
+                            className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
+                            placeholder=&quot;Your phone number&quot;
                           />
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                          <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Preferred Date</label>
                           <input
-                            type="date"
-                            name="preferredDate"
+                            type=&quot;date&quot;
+                            name=&quot;preferredDate&quot;
                             value={formData.preferredDate}
                             onChange={handleInputChange}
                             required
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
+                            className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
                           />
                         </div>
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Time</label>
+                          <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Preferred Time</label>
                           <select
-                            name="preferredTime"
+                            name=&quot;preferredTime&quot;
                             value={formData.preferredTime}
                             onChange={handleInputChange}
                             required
-                            className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
+                            className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
                           >
-                            <option value="">Select a time</option>
-                            <option value="09:00">9:00 AM</option>
-                            <option value="10:00">10:00 AM</option>
-                            <option value="11:00">11:00 AM</option>
-                            <option value="14:00">2:00 PM</option>
-                            <option value="15:00">3:00 PM</option>
+                            <option value=&quot;&quot;>Select a time</option>
+                            <option value=&quot;09:00&quot;>9:00 AM</option>
+                            <option value=&quot;10:00&quot;>10:00 AM</option>
+                            <option value=&quot;11:00&quot;>11:00 AM</option>
+                            <option value=&quot;14:00&quot;>2:00 PM</option>
+                            <option value=&quot;15:00&quot;>3:00 PM</option>
                           </select>
                         </div>
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Message</label>
                         <textarea
-                          name="message"
+                          name=&quot;message&quot;
                           value={formData.message}
                           onChange={handleInputChange}
-                          rows="3"
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent"
-                          placeholder="Tell us about your cloud needs..."
+                          rows=&quot;3&quot;
+                          className=&quot;w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ff3b30] focus:border-transparent&quot;
+                          placeholder=&quot;Tell us about your cloud needs...&quot;
                         />
                       </div>
 
-                      <div className="flex justify-end space-x-4 mt-6">
+                      <div className=&quot;flex justify-end space-x-4 mt-6&quot;>
                         <button
-                          type="button"
+                          type=&quot;button&quot;
                           onClick={() => setShowScheduler(false)}
-                          className="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50"
+                          className=&quot;px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50&quot;
                         >
                           Cancel
                         </button>
                         <button
-                          type="submit"
-                          className="px-6 py-2 rounded-lg bg-[#ff3b30] text-white hover:bg-[#ff3b30]/90"
+                          type=&quot;submit&quot;
+                          className=&quot;px-6 py-2 rounded-lg bg-[#ff3b30] text-white hover:bg-[#ff3b30]/90&quot;
                         >
                           Schedule Consultation
                         </button>

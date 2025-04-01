@@ -55,7 +55,7 @@ export default function AIChatbotDevelopmentPage() {
             <motion.div
               initial={{ scale: 0.8, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
               className="inline-block mb-8 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-2xl"></div>
@@ -250,7 +250,7 @@ export default function AIChatbotDevelopmentPage() {
           <div className="relative">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Customer Service?</h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's create an intelligent chatbot that delivers exceptional customer experiences and drives business growth.
+              Let&apos;s create an intelligent chatbot that delivers exceptional customer experiences and drives business growth.
             </p>
             <Link
               href="/contact"

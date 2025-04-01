@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -59,13 +59,13 @@ export default function Industries() {
     }
   }, [])
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (currentIndex < industries.length - 1) {
       setCurrentIndex(currentIndex + 1)
     } else {
       setCurrentIndex(0) // Loop back to the first slide
     }
-  }
+  }, [currentIndex])
 
   const prevSlide = () => {
     if (currentIndex > 0) {
@@ -80,7 +80,6 @@ export default function Industries() {
     const interval = setInterval(() => {
       nextSlide()
     }, 5000)
-
     return () => clearInterval(interval)
   }, [nextSlide])
 

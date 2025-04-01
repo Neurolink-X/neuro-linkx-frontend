@@ -61,7 +61,7 @@ export default function ContactPage() {
             <motion.div
               initial={{ scale: 0.8, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
               className="inline-block mb-8 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-xl text-gray-600 max-w-2xl mx-auto"
             >
-              Have a project in mind? Let's discuss how we can help bring your vision to life.
+              Let&apos;s discuss your project
             </motion.p>
           </div>
         </motion.div>

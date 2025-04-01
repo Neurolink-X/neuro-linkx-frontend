@@ -6,35 +6,21 @@ export default function FlowingLinesSVG() {
   const svgRef = useRef(null)
 
   useEffect(() => {
-    const svg = svgRef.current
-    if (!svg) return
+    if (!svgRef.current) return
 
     // Make the SVG responsive to its container
     const resizeObserver = new ResizeObserver(() => {
-      if (svg) {
-        const { width, height } = svg.getBoundingClientRect()
-        svg.setAttribute("viewBox", `0 0 ${width} ${height}`)
+      if (svgRef.current) {
+        const { width, height } = svgRef.current.getBoundingClientRect()
+        svgRef.current.setAttribute("viewBox", `0 0 ${width} ${height}`)
       }
     })
 
-    resizeObserver.observe(svg)
-
-    const animate = () => {
-      const paths = svg.querySelectorAll('path')
-      paths.forEach((path, index) => {
-        path.style.animationDelay = `${index * 0.5}s`
-      })
-    }
-
-    animate()
+    resizeObserver.observe(svgRef.current)
 
     return () => {
-      if (svg) {
+      if (svgRef.current) {
         resizeObserver.disconnect()
-        const paths = svg.querySelectorAll('path')
-        paths.forEach(path => {
-          path.style.animationDelay = ''
-        })
       }
     }
   }, [])

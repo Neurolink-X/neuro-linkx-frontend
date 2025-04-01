@@ -311,7 +311,7 @@ export default function Testimonials() {
                 </div>
                 <Quote className="w-8 h-8 text-blue-600 mx-auto md:mx-0 mb-4" />
                 <p className="text-gray-600 text-lg mb-6 italic">
-                  "{currentTestimonial.content}"
+                  &quot;{currentTestimonial.content}&quot;
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                   {currentTestimonial.technologies.map((tech) => (
