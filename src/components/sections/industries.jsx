@@ -80,8 +80,9 @@ export default function Industries() {
     const interval = setInterval(() => {
       nextSlide()
     }, 5000)
+
     return () => clearInterval(interval)
-  }, [currentIndex])
+  }, [nextSlide])
 
   return (
     <section className="w-full py-16 bg-[#1e2942] text-white overflow-x-hidden">

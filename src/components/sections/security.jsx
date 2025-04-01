@@ -31,11 +31,12 @@ export default function Security() {
             </ul>
           </div>
           <div className="relative h-[400px]">
-            <img
-              src="/placeholder.svg?height=400&width=600"
-              alt="Security Illustration"
-              fill
-              className="object-contain"
+            <Image
+              src="/path/to/security-image.jpg"
+              alt="Security"
+              width={800}
+              height={600}
+              className="rounded-lg"
             />
           </div>
         </div>

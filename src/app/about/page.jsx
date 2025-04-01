@@ -16,35 +16,38 @@ import {
   Zap,
   Cloud,
   Database,
-  GitBranch
+  GitBranch,
+  Cpu,
+  Network,
+  CircuitBoard
 } from 'lucide-react'
 
 const stats = [
   {
     title: "Automation Rate",
-    value: "85%",
-    description: "Tasks Automated Through AI",
+    value: "95%",
+    description: "Tasks Automated Through AI & Robotics",
     icon: Zap,
     color: "from-blue-600 to-indigo-600"
   },
   {
     title: "Cost Savings",
-    value: "40%+",
-    description: "Average Reduction in Operational Costs",
+    value: "60%+",
+    description: "Reduction in Operational Costs",
     icon: LineChart,
     color: "from-purple-600 to-pink-600"
   },
   {
-    title: "Cloud Efficiency",
-    value: "60%",
-    description: "Cloud Cost Optimization",
-    icon: Cloud,
+    title: "Future-Ready",
+    value: "100%",
+    description: "Robotics & AI Integration",
+    icon: CircuitBoard,
     color: "from-orange-600 to-red-600"
   },
   {
     title: "Customer Satisfaction",
-    value: "98%",
-    description: "AI-Powered Support Success Rate",
+    value: "99%",
+    description: "AI & Robotics Support Success",
     icon: Users,
     color: "from-green-600 to-emerald-600"
   }
@@ -53,19 +56,19 @@ const stats = [
 const values = [
   {
     title: "Innovation First",
-    description: "We leverage cutting-edge AI and automation to deliver future-proof solutions.",
+    description: "Leading the future with cutting-edge robotics and AI solutions.",
     icon: Lightbulb,
     color: "from-blue-600 to-indigo-600"
   },
   {
     title: "Cost-Effective",
-    description: "Our solutions focus on reducing operational costs and maximizing ROI.",
+    description: "Maximizing ROI through intelligent automation and robotics.",
     icon: LineChart,
     color: "from-purple-600 to-pink-600"
   },
   {
     title: "Customer-Centric",
-    description: "AI-powered support and personalized solutions for exceptional customer experience.",
+    description: "AI-powered support and personalized robotics solutions.",
     icon: Users,
     color: "from-orange-600 to-red-600"
   }
@@ -73,31 +76,59 @@ const values = [
 
 const services = [
   {
-    title: "Custom Software Solutions",
-    description: "Tailored applications designed to meet your specific business needs, from web applications to enterprise software.",
-    features: ["Web Applications", "Mobile Apps", "Enterprise Software", "API Development"],
-    icon: Code,
+    title: "Robotics Solutions",
+    description: "Advanced robotics systems for manufacturing, healthcare, and service industries.",
+    features: [
+      "Industrial Automation",
+      "Medical Robotics",
+      "Service Robots",
+      "AI-Powered Control Systems",
+      "Robotic Process Automation",
+      "Human-Robot Collaboration"
+    ],
+    icon: CircuitBoard,
     color: "from-blue-600 to-indigo-600"
   },
   {
     title: "AI & Automation",
-    description: "Intelligent automation solutions that reduce manual work and streamline operations through advanced AI technology.",
-    features: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Task Automation"],
+    description: "Intelligent automation solutions that revolutionize business operations.",
+    features: [
+      "Process Automation",
+      "Workflow Optimization",
+      "RPA Solutions",
+      "Task Automation",
+      "AI Decision Making",
+      "Smart Manufacturing"
+    ],
     icon: Brain,
     color: "from-purple-600 to-pink-600"
   },
   {
-    title: "SaaS Solutions",
-    description: "Cloud-based software solutions with flexible pricing tiers, from basic features to advanced capabilities.",
-    features: ["Free Basic Tier", "Premium Features", "Enterprise Solutions", "Custom Integrations"],
+    title: "Future-Ready SaaS",
+    description: "Cloud-based solutions with robotics and AI integration.",
+    features: [
+      "Robotics as a Service",
+      "AI-Powered Analytics",
+      "Enterprise Solutions",
+      "Custom Integrations",
+      "Real-time Monitoring",
+      "Predictive Maintenance"
+    ],
     icon: Server,
     color: "from-orange-600 to-red-600"
   },
   {
-    title: "Cloud Optimization",
-    description: "Expert cloud cost management and optimization to reduce infrastructure expenses and improve efficiency.",
-    features: ["Cost Analysis", "Resource Optimization", "Performance Tuning", "Cost Forecasting"],
-    icon: Cloud,
+    title: "Smart Infrastructure",
+    description: "Intelligent systems for modern business operations.",
+    features: [
+      "IoT Integration",
+      "Smart Buildings",
+      "Energy Management",
+      "Security Systems",
+      "Environmental Control",
+      "Resource Optimization"
+    ],
+    icon: Network,
     color: "from-green-600 to-emerald-600"
   }
 ]
@@ -120,7 +151,7 @@ export default function About() {
               </span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              We&apos;re revolutionizing technology with cutting-edge AI and cloud solutions
+              Pioneering the future with robotics, AI, and automation solutions
             </p>
           </div>
         </div>
@@ -204,10 +235,10 @@ export default function About() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:4rem_4rem] rounded-3xl" />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
+                Ready to Transform Your Business with Robotics?
               </h2>
               <p className="text-blue-100 text-lg mb-8 max-w-2xl">
-                Join us in shaping the future of technology with our cutting-edge solutions.
+                Join us in shaping the future of automation and robotics technology.
               </p>
               <button className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-medium hover:bg-blue-50 transition-colors duration-300">
                 Get Started

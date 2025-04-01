@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { Button } from "./ui/button"
+import Image from 'next/image'
 
 export function About() {
   return (
@@ -63,13 +64,13 @@ export function About() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
-              <img
-                src="/images/about.jpg"
-                alt="About Us"
-                className="object-cover w-full h-full"
-              />
-            </div>
+            <Image
+              src="/path/to/image.jpg"
+              alt="About Neurolink"
+              width={800}
+              height={600}
+              className="rounded-lg"
+            />
             <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg">
               <div className="text-4xl font-bold text-blue-600">10+</div>
               <div className="text-gray-600">Years of App Development Experience</div>

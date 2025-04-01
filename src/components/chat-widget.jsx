@@ -30,6 +30,7 @@ export default function ChatWidget() {
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const scrollRef = useRef(null)
+  const scrollAreaRef = useRef(null)
 
   // Load initial greeting when chat is opened
   useEffect(() => {
@@ -63,6 +64,15 @@ export default function ChatWidget() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight
     }
   }, [messages])
+
+  useEffect(() => {
+    if (isOpen) {
+      scrollAreaRef.current?.scrollTo({
+        top: scrollAreaRef.current.scrollHeight,
+        behavior: 'smooth'
+      })
+    }
+  }, [isOpen, messages.length])
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return
@@ -113,7 +123,7 @@ export default function ChatWidget() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900">AI Assistant</h3>
-                <p className="text-xs text-gray-500">Always here to help</p>
+                <p className="text-sm text-gray-500">We&apos;re here to help!</p>
               </div>
             </div>
             <Button
