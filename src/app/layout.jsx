@@ -1,20 +1,23 @@
-import { Inter } from &apos;next/font/google&apos;
-import &apos;./globals.css&apos;
-import Header from &apos;@/components/header/Header&apos;
+'use client';
 
-const inter = Inter({ subsets: [&apos;latin&apos;] })
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/header/Header';
+import { Toaster } from 'react-hot-toast';
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: &apos;Neurolink - Custom Software & Cloud Solutions&apos;,
-  description: &apos;Transform your business with custom software development, automation solutions, and cloud infrastructure.&apos;,
+  title: 'Neurolink - Custom Software & Cloud Solutions',
+  description: 'Transform your business with custom software development, automation solutions, and cloud infrastructure.',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang=&quot;en&quot;>
+    <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className=&quot;pt-16&quot;>
+        <main className="pt-16">
           {children}
         </main>
       </body>

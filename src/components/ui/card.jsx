@@ -1,41 +1,41 @@
-import * as React from &quot;react&quot;
+import * as React from 'react';
 
-import { cn } from &quot;@/lib/utils&quot;
+import { cn } from '@/lib/utils';
 
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(&quot;rounded-xl border bg-card text-card-foreground shadow&quot;, className)}
+    className={cn('rounded-xl border bg-card text-card-foreground shadow', className)}
     {...props} />
 ))
-Card.displayName = &quot;Card&quot;
+Card.displayName = 'Card'
 
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(&quot;flex flex-col space-y-1.5 p-6&quot;, className)}
+    className={cn('flex flex-col space-y-1.5 p-6', className)}
     {...props} />
 ))
-CardHeader.displayName = &quot;CardHeader&quot;
+CardHeader.displayName = 'CardHeader'
 
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+  <h3
     ref={ref}
-    className={cn(&quot;font-semibold leading-none tracking-tight&quot;, className)}
+    className={cn('font-semibold leading-none tracking-tight', className)}
     {...props} />
 ))
-CardTitle.displayName = &quot;CardTitle&quot;
+CardTitle.displayName = 'CardTitle'
 
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
-  <div
+  <p
     ref={ref}
-    className={cn(&quot;text-sm text-muted-foreground&quot;, className)}
+    className={cn('text-sm text-muted-foreground', className)}
     {...props} />
 ))
-CardDescription.displayName = &quot;CardDescription&quot;
+CardDescription.displayName = 'CardDescription'
 
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn(&quot;p-6 pt-0&quot;, className)} {...props} />
+  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
 ))
 CardContent.displayName = &quot;CardContent&quot;
 
