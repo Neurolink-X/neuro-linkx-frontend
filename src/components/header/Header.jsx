@@ -1,7 +1,7 @@
-&apos;use client&apos;
+'use client';
 
-import { useState } from &apos;react&apos;
-import Link from &apos;next/link&apos;
+import { useState } from 'react';
+import Link from 'next/link';
 import { 
   Menu, 
   X, 
@@ -10,54 +10,54 @@ import {
   UserPlus,
   Brain,
   ChevronDown
-} from &apos;lucide-react&apos;
+} from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isAuthOpen, setIsAuthOpen] = useState(false)
 
   return (
-    <header className=&quot;fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100&quot;>
-      <div className=&quot;container mx-auto px-4&quot;>
-        <div className=&quot;flex items-center justify-between h-16&quot;>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href=&quot;/&quot; className=&quot;flex items-center gap-2&quot;>
-            <Brain className=&quot;w-8 h-8 text-blue-600&quot; />
-            <span className=&quot;text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text&quot;>
+          <Link href="/" className="flex items-center gap-2">
+            <Brain className="w-8 h-8 text-blue-600" />
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">
               Neurolink
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className=&quot;hidden md:flex items-center gap-8&quot;>
-            <Link href=&quot;/&quot; className=&quot;text-gray-600 hover:text-gray-900 transition-colors&quot;>
+          <nav className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">
               Home
             </Link>
-            <Link href=&quot;/services&quot; className=&quot;text-gray-600 hover:text-gray-900 transition-colors&quot;>
+            <Link href="/services" className="text-gray-600 hover:text-gray-900 transition-colors">
               Services
             </Link>
-            <Link href=&quot;/about&quot; className=&quot;text-gray-600 hover:text-gray-900 transition-colors&quot;>
+            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
               About
             </Link>
-            <Link href=&quot;/contact&quot; className=&quot;text-gray-600 hover:text-gray-900 transition-colors&quot;>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">
               Contact
             </Link>
           </nav>
 
           {/* Auth Buttons */}
-          <div className=&quot;hidden md:flex items-center gap-4&quot;>
+          <div className="hidden md:flex items-center gap-4">
             <Link 
-              href=&quot;/auth?mode=login&quot;
-              className=&quot;px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2&quot;
+              href="/auth?mode=login"
+              className="px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2"
             >
-              <LogIn className=&quot;w-4 h-4&quot; />
+              <LogIn className="w-4 h-4" />
               Sign In
             </Link>
             <Link 
-              href=&quot;/auth?mode=signup&quot;
-              className=&quot;px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center gap-2&quot;
+              href="/auth?mode=signup"
+              className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center gap-2"
             >
-              <UserPlus className=&quot;w-4 h-4&quot; />
+              <UserPlus className="w-4 h-4" />
               Sign Up
             </Link>
           </div>
@@ -65,62 +65,62 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className=&quot;md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors&quot;
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
             {isMenuOpen ? (
-              <X className=&quot;w-6 h-6 text-gray-600&quot; />
+              <X className="w-6 h-6 text-gray-600" />
             ) : (
-              <Menu className=&quot;w-6 h-6 text-gray-600&quot; />
+              <Menu className="w-6 h-6 text-gray-600" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className=&quot;md:hidden py-4 space-y-4&quot;>
+          <div className="md:hidden py-4 space-y-4">
             <Link 
-              href=&quot;/&quot; 
-              className=&quot;block text-gray-600 hover:text-gray-900 transition-colors&quot;
+              href="/" 
+              className="block text-gray-600 hover:text-gray-900 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
-              href=&quot;/services&quot; 
-              className=&quot;block text-gray-600 hover:text-gray-900 transition-colors&quot;
+              href="/services" 
+              className="block text-gray-600 hover:text-gray-900 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link 
-              href=&quot;/about&quot; 
-              className=&quot;block text-gray-600 hover:text-gray-900 transition-colors&quot;
+              href="/about" 
+              className="block text-gray-600 hover:text-gray-900 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
-              href=&quot;/contact&quot; 
-              className=&quot;block text-gray-600 hover:text-gray-900 transition-colors&quot;
+              href="/contact" 
+              className="block text-gray-600 hover:text-gray-900 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>
-            <div className=&quot;pt-4 border-t border-gray-100 space-y-2&quot;>
+            <div className="pt-4 border-t border-gray-100 space-y-2">
               <Link 
-                href=&quot;/auth?mode=login&quot;
-                className=&quot;block px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2&quot;
+                href="/auth?mode=login"
+                className="block px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <LogIn className=&quot;w-4 h-4&quot; />
+                <LogIn className="w-4 h-4" />
                 Sign In
               </Link>
               <Link 
-                href=&quot;/auth?mode=signup&quot;
-                className=&quot;block px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center gap-2&quot;
+                href="/auth?mode=signup"
+                className="block px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <UserPlus className=&quot;w-4 h-4&quot; />
+                <UserPlus className="w-4 h-4" />
                 Sign Up
               </Link>
             </div>
