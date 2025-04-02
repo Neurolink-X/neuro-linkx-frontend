@@ -3,13 +3,15 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+interface BentoGridProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 export const BentoGrid = ({
   className,
   children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-}) => {
+}: BentoGridProps) => {
   return (
     <div
       className={cn(
@@ -22,6 +24,15 @@ export const BentoGrid = ({
   );
 };
 
+interface BentoGridItemProps {
+  className?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  header?: React.ReactNode;
+  icon?: typeof ArrowRight;
+  link?: string;
+}
+
 export const BentoGridItem = ({
   className,
   title,
@@ -29,14 +40,7 @@ export const BentoGridItem = ({
   header,
   icon: Icon,
   link,
-}: {
-  className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: typeof ArrowRight;
-  link?: string;
-}) => {
+}: BentoGridItemProps) => {
   return (
     <div
       className={cn(

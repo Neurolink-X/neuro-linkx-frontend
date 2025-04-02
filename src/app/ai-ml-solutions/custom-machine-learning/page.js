@@ -249,7 +249,7 @@ export default function CustomMachineLearningPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Leverage Machine Learning?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create custom ML models that drive your business forward.
+              Let&apos;s create custom ML models that drive your business forward.
             </p>
             <Link
               href='/contact'

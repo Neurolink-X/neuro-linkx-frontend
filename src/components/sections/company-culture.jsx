@@ -50,7 +50,7 @@ export default function CompanyCulture() {
               </motion.div>
             ))}
             <div className='font-serif absolute right-0 top-1/2 transform -translate-y-1/2 text-[#ffdddd] text-9xl'>
-              "
+              &quot;
             </div>
           </motion.div>
 
@@ -75,6 +75,9 @@ export default function CompanyCulture() {
                 Explore Vibrant Life @ NeuroLink
             </button>
             </div>
+            <p className='text-white/70 text-lg mb-8'>
+              At NeuroLink Technologies, we believe in a people-first approach. Our culture is built on the foundation of &quot;Innovation through Collaboration&quot;.
+            </p>
           </motion.div>
         </div>
       </div>

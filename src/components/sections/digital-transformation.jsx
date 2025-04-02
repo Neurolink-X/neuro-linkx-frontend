@@ -238,6 +238,10 @@ export default function DigitalTransformation() {
             </div>
           </motion.div>
         </div>
+
+        <p className='text-white/70 text-lg mb-8'>
+          Our digital transformation services help businesses navigate the complex landscape of modern technology. We&apos;re here to guide you through every step of your digital journey.
+        </p>
       </div>
     </section>
   )

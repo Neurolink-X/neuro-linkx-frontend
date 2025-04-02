@@ -19,7 +19,10 @@ import {
   Globe,
   Languages,
   Clock,
-  Users2
+  Users2,
+  TrendingUp,
+  PieChart,
+  Cpu
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRef } from 'react';

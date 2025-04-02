@@ -19,7 +19,11 @@ import {
   Globe,
   Languages,
   Clock,
-  Users2
+  Users2,
+  Cpu,
+  Workflow,
+  Code2,
+  Database
 } from 'lucide-react';
 import Link from 'next/link';
 

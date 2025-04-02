@@ -250,7 +250,7 @@ export default function AIGameDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Create Your AI-Powered Game?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's bring your game ideas to life with cutting-edge AI technology.
+              Let&apos;s bring your game ideas to life with cutting-edge AI technology.
             </p>
             <Link
               href='/contact'

@@ -257,7 +257,7 @@ export default function AIConsultancyServicesPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Transform Your Business with AI?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's develop a comprehensive AI strategy that drives your business forward.
+              Let&apos;s develop a comprehensive AI strategy that drives your business forward.
             </p>
             <Link
               href='/contact'

@@ -65,7 +65,7 @@ export default function Hero() {
               </span>
               {' '}to{' '}
               <span className='relative inline-block group'>
-                <span className='relative z-10'>Here's How</span>
+                <span className='relative z-10'>Here&apos;s How</span>
                 <motion.div
                   className='absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-full'
                   initial={{ scaleX: 0, opacity: 0 }}
@@ -115,6 +115,10 @@ export default function Hero() {
                 </span>
               </button>
             </motion.div>
+
+            <p className='text-white/70 text-lg max-w-2xl mx-auto'>
+              We&apos;re not just another tech company. We&apos;re your partner in innovation.
+            </p>
           </motion.div>
 
           {/* Right Column - Feature Cards */}

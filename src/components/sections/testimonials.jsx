@@ -263,8 +263,8 @@ export default function Testimonials() {
               Leaders
             </span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Discover how we've helped leading companies transform their digital landscape.
+          <p className="text-white/70 text-lg mb-8">
+            Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
           </p>
         </div>
 
