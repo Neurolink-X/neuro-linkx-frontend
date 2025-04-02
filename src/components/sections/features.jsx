@@ -1,43 +1,44 @@
-import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;
-import { Zap, Shield, Cloud, Code } from &quot;lucide-react&quot;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Zap, Shield, Cloud, Code } from 'lucide-react'
 
 const features = [
   {
-    icon: Zap,
-    title: &quot;High Performance&quot;,
-    description: &quot;Lightning-fast response times and optimal resource usage&quot;,
+    title: 'Lightning Fast',
+    description: 'Built with performance in mind for the best user experience',
+    icon: <Zap className='w-6 h-6' />,
   },
   {
-    icon: Shield,
-    title: &quot;Enterprise Security&quot;,
-    description: &quot;Advanced security features to protect your data&quot;,
+    title: 'Secure by Default',
+    description: 'Enterprise-grade security to protect your data',
+    icon: <Shield className='w-6 h-6' />,
   },
   {
-    icon: Cloud,
-    title: &quot;Cloud Native&quot;,
-    description: &quot;Built for modern cloud infrastructure&quot;,
+    title: 'Cloud Ready',
+    description: 'Deploy anywhere with cloud-native architecture',
+    icon: <Cloud className='w-6 h-6' />,
   },
   {
-    icon: Code,
-    title: &quot;Developer First&quot;,
-    description: &quot;Designed with developers in mind&quot;,
+    title: 'Developer First',
+    description: 'Built for developers with modern tooling',
+    icon: <Code className='w-6 h-6' />,
   },
 ]
 
 export default function Features() {
   return (
-    <section className=&quot;py-20 px-4&quot;>
-      <div className=&quot;container mx-auto&quot;>
-        <h2 className=&quot;text-3xl font-bold text-white text-center mb-12&quot;>Features That Set Us Apart</h2>
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>
+    <section className='py-20 px-4'>
+      <div className='container mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {features.map((feature) => (
-            <Card key={feature.title} className=&quot;bg-slate-800 border-slate-700&quot;>
+            <Card key={feature.title} className='border-none shadow-lg hover:shadow-xl transition-shadow duration-300'>
               <CardHeader>
-                <feature.icon className=&quot;h-12 w-12 text-red-500 mb-4&quot; />
-                <CardTitle className=&quot;text-white&quot;>{feature.title}</CardTitle>
+                <div className='p-2 w-fit rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 text-white mb-4'>
+                  {feature.icon}
+                </div>
+                <CardTitle className='text-xl'>{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className=&quot;text-slate-400&quot;>{feature.description}</p>
+                <p className='text-gray-600'>{feature.description}</p>
               </CardContent>
             </Card>
           ))}
