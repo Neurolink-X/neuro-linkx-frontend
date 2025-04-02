@@ -1,7 +1,7 @@
-&quot;use client&quot;
+'use client'
 
-import { useState } from &quot;react&quot;
-import { motion, AnimatePresence } from &quot;framer-motion&quot;
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Brain, 
   Zap, 
@@ -21,123 +21,123 @@ import {
   Lock, 
   Rocket, 
   BarChart
-} from &quot;lucide-react&quot;
+} from 'lucide-react'
 
-const tabs = [&quot;Gen AI&quot;, &quot;DevOps&quot;, &quot;CloudOps&quot;, &quot;Data Engineering&quot;, &quot;Product Lifecycle&quot;, &quot;Enterprise App&quot;]
+const tabs = ['Gen AI', 'DevOps', 'CloudOps', 'Data Engineering', 'Product Lifecycle', 'Enterprise App']
 
 const tabContent = {
-  &quot;Gen AI&quot;: {
-    title: &quot;Transforming Business with Generative AI&quot;,
+  'Gen AI': {
+    title: 'Transforming Business with Generative AI',
     description:
-      &quot;Our Gen AI solutions leverage cutting-edge artificial intelligence to generate new content, ideas, and solutions. From natural language processing to image generation, our AI services help businesses automate creative processes, enhance customer experiences, and drive innovation across all departments.&quot;,
+      'Our Gen AI solutions leverage cutting-edge artificial intelligence to generate new content, ideas, and solutions. From natural language processing to image generation, our AI services help businesses automate creative processes, enhance customer experiences, and drive innovation across all departments.',
     features: [
-      { id: &quot;01&quot;, title: &quot;Natural Language Processing&quot;, icon: Brain, color: &quot;from-blue-500 to-indigo-500&quot; },
-      { id: &quot;02&quot;, title: &quot;Image & Content Generation&quot;, icon: Zap, color: &quot;from-purple-500 to-pink-500&quot; },
-      { id: &quot;03&quot;, title: &quot;Predictive Analytics&quot;, icon: LineChart, color: &quot;from-orange-500 to-red-500&quot; },
-      { id: &quot;04&quot;, title: &quot;AI Model Training & Deployment&quot;, icon: Cpu, color: &quot;from-green-500 to-emerald-500&quot; },
+      { id: '01', title: 'Natural Language Processing', icon: Brain, color: 'from-blue-500 to-indigo-500' },
+      { id: '02', title: 'Image & Content Generation', icon: Zap, color: 'from-purple-500 to-pink-500' },
+      { id: '03', title: 'Predictive Analytics', icon: LineChart, color: 'from-orange-500 to-red-500' },
+      { id: '04', title: 'AI Model Training & Deployment', icon: Cpu, color: 'from-green-500 to-emerald-500' },
     ],
   },
   DevOps: {
-    title: &quot;Streamlining Development with DevOps Excellence&quot;,
+    title: 'Streamlining Development with DevOps Excellence',
     description:
-      &quot;Our DevOps practices bridge the gap between development and operations, creating a seamless pipeline for software delivery. By automating workflows, implementing continuous integration and delivery, and fostering collaboration, we help organizations release high-quality software faster and more reliably.&quot;,
+      'Our DevOps practices bridge the gap between development and operations, creating a seamless pipeline for software delivery. By automating workflows, implementing continuous integration and delivery, and fostering collaboration, we help organizations release high-quality software faster and more reliably.',
     features: [
-      { id: &quot;01&quot;, title: &quot;CI/CD Pipeline Automation&quot;, icon: GitBranch, color: &quot;from-blue-500 to-indigo-500&quot; },
-      { id: &quot;02&quot;, title: &quot;Infrastructure as Code&quot;, icon: Code2, color: &quot;from-purple-500 to-pink-500&quot; },
-      { id: &quot;03&quot;, title: &quot;Monitoring & Observability&quot;, icon: BarChart, color: &quot;from-orange-500 to-red-500&quot; },
-      { id: &quot;04&quot;, title: &quot;Container Orchestration&quot;, icon: Boxes, color: &quot;from-green-500 to-emerald-500&quot; },
+      { id: '01', title: 'CI/CD Pipeline Automation', icon: GitBranch, color: 'from-blue-500 to-indigo-500' },
+      { id: '02', title: 'Infrastructure as Code', icon: Code2, color: 'from-purple-500 to-pink-500' },
+      { id: '03', title: 'Monitoring & Observability', icon: BarChart, color: 'from-orange-500 to-red-500' },
+      { id: '04', title: 'Container Orchestration', icon: Boxes, color: 'from-green-500 to-emerald-500' },
     ],
   },
   CloudOps: {
-    title: &quot;Enabling Seamless Operations with Precision and Agility&quot;,
+    title: 'Enabling Seamless Operations with Precision and Agility',
     description:
-      &quot;Mastering cloud operations goes beyond routine management: it&apos;s about creating a strategic advantage. Our CloudOps services are crafted with a deep understanding of your unique operational challenges, focusing on delivering tailored solutions that balance agility, security, and efficiency.&quot;,
+      'Mastering cloud operations goes beyond routine management: it\'s about creating a strategic advantage. Our CloudOps services are crafted with a deep understanding of your unique operational challenges, focusing on delivering tailored solutions that balance agility, security, and efficiency.',
     features: [
-      { id: &quot;01&quot;, title: &quot;Cloud Infrastructure Management&quot;, icon: Cloud, color: &quot;from-blue-500 to-indigo-500&quot; },
-      { id: &quot;02&quot;, title: &quot;Cloud Cost Management&quot;, icon: BarChart, color: &quot;from-purple-500 to-pink-500&quot; },
-      { id: &quot;03&quot;, title: &quot;Cloud Monitoring & Performance&quot;, icon: Server, color: &quot;from-orange-500 to-red-500&quot; },
-      { id: &quot;04&quot;, title: &quot;Cloud Automation & Orchestration&quot;, icon: Network, color: &quot;from-green-500 to-emerald-500&quot; },
+      { id: '01', title: 'Cloud Infrastructure Management', icon: Cloud, color: 'from-blue-500 to-indigo-500' },
+      { id: '02', title: 'Cloud Cost Management', icon: BarChart, color: 'from-purple-500 to-pink-500' },
+      { id: '03', title: 'Cloud Monitoring & Performance', icon: Server, color: 'from-orange-500 to-red-500' },
+      { id: '04', title: 'Cloud Automation & Orchestration', icon: Network, color: 'from-green-500 to-emerald-500' },
     ],
   },
-  &quot;Data Engineering&quot;: {
-    title: &quot;Building Robust Data Foundations&quot;,
+  'Data Engineering': {
+    title: 'Building Robust Data Foundations',
     description:
-      &quot;Our Data Engineering services transform raw data into valuable business insights. We design and implement scalable data pipelines, data lakes, and warehousing solutions that enable organizations to harness the full potential of their data assets.&quot;,
+      'Our Data Engineering services transform raw data into valuable business insights. We design and implement scalable data pipelines, data lakes, and warehousing solutions that enable organizations to harness the full potential of their data assets.',
     features: [
-      { id: &quot;01&quot;, title: &quot;Data Pipeline Development&quot;, icon: Database, color: &quot;from-blue-500 to-indigo-500&quot; },
-      { id: &quot;02&quot;, title: &quot;Data Warehousing&quot;, icon: Database, color: &quot;from-purple-500 to-pink-500&quot; },
-      { id: &quot;03&quot;, title: &quot;Big Data Processing&quot;, icon: Server, color: &quot;from-orange-500 to-red-500&quot; },
-      { id: &quot;04&quot;, title: &quot;Data Governance & Quality&quot;, icon: Shield, color: &quot;from-green-500 to-emerald-500&quot; },
+      { id: '01', title: 'Data Pipeline Development', icon: Database, color: 'from-blue-500 to-indigo-500' },
+      { id: '02', title: 'Data Warehousing', icon: Database, color: 'from-purple-500 to-pink-500' },
+      { id: '03', title: 'Big Data Processing', icon: Server, color: 'from-orange-500 to-red-500' },
+      { id: '04', title: 'Data Governance & Quality', icon: Shield, color: 'from-green-500 to-emerald-500' },
     ],
   },
-  &quot;Product Lifecycle&quot;: {
-    title: &quot;Managing Products from Concept to Retirement&quot;,
+  'Product Lifecycle': {
+    title: 'Managing Products from Concept to Retirement',
     description:
-      &quot;Our Product Lifecycle Management services provide end-to-end support for your product journey. From initial concept and design to development, deployment, maintenance, and eventual retirement, we ensure each phase is optimized for success.&quot;,
+      'Our Product Lifecycle Management services provide end-to-end support for your product journey. From initial concept and design to development, deployment, maintenance, and eventual retirement, we ensure each phase is optimized for success.',
     features: [
-      { id: &quot;01&quot;, title: &quot;Product Strategy & Roadmapping&quot;, icon: Rocket, color: &quot;from-blue-500 to-indigo-500&quot; },
-      { id: &quot;02&quot;, title: &quot;Agile Development&quot;, icon: Code2, color: &quot;from-purple-500 to-pink-500&quot; },
-      { id: &quot;03&quot;, title: &quot;Quality Assurance&quot;, icon: Shield, color: &quot;from-orange-500 to-red-500&quot; },
-      { id: &quot;04&quot;, title: &quot;Product Analytics&quot;, icon: BarChart, color: &quot;from-green-500 to-emerald-500&quot; },
+      { id: '01', title: 'Product Strategy & Roadmapping', icon: Rocket, color: 'from-blue-500 to-indigo-500' },
+      { id: '02', title: 'Agile Development', icon: Code2, color: 'from-purple-500 to-pink-500' },
+      { id: '03', title: 'Quality Assurance', icon: Shield, color: 'from-orange-500 to-red-500' },
+      { id: '04', title: 'Product Analytics', icon: BarChart, color: 'from-green-500 to-emerald-500' },
     ],
   },
-  &quot;Enterprise App&quot;: {
-    title: &quot;Building Powerful Enterprise Applications&quot;,
+  'Enterprise App': {
+    title: 'Building Powerful Enterprise Applications',
     description:
-      &quot;Our Enterprise Application services deliver custom, scalable solutions designed to address your organization&apos;s specific challenges. We develop robust, secure, and user-friendly applications that integrate seamlessly with your existing systems.&quot;,
+      'Our Enterprise Application services deliver custom, scalable solutions designed to address your organization\'s specific challenges. We develop robust, secure, and user-friendly applications that integrate seamlessly with your existing systems.',
     features: [
-      { id: &quot;01&quot;, title: &quot;Custom Application Development&quot;, icon: Code2, color: &quot;from-blue-500 to-indigo-500&quot; },
-      { id: &quot;02&quot;, title: &quot;Legacy System Modernization&quot;, icon: Server, color: &quot;from-purple-500 to-pink-500&quot; },
-      { id: &quot;03&quot;, title: &quot;Enterprise Integration&quot;, icon: Network, color: &quot;from-orange-500 to-red-500&quot; },
-      { id: &quot;04&quot;, title: &quot;Mobile Enterprise Solutions&quot;, icon: Globe, color: &quot;from-green-500 to-emerald-500&quot; },
+      { id: '01', title: 'Custom Application Development', icon: Code2, color: 'from-blue-500 to-indigo-500' },
+      { id: '02', title: 'Legacy System Modernization', icon: Server, color: 'from-purple-500 to-pink-500' },
+      { id: '03', title: 'Enterprise Integration', icon: Network, color: 'from-orange-500 to-red-500' },
+      { id: '04', title: 'Mobile Enterprise Solutions', icon: Globe, color: 'from-green-500 to-emerald-500' },
     ],
   },
 }
 
 export default function Services() {
-  const [activeTab, setActiveTab] = useState(&quot;Gen AI&quot;)
+  const [activeTab, setActiveTab] = useState('Gen AI')
 
   return (
-    <section className=&quot;relative py-32 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden&quot;>
+    <section className='relative py-32 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden'>
       {/* Animated Background */}
-      <div className=&quot;absolute inset-0&quot;>
-        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.05),transparent_50%)]&quot; />
-        <div className=&quot;absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]&quot; />
+      <div className='absolute inset-0'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.05),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
       </div>
 
-      <div className=&quot;container relative mx-auto max-w-7xl&quot;>
+      <div className='container relative mx-auto max-w-7xl'>
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className=&quot;text-center mb-20&quot;
+          className='text-center mb-20'
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className=&quot;inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm shadow-lg shadow-[#ff3b30]/5&quot;
+            className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm shadow-lg shadow-[#ff3b30]/5'
           >
-            <Sparkles className=&quot;w-4 h-4 text-[#ff3b30]&quot; />
-            <span className=&quot;text-white/90 text-sm font-medium tracking-wide&quot;>Our Services</span>
+            <Sparkles className='w-4 h-4 text-[#ff3b30]' />
+            <span className='text-white/90 text-sm font-medium tracking-wide'>Our Services</span>
           </motion.div>
-          <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight&quot;>
-            Crafted by Talent,{&apos; &apos;}
-            <span className=&quot;bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient&quot;>
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight'>
+            Crafted by Talent,{' &apos; '}
+            <span className='bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient'>
               Perfected in Services
             </span>
           </h2>
-          <p className=&quot;text-white/70 text-lg max-w-2xl mx-auto&quot;>
+          <p className='text-white/70 text-lg max-w-2xl mx-auto'>
             Leverage cutting-edge technologies to transform your business operations and drive innovation.
           </p>
         </motion.div>
 
         {/* Tabs */}
-        <div className=&quot;flex flex-row justify-center mb-12&quot;>
-          <div className=&quot;flex flex-row max-w-min justify-center gap-2 py-2 px-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 overflow-x-auto&quot;>
+        <div className='flex flex-row justify-center mb-12'>
+          <div className='flex flex-row max-w-min justify-center gap-2 py-2 px-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 overflow-x-auto'>
             {tabs.map((tab) => (
               <motion.button
                 key={tab}
@@ -146,32 +146,32 @@ export default function Services() {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full text-sm md:text-base transition-all duration-300 ${
                   activeTab === tab 
-                    ? &quot;bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white shadow-lg shadow-[#ff3b30]/20&quot; 
-                    : &quot;bg-transparent text-white/70 hover:text-white hover:bg-white/5&quot;
+                    ? 'bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white shadow-lg shadow-[#ff3b30]/20' 
+                    : 'bg-transparent text-white/70 hover:text-white hover:bg-white/5'
                 }`}
               >
-                <p className=&quot;text-nowrap&quot;>{tab}</p>
+                <p className='text-nowrap'>{tab}</p>
               </motion.button>
             ))}
           </div>
         </div>
 
         {/* Tab Content */}
-        <AnimatePresence mode=&quot;wait&quot;>
+        <AnimatePresence mode='wait'>
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className=&quot;grid md:grid-cols-2 gap-12 items-center&quot;
+            className='grid md:grid-cols-2 gap-12 items-center'
           >
-            <div className=&quot;order-2 md:order-1&quot;>
+            <div className='order-2 md:order-1'>
               <motion.h3 
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;
+                className='text-3xl md:text-4xl font-bold text-white mb-6'
               >
                 {tabContent[activeTab].title}
               </motion.h3>
@@ -179,7 +179,7 @@ export default function Services() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className=&quot;text-white/70 text-lg mb-8&quot;
+                className='text-white/70 text-lg mb-8'
               >
                 {tabContent[activeTab].description}
               </motion.p>
@@ -189,18 +189,18 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className=&quot;group relative px-8 py-4 rounded-full font-medium overflow-hidden transition-all duration-300 shadow-lg shadow-[#ff3b30]/10&quot;
+                className='group relative px-8 py-4 rounded-full font-medium overflow-hidden transition-all duration-300 shadow-lg shadow-[#ff3b30]/10'
               >
-                <div className=&quot;absolute inset-0 bg-gradient-to-r from-orange-500 to-[#ff3b30] opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot;></div>
-                <div className=&quot;absolute inset-0 bg-[#ff3b30] group-hover:bg-transparent transition-colors duration-300&quot;></div>
-                <span className=&quot;relative text-white text-lg flex items-center gap-2&quot;>
+                <div className='absolute inset-0 bg-gradient-to-r from-orange-500 to-[#ff3b30] opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                <div className='absolute inset-0 bg-[#ff3b30] group-hover:bg-transparent transition-colors duration-300'></div>
+                <span className='relative text-white text-lg flex items-center gap-2'>
                   Learn More
-                  <ChevronRight className=&quot;w-5 h-5 group-hover:translate-x-1 transition-transform&quot; />
+                  <ChevronRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </span>
               </motion.button>
             </div>
-            <div className=&quot;order-1 md:order-2 relative&quot;>
-              <div className=&quot;relative h-[500px]&quot;>
+            <div className='order-1 md:order-2 relative'>
+              <div className='relative h-[500px]'>
                 {tabContent[activeTab].features.map((feature, index) => (
                   <motion.div
                     key={feature.id}
@@ -208,25 +208,25 @@ export default function Services() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
-                    className=&quot;absolute group&quot;
+                    className='absolute group'
                     style={{
-                      top: index === 0 ? &quot;10%&quot; : index === 1 ? &quot;70%&quot; : index === 2 ? &quot;10%&quot; : &quot;70%&quot;,
-                      left: index === 0 || index === 1 ? &quot;10%&quot; : &quot;60%&quot;,
+                      top: index === 0 ? '10%' : index === 1 ? '70%' : index === 2 ? '10%' : '70%',
+                      left: index === 0 || index === 1 ? '10%' : '60%',
                     }}
                   >
-                    <div className=&quot;relative p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#ff3b30]/20 transition-all duration-300 shadow-lg shadow-[#ff3b30]/5 overflow-hidden&quot;>
-                      <div className=&quot;absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
-                      <div className=&quot;relative flex items-center gap-4&quot;>
+                    <div className='relative p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#ff3b30]/20 transition-all duration-300 shadow-lg shadow-[#ff3b30]/5 overflow-hidden'>
+                      <div className='absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                      <div className='relative flex items-center gap-4'>
                         <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <feature.icon className=&quot;w-6 h-6 text-white&quot; />
+                          <feature.icon className='w-6 h-6 text-white' />
                         </div>
                         <div>
-                          <p className=&quot;text-white font-medium&quot;>{feature.title}</p>
+                          <p className='text-white font-medium'>{feature.title}</p>
                         </div>
                       </div>
                     </div>
                     <motion.div
-                      className=&quot;absolute -top-8 -left-8 text-6xl font-bold text-white/5 group-hover:text-white/10 transition-colors duration-300&quot;
+                      className='absolute -top-8 -left-8 text-6xl font-bold text-white/5 group-hover:text-white/10 transition-colors duration-300'
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -236,13 +236,13 @@ export default function Services() {
                   </motion.div>
                 ))}
 
-                <svg className=&quot;absolute inset-0 w-full h-full z-20&quot; viewBox=&quot;0 0 400 400&quot;>
+                <svg className='absolute inset-0 w-full h-full z-20' viewBox='0 0 400 400'>
                   <path
-                    d=&quot;M100,100 C150,50 250,50 300,100 C350,150 350,250 300,300 C250,350 150,350 100,300 C50,250 50,150 100,100&quot;
-                    fill=&quot;none&quot;
-                    stroke=&quot;rgba(255,255,255,0.1)&quot;
-                    strokeWidth=&quot;2&quot;
-                    strokeDasharray=&quot;5,5&quot;
+                    d='M100,100 C150,50 250,50 300,100 C350,150 350,250 300,300 C250,350 150,350 100,300 C50,250 50,150 100,100'
+                    fill='none'
+                    stroke='rgba(255,255,255,0.1)'
+                    strokeWidth='2'
+                    strokeDasharray='5,5'
                   />
                 </svg>
               </div>

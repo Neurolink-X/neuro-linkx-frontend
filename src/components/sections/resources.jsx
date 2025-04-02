@@ -1,77 +1,77 @@
-&quot;use client&quot;
+'use client'
 
-import { motion } from &quot;framer-motion&quot;
-import Image from &quot;next/image&quot;
-import { ArrowRight, BookOpen, Clock, Tag, Sparkles, TrendingUp, Bookmark } from &quot;lucide-react&quot;
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { ArrowRight, BookOpen, Clock, Tag, Sparkles, TrendingUp, Bookmark } from 'lucide-react'
 
 const resources = [
   {
     id: 1,
-    title: &quot;Reverse ETL: Operationalizing Data for Real-Time Business Decisions&quot;,
-    category: &quot;Data Analytics&quot;,
-    readTime: &quot;5 min read&quot;,
-    description: &quot;Learn how to leverage reverse ETL to make data-driven decisions in real-time.&quot;,
-    color: &quot;from-[#1e2942] to-[#2d3748]&quot;,
+    title: 'Reverse ETL: Operationalizing Data for Real-Time Business Decisions',
+    category: 'Data Analytics',
+    readTime: '5 min read',
+    description: 'Learn how to leverage reverse ETL to make data-driven decisions in real-time.',
+    color: 'from-[#1e2942] to-[#2d3748]',
     trending: true
   },
   {
     id: 2,
-    title: &quot;The HR Prompt Handbook: 200+ Prompts For ChatGPT/Gemini and Your Own or Private LLMs&quot;,
-    category: &quot;AI & Machine Learning&quot;,
-    readTime: &quot;8 min read&quot;,
-    description: &quot;A comprehensive guide to using AI prompts effectively in HR processes.&quot;,
-    color: &quot;from-[#1e2942] to-[#2d3748]&quot;,
+    title: 'The HR Prompt Handbook: 200+ Prompts For ChatGPT/Gemini and Your Own or Private LLMs',
+    category: 'AI & Machine Learning',
+    readTime: '8 min read',
+    description: 'A comprehensive guide to using AI prompts effectively in HR processes.',
+    color: 'from-[#1e2942] to-[#2d3748]',
     trending: true
   },
   {
     id: 3,
-    title: &quot;Leveraging Generative AI for Advanced Anti-Money Laundering and Fraud Detection&quot;,
-    category: &quot;Security&quot;,
-    readTime: &quot;6 min read&quot;,
-    description: &quot;Discover how AI is revolutionizing fraud detection and AML processes.&quot;,
-    color: &quot;from-[#1e2942] to-[#2d3748]&quot;
+    title: 'Leveraging Generative AI for Advanced Anti-Money Laundering and Fraud Detection',
+    category: 'Security',
+    readTime: '6 min read',
+    description: 'Discover how AI is revolutionizing fraud detection and AML processes.',
+    color: 'from-[#1e2942] to-[#2d3748]'
   },
   {
     id: 4,
-    title: &quot;Edge Computing in Green IoT: Reducing Energy Use in Data Processing&quot;,
-    category: &quot;IoT&quot;,
-    readTime: &quot;7 min read&quot;,
-    description: &quot;Explore sustainable IoT solutions through edge computing technology.&quot;,
-    color: &quot;from-[#1e2942] to-[#2d3748]&quot;
+    title: 'Edge Computing in Green IoT: Reducing Energy Use in Data Processing',
+    category: 'IoT',
+    readTime: '7 min read',
+    description: 'Explore sustainable IoT solutions through edge computing technology.',
+    color: 'from-[#1e2942] to-[#2d3748]'
   },
 ]
 
 export default function Resources() {
   return (
-    <section className=&quot;w-full py-16 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden&quot;>
+    <section className='w-full py-16 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden'>
       {/* Background decorative elements */}
-      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
-        <div className=&quot;absolute -top-40 -right-40 w-80 h-80 bg-[#1e2942]/5 rounded-full blur-3xl&quot;></div>
-        <div className=&quot;absolute -bottom-40 -left-40 w-80 h-80 bg-[#2d3748]/5 rounded-full blur-3xl&quot;></div>
-        <div className=&quot;absolute top-1/2 left-1/2 w-96 h-96 bg-[#ff3b30]/5 rounded-full blur-3xl&quot;></div>
+      <div className='absolute inset-0 overflow-hidden'>
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-[#1e2942]/5 rounded-full blur-3xl'></div>
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-[#2d3748]/5 rounded-full blur-3xl'></div>
+        <div className='absolute top-1/2 left-1/2 w-96 h-96 bg-[#ff3b30]/5 rounded-full blur-3xl'></div>
       </div>
 
-      <div className=&quot;container mx-auto px-4 max-w-6xl relative&quot;>
+      <div className='container mx-auto px-4 max-w-6xl relative'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className=&quot;text-center mb-16&quot;
+          className='text-center mb-16'
         >
-          <div className=&quot;inline-flex items-center gap-2 px-4 py-2 bg-[#ff3b30]/5 rounded-full mb-6 border border-[#ff3b30]/10 shadow-sm&quot;>
-            <Sparkles className=&quot;w-5 h-5 text-[#ff3b30]&quot; />
-            <span className=&quot;text-[#ff3b30] font-medium&quot;>Resources & Insights</span>
+          <div className='inline-flex items-center gap-2 px-4 py-2 bg-[#ff3b30]/5 rounded-full mb-6 border border-[#ff3b30]/10 shadow-sm'>
+            <Sparkles className='w-5 h-5 text-[#ff3b30]' />
+            <span className='text-[#ff3b30] font-medium'>Resources & Insights</span>
           </div>
-          <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4 text-[#1e2942]&quot;>
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-[#1e2942]'>
             The Edge of Innovation
           </h2>
-          <p className=&quot;text-xl text-gray-600 max-w-2xl mx-auto&quot;>
+          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
             Discover cutting-edge insights and resources to drive your business forward
           </p>
         </motion.div>
 
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
           {resources.map((resource, index) => (
             <motion.div
               key={resource.id}
@@ -79,15 +79,19 @@ export default function Resources() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className=&quot;group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#ff3b30]/20 overflow-hidden relative&quot;
+              className='group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#ff3b30]/20 overflow-hidden relative'
             >
               {/* Gradient overlay */}
-              <div className=&quot;absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300&quot;
+              <div className='absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300'
                 style={{
                   background: `linear-gradient(to bottom right, #1e2942, #2d3748)`
                 }}
               ></div>
 
+              <div className='p-8 relative'>
+                <div className='flex items-center justify-between mb-4'>
+                  <div className='flex items-center gap-3'>
+                    <span className='px-3 py-1 bg-[#ff3b30]/5 rounded-full text-sm font-medium text-[#ff3b30] flex items-center gap-1 shadow-sm'>
               <div className=&quot;p-8 relative&quot;>
                 <div className=&quot;flex items-center justify-between mb-4&quot;>
                   <div className=&quot;flex items-center gap-3&quot;>
