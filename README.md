@@ -1,5 +1,5 @@
 # neuro-linkx-frontend
-The official frontend codebase for the NeuroLinkX website delivers a modern, secure, and user-centric interface that represents our brand and showcases our AI- and automation-driven solutions.
+The frontend codebase for teams and the NeuroLinkX website delivers a modern, secure, and user-centric interface that represents our brand and showcases our AI- and automation-driven solutions. (Note- Some Important code may be hidden here for security purposes)
 
 🚀 About NeuroLinkX
 NeuroLinkX is a next-generation IT and SaaS company specializing in AI, automation, and digital transformation. We help startups, SMEs, and enterprises scale with secure, scalable, and intelligent technology solutions.
@@ -11,7 +11,7 @@ The neuro-linkx-frontend is built using the latest industry standards and techno
 
 🔧 Tech Stack
 React.js – Fast and component-driven UI
-
+(Advanced technology is also used here.)
 Tailwind CSS – Modern utility-first CSS framework
 
 JavaScript (ES6+)
