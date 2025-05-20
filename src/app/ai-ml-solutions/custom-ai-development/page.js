@@ -253,7 +253,7 @@ export default function CustomAIDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build Your Custom AI Solution?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create a tailored AI solution that transforms your business operations and drives growth.
+              Let &apos;s create a tailored AI solution that transforms your business operations and drives growth.
             </p>
             <Link
               href='/contact'

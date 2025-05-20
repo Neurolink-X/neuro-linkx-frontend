@@ -249,7 +249,7 @@ export default function AISoftwareDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build AI-Powered Software?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create innovative software solutions that leverage AI technology.
+              Let &apos;s create innovative software solutions that leverage AI technology.
             </p>
             <Link
               href='/contact'

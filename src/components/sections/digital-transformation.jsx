@@ -115,7 +115,7 @@ export default function DigitalTransformation() {
             Digital Transformation Services
           </h2>
           <h3 className='text-2xl md:text-4xl mb-4 text-[#1e2942]'>
-            It's the nimble who triumph, not just the big!
+            It&apos;s the nimble who triumph, not just the big!
           </h3>
           <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
             Transform your business with cutting-edge digital solutions

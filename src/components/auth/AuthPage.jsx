@@ -191,7 +191,7 @@ export default function AuthPage({ initialMode = 'login' }) {
           >
             {isLogin ? (
               <>
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <span className="text-blue-400 hover:text-blue-300">Sign up</span>
               </>
             ) : (
