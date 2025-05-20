@@ -268,7 +268,7 @@ export default function DigitalMarketingPage() {
                 <h3 className='text-xl font-semibold text-[#1e2942]'>SEO</h3>
               </div>
               <p className='text-gray-600 mb-6'>
-                Improve your website's visibility and rankings with our comprehensive SEO services.
+                Improve your website &apos;s visibility and rankings with our comprehensive SEO services.
               </p>
               <ul className='space-y-3'>
                 <li className='flex items-center space-x-2 text-gray-600'>
@@ -488,7 +488,7 @@ export default function DigitalMarketingPage() {
               viewport={{ once: true }}
               className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'
             >
-              Let's create powerful digital marketing campaigns that drive results.
+              Let &apos;s create powerful digital marketing campaigns that drive results.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

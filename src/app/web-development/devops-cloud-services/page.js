@@ -230,7 +230,7 @@ export default function DevOpsCloudServicesPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Optimize Your Development Process?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's streamline your development and deployment workflow with modern DevOps practices.
+              Let &apos;s streamline your development and deployment workflow with modern DevOps practices.
             </p>
             <Link
               href='/contact'

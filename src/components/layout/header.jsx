@@ -278,7 +278,7 @@ export default function Header() {
               href='/ai-consultation'
               className='hidden md:flex md:flex-row py-[10px] px-6 bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white text-nowrap rounded-lg hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 font-medium'
             >
-              Let's Talk AI
+              Let&apos;s Talk AI
               <Stars className='ml-2 text-sm animate-pulse' />
             </Link>
             <Link 
@@ -402,7 +402,7 @@ export default function Header() {
                       className='w-full bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white rounded-lg hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 font-medium py-2.5 text-center'
                       onClick={() => setIsOpen(false)}
                     >
-                      Let's Talk AI
+                      Let&apos;s Talk AI
                     </Link>
                     <Link 
                       href='/contact' 

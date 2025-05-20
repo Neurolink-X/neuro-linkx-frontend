@@ -230,7 +230,7 @@ export default function APIDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build Your API?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create powerful APIs that connect your applications and drive business growth.
+              Let &apos;s create powerful APIs that connect your applications and drive business growth.
             </p>
             <Link
               href='/contact'

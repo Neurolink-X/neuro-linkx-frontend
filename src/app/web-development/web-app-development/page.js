@@ -230,7 +230,7 @@ export default function WebAppDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build Your Web Application?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create a powerful web application that drives your business forward.
+              Let &apos;s create a powerful web application that drives your business forward.
             </p>
             <Link
               href='/contact'

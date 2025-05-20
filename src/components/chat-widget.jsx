@@ -100,7 +100,7 @@ export default function ChatWidget() {
         <div className="mb-2 bg-white rounded-lg shadow-lg p-3 text-sm animate-fade-in">
           <p className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-blue-500" />
-            Need help? Let's chat!
+            Need help? Let&apos;s chat!
           </p>
         </div>
       )}

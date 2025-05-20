@@ -271,7 +271,7 @@ export default function PredictiveAnalyticsSolutionsPage() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              Let's create powerful predictive analytics solutions that drive your business forward.
+              Let &apos;s create powerful predictive analytics solutions that drive your business forward.
             </motion.p>
             <Link
               href='/contact'

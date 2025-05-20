@@ -230,7 +230,7 @@ export default function BackEndDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build Your Back-End?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create a powerful and scalable back-end for your application.
+              Let &apos;s create a powerful and scalable back-end for your application.
             </p>
             <Link
               href='/contact'

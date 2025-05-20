@@ -230,7 +230,7 @@ export default function FrontEndDevelopmentPage() {
           <div className='relative'>
             <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build Your Front-End?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let's create stunning web interfaces that engage your users and drive results.
+              Let &apos;s create stunning web interfaces that engage your users and drive results.
             </p>
             <Link
               href='/contact'
