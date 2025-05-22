@@ -3,9 +3,11 @@
 import React, { useState } from 'react';
 import { 
   LogIn, 
-  UserPlus, 
+  UserPlus,
+  User, 
   Mail, 
   Lock, 
+  Phone,
   Eye, 
   EyeOff,
   Github,
@@ -70,6 +72,28 @@ export default function AuthPage({ initialMode = 'login' }) {
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
+            {!isLogin && (
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+                Full Name
+                </label>
+                <div className="mt-1 relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <User className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    className="appearance-none block w-full pl-10 pr-3 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+              </div>
+            )} 
+
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-300">
                 Email address
@@ -139,8 +163,42 @@ export default function AuthPage({ initialMode = 'login' }) {
                     className="appearance-none block w-full pl-10 pr-10 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Confirm your password"
                   />
+                  <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  >
+                    {showPassword ? (
+                      <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    ) : (
+                      <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    )}
+                  </button>
                 </div>
               </div>
+            )}
+
+            {!isLogin && (
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-300">
+                  Phone Number
+                </label>
+                <div className="mt-1 relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Phone className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    required
+                    className="appearance-none block w-full pl-10 pr-3 py-2 border border-white/10 rounded-lg bg-white/5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
             )}
           </div>
 
@@ -191,7 +249,7 @@ export default function AuthPage({ initialMode = 'login' }) {
           >
             {isLogin ? (
               <>
-                Don&apos;t have an account?{' '}
+                Don't have an account?{' '}
                 <span className="text-blue-400 hover:text-blue-300">Sign up</span>
               </>
             ) : (

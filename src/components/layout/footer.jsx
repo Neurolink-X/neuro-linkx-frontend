@@ -15,7 +15,7 @@ export default function Footer() {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12'>
           <div>
             <Link href='/'>
-              NeuroLink
+              NeuroLink-X
             </Link>
             <div className='flex gap-4 text-slate-400'>
               {/* <Link href='#' className='hover:text-white'>
@@ -90,7 +90,7 @@ export default function Footer() {
           ))}
         </div>
         <div className='mt-12 pt-8 border-t border-slate-800 text-center text-slate-400'>
-          <p>&copy; 2025 NeuroLink. All rights reserved.</p>
+          <p>&copy; 2025 NeuroLink-X. All rights reserved.</p>
         </div>
       </div>
 

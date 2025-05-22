@@ -211,7 +211,7 @@ export default function Header() {
                 <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
                 <div className='relative flex items-center'>
                   <span className='font-extrabold text-3xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono tracking-tight'>
-                    NeuroLink
+                    NeuroLink-X
                   </span>
                   <div className='ml-2 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-[#ff3b30] animate-pulse'></div>
                 </div>
@@ -304,7 +304,7 @@ export default function Header() {
                           <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30'></div>
                           <div className='relative'>
                             <span className='font-extrabold text-xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono'>
-                              NeuroLink
+                              NeuroLink-X
                             </span>
                           </div>
                         </div>
