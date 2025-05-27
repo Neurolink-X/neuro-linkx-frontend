@@ -24,7 +24,7 @@ const employeeQuotes = [
 
 export default function CompanyCulture() {
   return (
-    <section className='w-full my-10 bg-white'>
+    <section className='w-full my-10 bg-white max-w-[100vw] overflow-x-hidden'>
       <div className='bg-[#d8e5fa] py-4 md:py-10 rounded-3xl mx-auto px-4 max-w-7xl'>
         <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-12'>
           <motion.div
@@ -66,17 +66,17 @@ export default function CompanyCulture() {
             <p className='text-gray-600 my-4 text-sm' 
               style={{fontSize:16}}
             >
-              At NeuroLink Technologies, our people-first culture thrives by valuing every individual and embracing
+              At NeuroLinkX Technologies, our people-first culture thrives by valuing every individual and embracing
               diversity. We support our team with wellness initiatives and ensure every voice is heard. By prioritizing
               people and their well-being, we create a vibrant environment where everyone can grow and succeed together.
             </p>
             <div className='flex md:block justify-center'>
             <button className='bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors'>
-                Explore Vibrant Life @ NeuroLink
+                Explore Vibrant Life @ NeuroLinkX
             </button>
             </div>
             <p className='text-white/70 text-lg mb-8'>
-              At NeuroLink Technologies, we believe in a people-first approach. Our culture is built on the foundation of &quot;Innovation through Collaboration&quot;.
+              At NeuroLinkX Technologies, we believe in a people-first approach. Our culture is built on the foundation of &quot;Innovation through Collaboration&quot;.
             </p>
           </motion.div>
         </div>

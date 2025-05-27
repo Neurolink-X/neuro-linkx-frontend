@@ -6,16 +6,16 @@ import { ArrowRight, Sparkles, Brain, Zap, LineChart, ChevronRight } from 'lucid
 
 export default function Hero() {
   return (
-    <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden px-4'>
+    <section className='relative min-h-screen w-full max-w-[100vw] flex items-center justify-center bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-x-hidden px-4'>
       {/* Animated Background */}
-      <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.1),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
+      <div className='absolute inset-0 w-full max-w-[100vw] overflow-x-hidden'>
+        <div className='absolute inset-0 w-full max-w-[100vw] overflow-x-hidden bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.1),transparent_50%)]' />
+        <div className='absolute inset-0 w-full max-w-[100vw] overflow-x-hidden bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
       </div>
 
       {/* Content Container */}
-      <div className='container relative mx-auto max-w-6xl'>
-        <div className='grid md:grid-cols-2 gap-12 items-center'>
+      <div className='container relative mx-auto pt-7 w-full max-w-[100vw] overflow-x-hidden'>
+        <div className='grid md:grid-cols-2 gap-12 items-center w-full max-w-[100vw] overflow-x-hidden'>
           {/* Left Column - Text Content */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -185,6 +185,7 @@ export default function Hero() {
         </div>
       </div>
     </section>
+   
   )
 }
 

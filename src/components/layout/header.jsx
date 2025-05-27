@@ -211,7 +211,7 @@ export default function Header() {
                 <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
                 <div className='relative flex items-center'>
                   <span className='font-extrabold text-3xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono tracking-tight'>
-                    NeuroLink-X
+                    NeuroLinkX
                   </span>
                   <div className='ml-2 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-[#ff3b30] animate-pulse'></div>
                 </div>
@@ -283,7 +283,7 @@ export default function Header() {
             </Link>
             <Link 
               href='/contact' 
-              className='py-2.5 px-6 rounded-lg text-lg text-nowrap bg-white/5 hover:bg-white/10 text-white font-medium transition-all duration-300 border border-white/10 hover:border-white/20'
+              className='py-2.5 px-6 rounded-lg text-lg text-nowrap bg-white/5  max-sm:px-2 hover:bg-white/10 text-white font-medium transition-all duration-300 border border-white/10 hover:border-white/20'
             >
               Contact Us
             </Link>
@@ -304,7 +304,7 @@ export default function Header() {
                           <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30'></div>
                           <div className='relative'>
                             <span className='font-extrabold text-xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono'>
-                              NeuroLink-X
+                              NeuroLinkX
                             </span>
                           </div>
                         </div>
@@ -399,7 +399,7 @@ export default function Header() {
                   <div className='p-4 border-t border-white/5 space-y-4'>
                     <Link 
                       href='/ai-consultation'
-                      className='w-full bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white rounded-lg hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 font-medium py-2.5 text-center'
+                      className='w-full pl-2 pr-2 bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white rounded-lg  hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 font-medium py-2.5 text-center'
                       onClick={() => setIsOpen(false)}
                     >
                       Let&apos;s Talk AI
@@ -409,7 +409,7 @@ export default function Header() {
                       className='w-full'
                       onClick={() => setIsOpen(false)}
                     >
-                      <Button variant='outline' className='w-full rounded-lg hover:bg-white/5 text-white border-white/10 hover:border-white/20 transition-all duration-300'>
+                      <Button variant='outline' className='w-full rounded-lg bg-white/5 text-white mt-5 border-white/10 hover:border-white/20 transition-all duration-300'>
                         Contact Us
                       </Button>
                     </Link>

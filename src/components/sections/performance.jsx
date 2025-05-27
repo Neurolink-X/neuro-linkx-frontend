@@ -1,6 +1,6 @@
 export default function Performance() {
     return (
-      <section className='py-20 px-4'>
+      <section className='py-20 px-4 w-full max-w-[100vw] overflow-x-hidden'>
         <div className='container mx-auto text-center'>
           <h2 className='text-3xl font-bold text-white mb-12'>Blazingly Fast Performance</h2>
           <div className='relative w-48 h-48 mx-auto mb-8'>

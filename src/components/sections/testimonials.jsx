@@ -243,7 +243,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="relative py-32 bg-white overflow-hidden">
+    <section className="relative w-full max-w-[100vw] overflow-x-hidden py-32 bg-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_50%)]" />

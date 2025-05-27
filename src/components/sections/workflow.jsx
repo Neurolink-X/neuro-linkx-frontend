@@ -32,7 +32,7 @@ const steps = [
 
 export default function Workflow() {
   return (
-    <section className='py-20 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421]'>
+    <section className=' w-full max-w-[100vw] overflow-x-hidden py-20 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421]'>
       <div className='container mx-auto max-w-7xl'>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -5,7 +5,7 @@ import FlowingLinesSVG from '../ui/flowing-lines'
 
 export default function CompanyStats() {
   return (
-    <section className='w-full py-16 md:py-24 lg:py-32 bg-[#fef4f3] relative overflow-hidden'>
+    <section className='w-full max-w-[100vw] overflow-x-hidden py-16 md:py-24 lg:py-32 bg-[#fef4f3] relative overflow-hidden'>
       <div className='container mx-auto px-4 relative z-10'>
         <motion.div
           className='max-w-5xl mx-auto mb-16'

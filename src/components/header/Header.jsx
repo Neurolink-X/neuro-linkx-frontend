@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Brain className="w-8 h-8 text-blue-600" />
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">
-              Neurolink-X
+              NeurolinkX
             </span>
           </Link>
 
@@ -109,7 +109,7 @@ export default function Header() {
             <div className="pt-4 border-t border-gray-100 space-y-2">
               <Link 
                 href="/auth?mode=login"
-                className="block px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2"
+                className=" px-4 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <LogIn className="w-4 h-4" />
@@ -117,7 +117,7 @@ export default function Header() {
               </Link>
               <Link 
                 href="/auth?mode=signup"
-                className="block px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center gap-2"
+                className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 flex items-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <UserPlus className="w-4 h-4" />

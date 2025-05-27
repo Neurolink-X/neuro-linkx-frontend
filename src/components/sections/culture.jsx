@@ -1,6 +1,6 @@
 export default function Culture() {
     return (
-      <section className='py-20 px-4 relative'>
+      <section className='py-20 px-4 relative w-full max-w-[100vw] overflow-x-hidden'>
         <div
           className='absolute inset-0 bg-[url("/placeholder.svg?height=600&width=1200")] bg-cover bg-center'
           style={{ opacity: 0.1 }}
