@@ -31,7 +31,7 @@ export default function Security() {
             </ul>
           </div>
           <div className="relative h-[400px]">
-            <img
+            <Image
               src="/placeholder.svg?height=400&width=600"
               alt="Security Illustration"
               fill

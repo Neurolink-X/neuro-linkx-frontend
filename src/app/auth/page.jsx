@@ -1,11 +1,11 @@
-'use client';
-
-import { useSearchParams } from 'next/navigation';
-import AuthPage from '@/components/auth/AuthPage';
+import { Suspense } from 'react';
+import AuthClient from './AuthClient';
 
 export default function Auth() {
-  const searchParams = useSearchParams()
-  const mode = searchParams.get('mode') || 'login';
+  return (
+    <Suspense fallback={<div className="text-white">Loading auth...</div>}>
+      <AuthClient />
+    </Suspense>
+  );
+}
 
-  return <AuthPage initialMode={mode} />
-} 
