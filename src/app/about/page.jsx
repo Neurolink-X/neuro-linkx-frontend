@@ -152,7 +152,7 @@ export default function About() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
               About{' '}
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
-                Neurolink-X
+                NeurolinkX
               </span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">

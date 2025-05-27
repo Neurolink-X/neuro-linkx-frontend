@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   LogIn, 
   UserPlus,
@@ -22,6 +22,9 @@ export default function AuthPage({ initialMode = 'login' }) {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  useEffect(() => {
+  setIsLogin(initialMode === 'login');
+}, [initialMode]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -249,7 +252,7 @@ export default function AuthPage({ initialMode = 'login' }) {
           >
             {isLogin ? (
               <>
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <span className="text-blue-400 hover:text-blue-300">Sign up</span>
               </>
             ) : (

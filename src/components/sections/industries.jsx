@@ -84,7 +84,7 @@ export default function Industries() {
   }, [nextSlide])
 
   return (
-    <section className="w-full py-16 bg-[#1e2942] text-white overflow-x-hidden">
+    <section className="w-full max-w-[100vw] py-16 bg-[#1e2942] text-white overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           className="text-center mb-12"

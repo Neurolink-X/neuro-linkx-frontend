@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Security() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 w-full max-w-[100vw] overflow-x-hidden">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>

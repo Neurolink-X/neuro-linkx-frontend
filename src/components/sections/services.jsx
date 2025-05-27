@@ -98,7 +98,7 @@ export default function Services() {
   const [activeTab, setActiveTab] = useState('Gen AI')
 
   return (
-    <section className='relative py-32 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden'>
+    <section className='relative w-full max-w-[100vw] overflow-x-hidden py-32 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden'>
       {/* Animated Background */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.05),transparent_50%)]' />
@@ -125,7 +125,7 @@ export default function Services() {
             <span className='text-white/90 text-sm font-medium tracking-wide'>Our Services</span>
           </motion.div>
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight'>
-            Crafted by Talent,{' &apos; '}
+            Crafted by Talent, 
             <span className='bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient'>
               Perfected in Services
             </span>
@@ -137,7 +137,7 @@ export default function Services() {
 
         {/* Tabs */}
         <div className='flex flex-row justify-center mb-12'>
-          <div className='flex flex-row max-w-min justify-center gap-2 py-2 px-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 overflow-x-auto'>
+          <div className='flex flex-row max-w-min justify-evenly gap-2 py-2 px-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 overflow-x-auto'>
             {tabs.map((tab) => (
               <motion.button
                 key={tab}
@@ -199,7 +199,7 @@ export default function Services() {
                 </span>
               </motion.button>
             </div>
-            <div className='order-1 md:order-2 relative'>
+            <div className='order-1 md:order-2 relative mr-5'>
               <div className='relative h-[500px]'>
                 {tabContent[activeTab].features.map((feature, index) => (
                   <motion.div
@@ -208,13 +208,13 @@ export default function Services() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
-                    className='absolute group'
+                    className='absolute group max-md:w-1/2'
                     style={{
                       top: index === 0 ? '10%' : index === 1 ? '70%' : index === 2 ? '10%' : '70%',
                       left: index === 0 || index === 1 ? '10%' : '60%',
                     }}
                   >
-                    <div className='relative p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#ff3b30]/20 transition-all duration-300 shadow-lg shadow-[#ff3b30]/5 overflow-hidden'>
+                    <div className='relative p-6  rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#ff3b30]/20 transition-all duration-300 shadow-lg shadow-[#ff3b30]/5 overflow-hidden'>
                       <div className='absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                       <div className='relative flex items-center gap-4'>
                         <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>

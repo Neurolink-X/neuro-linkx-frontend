@@ -85,7 +85,7 @@ const benefits = [
 
 export default function DigitalTransformation() {
   return (
-    <section className='py-20 px-4 min-h-[90vh] bg-gradient-to-b from-white to-gray-50 relative overflow-hidden'>
+    <section className='w-full max-w-[100vw] overflow-x-hidden py-20 px-4 min-h-[90vh] bg-gradient-to-b from-white to-gray-50 relative overflow-hidden'>
       {/* Background decorative elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl'></div>
