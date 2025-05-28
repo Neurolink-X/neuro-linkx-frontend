@@ -202,304 +202,305 @@ export default function AIConsultationPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
       {/* Hero Section with Enhanced Animations */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="relative overflow-hidden min-h-screen flex items-center"
-        style={{ opacity, scale: springScale }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 animate-gradient-x"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative"
-        >
-          <div className="text-center">
-            <motion.div
-              initial={{ scale: 0.8, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-              className="inline-block mb-8 relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full animate-spin-slow"></div>
-              <Brain className="w-24 h-24 text-purple-600 animate-float" />
-            </motion.div>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-purple-600"
-            >
-              AI Solutions Consultation
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12"
-            >
-              Transform your business with cutting-edge AI solutions and expert guidance
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-6"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setShowScheduler(true)}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-5 rounded-full font-medium flex items-center space-x-3 hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 text-lg"
-              >
-                <Calendar className="w-6 h-6" />
-                <span>Schedule Free Consultation</span>
-                <ArrowRight className="w-6 h-6" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-purple-600 px-10 py-5 rounded-full font-medium flex items-center space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-purple-100 text-lg"
-              >
-                <Sparkles className="w-6 h-6" />
-                <span>View Case Studies</span>
-                <ChevronRight className="w-6 h-6" />
-              </motion.button>
-            </motion.div>
-          </div>
-        </motion.div>
-      </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="relative overflow-hidden min-h-screen flex items-center"
+  style={{ opacity, scale: springScale }}
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 animate-gradient-x"></div>
+  <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
 
-      {/* Stats Section with Premium Design */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32 relative"
+  >
+    <div className="text-center">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden"
+        initial={{ scale: 0.8, rotate: -180 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+        className="inline-block mb-8 relative"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5"></div>
-        <div className="text-center mb-20">
-          <div className="relative inline-block">
-            <h2 className="text-4xl font-bold text-[#1e2942] mb-6">
-              Our Track Record
-            </h2>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full"></div>
-            <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
-          </div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Trusted by businesses worldwide for AI excellence
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center group relative overflow-hidden"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-              <div className="relative">
-                <div className="inline-block p-4 rounded-xl bg-gradient-to-br from-purple-50 to-blue-50 mb-6 group-hover:from-purple-100 group-hover:to-blue-100 transition-colors duration-300">
-                  <stat.icon className="w-8 h-8 text-purple-600" />
-                </div>
-                <div className="text-4xl font-bold text-[#1e2942] mb-3">{stat.label}</div>
-                <div className="text-xl text-gray-800 font-medium mb-2">{stat.text}</div>
-                <div className="text-sm text-gray-600">{stat.description}</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full animate-spin-slow"></div>
+        <Brain className="w-20 sm:w-24 h-20 sm:h-24 text-purple-600 animate-float" />
       </motion.div>
-
-      {/* Services Section with Enhanced Layout */}
-      <motion.div
+      <motion.h1 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative"
+        className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-purple-600"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/50 to-transparent"></div>
-        <div className="text-center mb-24">
-          <div className="relative inline-block">
-            <h2 className="text-4xl font-bold text-[#1e2942] mb-8">
-              Our AI Services
-            </h2>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full"></div>
-            <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
-          </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive AI solutions tailored to your business needs
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              onHoverStart={() => setActiveService(service.id)}
-              onHoverEnd={() => setActiveService(null)}
-              className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative mb-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative text-purple-600 transform group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-12 h-12" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-semibold text-[#1e2942] mb-4">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed mb-8">{service.description}</p>
-              
-              <div className="space-y-4 mb-8">
-                {service.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center space-x-3">
-                    <Check className="w-5 h-5 text-purple-600" />
-                    <span className="text-gray-600">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <motion.a
-                href={service.link}
-                whileHover={{ x: 5 }}
-                className="flex items-center text-purple-600 group-hover:text-purple-700 transition-colors duration-300 font-medium group"
-              >
-                <span className="text-base">Learn more</span>
-                <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </motion.a>
-
-              {activeService === service.id && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10"
-                />
-              )}
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Consultation Types with Enhanced Design */}
+        AI Solutions Consultation
+      </motion.h1>
+      <motion.p 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12"
+      >
+        Transform your business with cutting-edge AI solutions and expert guidance
+      </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 bg-gradient-to-b from-white to-gray-50 rounded-3xl relative overflow-hidden mb-32"
+        className="flex flex-col sm:flex-row items-center justify-center gap-6"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5"></div>
-        <div className="text-center mb-20">
-          <div className="relative inline-block">
-            <h2 className="text-4xl font-bold text-[#1e2942] mb-6">
-              Consultation Options
-            </h2>
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full"></div>
-            <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setShowScheduler(true)}
+          className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-medium flex items-center space-x-3 hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 text-base sm:text-lg"
+        >
+          <Calendar className="w-5 sm:w-6 h-5 sm:h-6" />
+          <span>Schedule Free Consultation</span>
+          <ArrowRight className="w-5 sm:w-6 h-5 sm:h-6" />
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-purple-600 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-medium flex items-center space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-purple-100 text-base sm:text-lg"
+        >
+          <Sparkles className="w-5 sm:w-6 h-5 sm:h-6" />
+          <span>View Case Studies</span>
+          <ChevronRight className="w-5 sm:w-6 h-5 sm:h-6" />
+        </motion.button>
+      </motion.div>
+    </div>
+  </motion.div>
+</motion.div>
+
+
+      {/* Stats Section with Premium Design */}
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.6 }}
+  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden"
+>
+  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5"></div>
+  <div className="text-center mb-16 sm:mb-20">
+    <div className="relative inline-block">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e2942] mb-2 sm:mb-6">
+        Our Track Record
+      </h2>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full mb-17"></div>
+      <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent  "></div>
+    </div>
+    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+      Trusted by businesses worldwide for AI excellence
+    </p>
+  </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {stats.map((stat, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 * index }}
+        whileHover={{ y: -5, scale: 1.02 }}
+        className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center group relative overflow-hidden"
+      >
+        <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+        <div className="relative">
+          <div className="inline-block p-3 sm:p-4 rounded-xl bg-gradient-to-br from-purple-50 to-blue-50 mb-4 sm:mb-6 group-hover:from-purple-100 group-hover:to-blue-100 transition-colors duration-300">
+            <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" />
           </div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the consultation package that best fits your needs
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {consultationTypes.map((type, index) => (
-            <motion.div
-              key={type.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className={`bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden ${
-                type.recommended ? 'border-2 border-purple-500' : ''
-              }`}
-            >
-              {type.recommended && (
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  Recommended
-                </div>
-              )}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-semibold text-[#1e2942]">{type.title}</h3>
-                  <span className="text-2xl text-purple-600 font-semibold">{type.price}</span>
-                </div>
-                <p className="text-lg text-gray-600 mb-8">{type.description}</p>
-                <div className="flex items-center text-gray-500 mb-8">
-                  <Clock className="w-5 h-5 mr-2" />
-                  <span className="text-lg">{type.duration}</span>
-                </div>
-                <div className="space-y-3 mb-8">
-                  {type.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <Check className="w-5 h-5 text-purple-600" />
-                      <span className="text-gray-600">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="text-sm text-purple-600 font-medium mb-6">{type.highlight}</div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setShowScheduler(true)}
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 flex items-center justify-center space-x-3 text-lg"
-                >
-                  <Calendar className="w-6 h-6" />
-                  <span>Schedule Consultation</span>
-                </motion.button>
-              </div>
-            </motion.div>
-          ))}
+          <div className="text-2xl sm:text-3xl font-bold text-[#1e2942] mb-2 sm:mb-3">{stat.label}</div>
+          <div className="text-base sm:text-lg text-gray-800 font-medium mb-1 sm:mb-2">{stat.text}</div>
+          <div className="text-sm text-gray-600">{stat.description}</div>
         </div>
       </motion.div>
+    ))}
+  </div>
+</motion.div>
+
+      {/* Services Section with Enhanced Layout */}
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.2 }}
+  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 relative"
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/50 to-transparent"></div>
+  <div className="text-center mb-20 sm:mb-24">
+    <div className="relative inline-block">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e2942] mb-4 sm:mb-8">
+        Our AI Services
+      </h2>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full "></div>
+      <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
+    </div>
+    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-5">
+      Comprehensive AI solutions tailored to your business needs
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 relative">
+    {services.map((service, index) => (
+      <motion.div
+        key={service.id}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 * index }}
+        whileHover={{ y: -5, scale: 1.02 }}
+        onHoverStart={() => setActiveService(service.id)}
+        onHoverEnd={() => setActiveService(null)}
+        className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="relative mb-6 sm:mb-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+          <div className="relative text-purple-600 transform group-hover:scale-110 transition-transform duration-300">
+            <service.icon className="w-10 h-10 sm:w-12 sm:h-12" />
+          </div>
+        </div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-[#1e2942] mb-3 sm:mb-4">{service.title}</h3>
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">{service.description}</p>
+
+        <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+          {service.features.map((feature, idx) => (
+            <div key={idx} className="flex items-center space-x-2 sm:space-x-3">
+              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
+              <span className="text-sm sm:text-base text-gray-600">{feature}</span>
+            </div>
+          ))}
+        </div>
+
+        <motion.a
+          href={service.link}
+          whileHover={{ x: 5 }}
+          className="flex items-center text-purple-600 group-hover:text-purple-700 transition-colors duration-300 font-medium group"
+        >
+          <span className="text-sm sm:text-base">Learn more</span>
+          <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+        </motion.a>
+
+        {activeService === service.id && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10"
+          />
+        )}
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
+
+      {/* Consultation Types with Enhanced Design */}
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.4 }}
+  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-gradient-to-b from-white to-gray-50 rounded-3xl relative overflow-hidden mb-24 sm:mb-32"
+>
+  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5"></div>
+  <div className="text-center mb-16 sm:mb-20">
+    <div className="relative inline-block">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e2942] mb-4 sm:mb-6">
+        Consultation Options
+      </h2>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full"></div>
+      <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-600/30 to-transparent"></div>
+    </div>
+    <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mt-5">
+      Choose the consultation package that best fits your needs
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 relative">
+    {consultationTypes.map((type, index) => (
+      <motion.div
+        key={type.id}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 * index }}
+        whileHover={{ y: -5, scale: 1.02 }}
+        className={`bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group relative overflow-hidden ${
+          type.recommended ? 'border-2 border-purple-500' : ''
+        }`}
+      >
+        {type.recommended && (
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium ">
+            Recommended
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="relative">
+          <div className="flex items-center justify-between mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-[#1e2942]">{type.title}</h3>
+            <span className="text-lg sm:text-xl text-purple-600 font-semibold mt-5">{type.price}</span>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6">{type.description}</p>
+          <div className="flex items-center text-gray-500 mb-6">
+            <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+            <span className="text-sm sm:text-base">{type.duration}</span>
+          </div>
+          <div className="space-y-2 sm:space-y-3 mb-6">
+            {type.features.map((feature, idx) => (
+              <div key={idx} className="flex items-center space-x-2">
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
+                <span className="text-sm sm:text-base text-gray-600">{feature}</span>
+              </div>
+            ))}
+          </div>
+          <div className="text-xs sm:text-sm text-purple-600 font-medium mb-4 sm:mb-6">{type.highlight}</div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setShowScheduler(true)}
+            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 sm:py-4 rounded-xl hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 flex items-center justify-center space-x-2 sm:space-x-3 text-sm sm:text-base"
+          >
+            <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span>Schedule Consultation</span>
+          </motion.button>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
 
       {/* Enhanced Bottom CTA Section */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-lg py-6 z-50"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div className="flex items-center space-x-4">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="bg-green-50 p-2 rounded-full"
-              >
-                <Check className="w-6 h-6 text-green-500" />
-              </motion.div>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-1 sm:space-y-0 sm:space-x-4">
-                <span className="text-lg font-medium text-gray-800">Free 30-minute consultation available</span>
-                <span className="text-sm text-gray-500">Limited time offer</span>
-              </div>
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setShowScheduler(true)}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-4 rounded-full font-medium flex items-center space-x-3 hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 text-lg group"
-            >
-              <Calendar className="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" />
-              <span>Schedule Free Consultation</span>
-              <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" />
-            </motion.button>
-          </div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.5 }}
+  className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-lg py-4 sm:py-6 z-50"
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+      
+      <div className="flex items-center space-x-3 sm:space-x-4 text-center sm:text-left">
+        <div className="bg-green-50 p-1.5 sm:p-2 rounded-full">
+          <Check className="w-5 h-5 sm:w-6 sm:h-6 text-green-500" />
         </div>
-      </motion.div>
+        <div className="flex flex-col text-sm sm:text-base">
+          <span className="font-medium text-gray-800">Free 30-minute consultation available</span>
+          <span className="text-gray-500 text-xs sm:text-sm">Limited time offer</span>
+        </div>
+      </div>
 
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setShowScheduler(true)}
+        className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-medium flex items-center justify-center space-x-2 sm:space-x-3 text-sm sm:text-lg shadow-md hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300"
+      >
+        <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span>Schedule Free Consultation</span>
+        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+      </motion.button>
+
+    </div>
+  </div>
+</motion.div>
       {/* Enhanced Modal Design */}
       <AnimatePresence>
         {showScheduler && (
@@ -517,7 +518,8 @@ export default function AIConsultationPage() {
               className="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-8 relative overflow-hidden"
               onClick={e => e.stopPropagation()}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 pointer-events-none"></div>
+
               <button
                 onClick={handleCloseModal}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"

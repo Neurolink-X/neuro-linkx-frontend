@@ -4,16 +4,15 @@ import { motion } from 'framer-motion'
 
 const employeeQuotes = [
   {
-    quote: 'This is very employee-friendly company.',
+    quote: 'This is a very employee-friendly company.',
     position: 'Senior Software Engineer II',
   },
-  
   {
-    quote: 'Work Life balance is good.',
+    quote: 'Work-life balance is excellent.',
     position: 'DevOps Engineer',
   },
   {
-    quote: 'Have good policies to benefit people.',
+    quote: 'The policies here truly support people.',
     position: 'Software Quality Manager',
   },
   {
@@ -24,61 +23,65 @@ const employeeQuotes = [
 
 export default function CompanyCulture() {
   return (
-    <section className='w-full my-10 bg-white max-w-[100vw] overflow-x-hidden'>
-      <div className='bg-[#d8e5fa] py-4 md:py-10 rounded-3xl mx-auto px-4 max-w-7xl'>
-        <div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-12'>
+    <section className="w-full py-16 bg-gradient-to-br from-white via-[#f0f4fb] to-[#d8e5fa] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid md:grid-cols-2 gap-16 items-start relative">
+
+          {/* Decorative Quote Mark */}
           <motion.div
-            className='w-full md:w-1/2 relative'
-            initial={{ opacity: 0, x: -50 }}
+            className="absolute text-[#ff3b30]/10 text-[160px] top-6 left-4 select-none hidden md:block"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            &ldquo;
+          </motion.div>
+
+          {/* Quotes Section */}
+          <motion.div
+            className="space-y-6 relative"
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             {employeeQuotes.map((item, index) => (
               <motion.div
                 key={index}
-                className='bg-white rounded-lg px-4 py-1 mb-2 shadow-sm relative'
+                className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 hover:scale-[1.02] transform"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                style={{
-                  left: index % 2 === 0 ? '0' : '10%',
-                  maxWidth: '90%',
-                }}
               >
-                <p className='text-[#1e2942]'>{item.quote}</p>
-                <p className='text-sm text-gray-500 mt-1'>{item.position}</p>
+                <p className="text-[#1e2942] font-semibold text-lg leading-relaxed">
+                  “{item.quote}”
+                </p>
+                <p className="text-sm text-gray-500 mt-2">{item.position}</p>
               </motion.div>
             ))}
-            <div className='font-serif absolute right-0 top-1/2 transform -translate-y-1/2 text-[#ffdddd] text-9xl'>
-              &quot;
-            </div>
           </motion.div>
 
+          {/* Culture Text Section */}
           <motion.div
-            className='w-full md:w-1/2'
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className='text-xl md:text-2xl text-[#1e2942] mb-2 font-serif'>
+            <h2 className="text-3xl md:text-4xl font-serif text-[#1e2942] mb-6 font-semibold leading-snug">
               A people-first culture thrives on valuing individuals above all else.
             </h2>
-            <p className='text-gray-600 my-4 text-sm' 
-              style={{fontSize:16}}
-            >
-              At NeuroLinkX Technologies, our people-first culture thrives by valuing every individual and embracing
-              diversity. We support our team with wellness initiatives and ensure every voice is heard. By prioritizing
-              people and their well-being, we create a vibrant environment where everyone can grow and succeed together.
+            <p className="text-gray-700 mb-6 text-base leading-relaxed">
+              At NeuroLinkX Technologies, we embrace diversity and support our team through wellness initiatives, transparent communication, and inclusive policies. Everyone’s voice matters here.
             </p>
-            <div className='flex md:block justify-center'>
-            <button className='bg-[#ff3b30] text-white text-nowrap px-8 py-3 rounded-full font-medium outline outline-1 hover:bg-white hover:text-[#ff3b30] transition-colors'>
-                Explore Vibrant Life @ NeuroLinkX
+
+            <button className="bg-gradient-to-r from-[#ff3b30] to-[#ff7b5c] hover:from-white hover:to-white hover:text-[#ff3b30] border border-[#ff3b30] text-white px-8 py-3 rounded-full transition font-semibold shadow-lg hover:shadow-xl">
+              Explore Vibrant Life @ NeuroLinkX
             </button>
-            </div>
-            <p className='text-white/70 text-lg mb-8'>
-              At NeuroLinkX Technologies, we believe in a people-first approach. Our culture is built on the foundation of &quot;Innovation through Collaboration&quot;.
+
+            <p className="mt-6 text-sm text-[#1e2942]/80 italic">
+              We build innovation through collaboration and empower our people to thrive.
             </p>
           </motion.div>
+
         </div>
       </div>
     </section>
