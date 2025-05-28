@@ -1,26 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Brain, 
-  Zap, 
-  LineChart, 
-  ChevronRight, 
-  Sparkles, 
-  Code2, 
-  Database, 
-  Network, 
-  Shield, 
-  Cpu, 
-  Cloud, 
-  GitBranch, 
-  Boxes, 
-  Server, 
-  Globe, 
-  Lock, 
-  Rocket, 
-  BarChart
+import {
+  Brain, Zap, LineChart, ChevronRight, Sparkles, Code2, Database, Network,
+  Shield, Cpu, Cloud, GitBranch, Boxes, Server, Globe, Rocket, BarChart
 } from 'lucide-react'
 
 const tabs = ['Gen AI', 'DevOps', 'CloudOps', 'Data Engineering', 'Product Lifecycle', 'Enterprise App']
@@ -37,7 +21,7 @@ const tabContent = {
       { id: '04', title: 'AI Model Training & Deployment', icon: Cpu, color: 'from-green-500 to-emerald-500' },
     ],
   },
-  DevOps: {
+  'DevOps': {
     title: 'Streamlining Development with DevOps Excellence',
     description:
       'Our DevOps practices bridge the gap between development and operations, creating a seamless pipeline for software delivery. By automating workflows, implementing continuous integration and delivery, and fostering collaboration, we help organizations release high-quality software faster and more reliably.',
@@ -48,7 +32,7 @@ const tabContent = {
       { id: '04', title: 'Container Orchestration', icon: Boxes, color: 'from-green-500 to-emerald-500' },
     ],
   },
-  CloudOps: {
+  'CloudOps': {
     title: 'Enabling Seamless Operations with Precision and Agility',
     description:
       'Mastering cloud operations goes beyond routine management: it\'s about creating a strategic advantage. Our CloudOps services are crafted with a deep understanding of your unique operational challenges, focusing on delivering tailored solutions that balance agility, security, and efficiency.',
@@ -94,20 +78,31 @@ const tabContent = {
   },
 }
 
+
 export default function Services() {
   const [activeTab, setActiveTab] = useState('Gen AI')
+  const [isCompactView, setIsCompactView] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsCompactView(window.innerWidth < 1024)
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <section className='relative w-full max-w-[100vw] overflow-x-hidden py-32 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden'>
-      {/* Animated Background */}
+      {/* Background */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.05),transparent_50%)]' />
         <div className='absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
       </div>
 
       <div className='container relative mx-auto max-w-7xl'>
-        {/* Section Header */}
-        <motion.div 
+        {/* Header */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -125,7 +120,7 @@ export default function Services() {
             <span className='text-white/90 text-sm font-medium tracking-wide'>Our Services</span>
           </motion.div>
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight'>
-            Crafted by Talent, 
+            Crafted by Talent,{' '}
             <span className='bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient'>
               Perfected in Services
             </span>
@@ -136,7 +131,7 @@ export default function Services() {
         </motion.div>
 
         {/* Tabs */}
-        <div className='flex flex-row justify-center mb-12'>
+        <div className='flex justify-center mb-12'>
           <div className='flex flex-row max-w-min justify-evenly gap-2 py-2 px-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 overflow-x-auto'>
             {tabs.map((tab) => (
               <motion.button
@@ -145,8 +140,8 @@ export default function Services() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full text-sm md:text-base transition-all duration-300 ${
-                  activeTab === tab 
-                    ? 'bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white shadow-lg shadow-[#ff3b30]/20' 
+                  activeTab === tab
+                    ? 'bg-gradient-to-r from-orange-500 to-[#ff3b30] text-white shadow-lg shadow-[#ff3b30]/20'
                     : 'bg-transparent text-white/70 hover:text-white hover:bg-white/5'
                 }`}
               >
@@ -156,7 +151,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Tab Content */}
+        {/* Content */}
         <AnimatePresence mode='wait'>
           <motion.div
             key={activeTab}
@@ -164,10 +159,11 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3 }}
-            className='grid md:grid-cols-2 gap-12 items-center'
+            className='grid lg:grid-cols-2 gap-12 items-center'
           >
-            <div className='order-2 md:order-1'>
-              <motion.h3 
+            {/* Left: Text */}
+            <div className='order-2 lg:order-1'>
+              <motion.h3
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
@@ -175,7 +171,7 @@ export default function Services() {
               >
                 {tabContent[activeTab].title}
               </motion.h3>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
@@ -199,43 +195,58 @@ export default function Services() {
                 </span>
               </motion.button>
             </div>
-            <div className='order-1 md:order-2 relative mr-5'>
-              <div className='relative h-[500px]'>
-                {tabContent[activeTab].features.map((feature, index) => (
-                  <motion.div
-                    key={feature.id}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    className='absolute group max-md:w-1/2'
-                    style={{
-                      top: index === 0 ? '10%' : index === 1 ? '70%' : index === 2 ? '10%' : '70%',
-                      left: index === 0 || index === 1 ? '10%' : '60%',
-                    }}
-                  >
-                    <div className='relative p-6  rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#ff3b30]/20 transition-all duration-300 shadow-lg shadow-[#ff3b30]/5 overflow-hidden'>
-                      <div className='absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                      <div className='relative flex items-center gap-4'>
-                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <feature.icon className='w-6 h-6 text-white' />
-                        </div>
-                        <div>
-                          <p className='text-white font-medium'>{feature.title}</p>
+
+            {/* Right: Feature Boxes */}
+            <div className={`relative ${isCompactView ? '' : 'h-[600px]'}`}>
+              <div className={`${isCompactView ? 'grid grid-cols-1 sm:grid-cols-2 gap-6' : ''}`}>
+                {tabContent[activeTab].features.map((feature, index) => {
+                  const pos = !isCompactView
+                    ? {
+                        position: 'absolute',
+                        top:
+                          index === 0 ? '5%' :
+                          index === 1 ? '55%' :
+                          index === 2 ? '25%' : '75%',
+                        left: index === 0 || index === 1 ? '0%' : '55%',
+                      }
+                    : {}
+
+                  return (
+                    <motion.div
+                      key={feature.id}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
+                      className='group'
+                      style={pos}
+                    >
+                      <div className='relative max-w-[250px] p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#ff3b30]/20 transition-all duration-300 shadow-lg shadow-[#ff3b30]/5 overflow-hidden'>
+                        <div className='absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                        <div className='relative flex items-center gap-4'>
+                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                            <feature.icon className='w-6 h-6 text-white' />
+                          </div>
+                          <div>
+                            <p className='text-white font-medium'>{feature.title}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <motion.div
-                      className='absolute -top-8 -left-8 text-6xl font-bold text-white/5 group-hover:text-white/10 transition-colors duration-300'
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >
-                      {feature.id}
+                      {!isCompactView && (
+                        <motion.div
+                          className='absolute -top-8 -left-8 text-6xl font-bold text-white/5 group-hover:text-white/10 transition-colors duration-300'
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                          {feature.id}
+                        </motion.div>
+                      )}
                     </motion.div>
-                  </motion.div>
-                ))}
-
+                  )
+                })}
+              </div>
+              {!isCompactView && (
                 <svg className='absolute inset-0 w-full h-full z-20' viewBox='0 0 400 400'>
                   <path
                     d='M100,100 C150,50 250,50 300,100 C350,150 350,250 300,300 C250,350 150,350 100,300 C50,250 50,150 100,100'
@@ -245,7 +256,7 @@ export default function Services() {
                     strokeDasharray='5,5'
                   />
                 </svg>
-              </div>
+              )}
             </div>
           </motion.div>
         </AnimatePresence>
@@ -253,4 +264,3 @@ export default function Services() {
     </section>
   )
 }
-

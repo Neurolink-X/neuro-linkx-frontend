@@ -11,6 +11,14 @@ module.exports = {
 		fontFamily: {
 			mono: ["JetBrains Mono", "monospace", "Menlo", "Monaco", "Courier New",],
 		},
+		blur: {
+			'120px': '120px',
+			'160px': '160px',
+		  },
+		  animation: {
+			pulse: 'pulse 6s ease-in-out infinite',
+			ping: 'ping 12s linear infinite',
+		  },
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
