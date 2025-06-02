@@ -255,8 +255,8 @@ export default function AIConsultationPage() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowScheduler(true)}
-          className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-medium flex items-center space-x-3 hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 text-base sm:text-lg"
-        >
+          className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-5 sm:px-10 py-3 sm:py-5 rounded-full font-medium flex items-center space-x-2.5 sm:space-x-3 hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300 shadow-md sm:shadow-lg shadow-purple-500/20 hover:shadow-xl hover:shadow-purple-500/30 text-sm sm:text-lg"
+          >
           <Calendar className="w-5 sm:w-6 h-5 sm:h-6" />
           <span>Schedule Free Consultation</span>
           <ArrowRight className="w-5 sm:w-6 h-5 sm:h-6" />
@@ -264,7 +264,7 @@ export default function AIConsultationPage() {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white text-purple-600 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-medium flex items-center space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl border border-purple-100 text-base sm:text-lg"
+          className="bg-white text-purple-600 px-5 sm:px-10 py-3 sm:py-5 rounded-full font-medium flex items-center space-x-2.5 sm:space-x-3 hover:bg-gray-50 transition-all duration-300 shadow-md sm:shadow-lg hover:shadow-xl border border-purple-100 text-sm sm:text-lg"
         >
           <Sparkles className="w-5 sm:w-6 h-5 sm:h-6" />
           <span>View Case Studies</span>
@@ -472,7 +472,7 @@ export default function AIConsultationPage() {
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.5 }}
-  className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-lg py-4 sm:py-6 z-50"
+  className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-gray-100 shadow-lg py-2 sm:py-3 z-50"
 >
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
@@ -491,7 +491,7 @@ export default function AIConsultationPage() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setShowScheduler(true)}
-        className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-medium flex items-center justify-center space-x-2 sm:space-x-3 text-sm sm:text-lg shadow-md hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300"
+        className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium flex items-center justify-center space-x-2 sm:space-x-3 text-xs sm:text-sm shadow-md hover:from-purple-600/90 hover:to-blue-600/90 transition-all duration-300"
       >
         <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
         <span>Schedule Free Consultation</span>
@@ -501,6 +501,7 @@ export default function AIConsultationPage() {
     </div>
   </div>
 </motion.div>
+
       {/* Enhanced Modal Design */}
       <AnimatePresence>
         {showScheduler && (
