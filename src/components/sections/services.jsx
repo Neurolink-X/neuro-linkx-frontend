@@ -198,7 +198,8 @@ export default function Services() {
 
             {/* Right: Feature Boxes */}
             <div className={`relative ${isCompactView ? '' : 'h-[600px]'}`}>
-              <div className={`${isCompactView ? 'grid grid-cols-1 sm:grid-cols-2 gap-6' : ''}`}>
+            <div className={`${isCompactView ? 'grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center' : ''}`}>
+
                 {tabContent[activeTab].features.map((feature, index) => {
                   const pos = !isCompactView
                     ? {

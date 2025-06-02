@@ -1,202 +1,155 @@
 "use client"
 
-import { useState, useRef, useEffect, useCallback } from "react"
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react"
-import { motion } from "framer-motion"
+import { useState, useEffect, useRef } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
-// Industry data
 const industries = [
   {
-    title: "Claims made easy, peace made real",
     name: "InsurTech",
+    title: "Claims made easy, peace made real",
     description:
-      "InsurTech is revolutionizing the insurance industry by addressing challenges such as outdated processes and slow claims management. With AI, blockchain, and data analytics, it enhances efficiency, risk assessment, and customer experience.",
-    bgImage: "/images/insurtech-bg.png",
-    textColor: "text-[#1e2942]",
+      "AI and analytics simplify claims and modernize insurance workflows for better user experience.",
+    bgImage: "/images/InsurTech.png",
+    textColor: "text-white",
   },
   {
-    title: "Making HR less 'ugh' & more 'aha!",
     name: "HRTech",
+    title: "Making HR less 'ugh' & more 'aha!'",
     description:
-      "HRTech faces ongoing challenges with outdated processes and inefficiencies. We tackle these issues from hi-hire-retire, delivering innovative solutions that transform HR operations and drive unmatched efficiency & experience.",
-    bgImage: "/images/hrtech-bg.png",
+      "We streamline hiring, onboarding, and engagement with intelligent automation.",
+    bgImage: "/images/HrTech.png",
     textColor: "text-white",
   },
   {
-    title: "Turning financial blah into financial yay",
     name: "FinTech",
+    title: "Turning financial blah into financial yay",
     description:
-      "FinTech faces hurdles with security, compliance, and data management. Our software engineering solutions along with Data & AI offerings address these issues, enhancing security and efficiency to drive innovation in finance.",
-    bgImage: "/images/fintech-bg.png",
-    textColor: "text-[#1e2942]",
-  },
-  {
-    title: "Healthcare reimagined for everyone",
-    name: "HealthTech",
-    description:
-      "HealthTech is transforming patient care through innovative digital solutions. Our AI-powered platforms streamline diagnostics, enhance treatment plans, and improve patient outcomes while reducing costs and administrative burden.",
-    bgImage: "/images/healthtech-bg.png",
+      "Secure, compliant, and innovative FinTech apps driven by Data & AI.",
+    bgImage: "/images/fintech.png",
     textColor: "text-white",
   },
   {
-    title: "Sustainable solutions for a greener future",
-    name: "CleanTech",
+    name: "HealthTech",
+    title: "Healthcare reimagined for everyone",
     description:
-      "CleanTech leverages cutting-edge technology to address environmental challenges. Our solutions optimize energy consumption, reduce carbon footprints, and enable sustainable practices across industries through smart monitoring and AI-driven insights.",
-    bgImage: "/images/cleantech-bg.png",
-    textColor: "text-[#1e2942]",
+      "Digital tools that personalize care, enhance diagnostics, and improve outcomes.",
+    bgImage: "/images/Health-tech.png",
+    textColor: "text-white",
+  },
+  {
+    name: "CleanTech",
+    title: "Sustainable solutions for a greener future",
+    description:
+      "We build intelligent platforms to optimize energy and lower environmental impact.",
+    bgImage: "/images/cleanTech.png",
+    textColor: "text-white",
   },
 ]
 
 export default function Industries() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [width, setWidth] = useState(0)
-  const carousel = useRef(null)
+  const [index, setIndex] = useState(0)
+  const timeoutRef = useRef(null)
+
+  const next = () => setIndex((i) => (i + 1) % industries.length)
+  const prev = () => setIndex((i) => (i - 1 + industries.length) % industries.length)
 
   useEffect(() => {
-    if (carousel.current) {
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-    }
-  }, [])
-
-  const nextSlide = useCallback(() => {
-    if (currentIndex < industries.length - 1) {
-      setCurrentIndex(currentIndex + 1)
-    } else {
-      setCurrentIndex(0) // Loop back to the first slide
-    }
-  }, [currentIndex])
-
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1)
-    } else {
-      setCurrentIndex(industries.length - 1) // Loop to the last slide
-    }
-  }
-
-  // Auto-advance the carousel
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
+    timeoutRef.current = setTimeout(() => {
+      next()
     }, 5000)
-    return () => clearInterval(interval)
-  }, [nextSlide])
+
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+  }, [index])
 
   return (
-    <section className="w-full max-w-[100vw] py-16 bg-[#1e2942] text-white overflow-x-hidden">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <motion.div
-          className="text-center mb-12"
+    <section className="relative w-full py-20 bg-[#0f172a] overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 text-center text-white">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 max-w-5xl mx-auto">
-            Industries We Elevate With Enterprise AI Development Services
-          </h2>
-          <p className="text-xl md:text-2xl max-w-4xl mx-auto">
-            Because these industries still have numerous unresolved problems, affecting millions of people!
-          </p>
-        </motion.div>
+          Transforming Industries with Enterprise AI
+        </motion.h2>
+        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          From healthcare to clean energy — solving real-world challenges with smart tech.
+        </p>
+      </div>
 
-        <div className="relative my-10 overflow-x-hidden overflow-y-clip">
-          <motion.div ref={carousel} className="" whileTap={{ cursor: "grabbing" }}>
-            <motion.div
-              className="flex mx-4 my-10"
-              drag="x"
-              dragConstraints={{ right: 0, left: -width-10 }}
-              animate={{ x: -currentIndex * (300 + 40) }} // Card width + gap
-              transition={{ type: "spring", stiffness: 120, damping: 20 }}
-            >
-              {industries.map((industry, index) => (
-                <motion.div
-                  key={index}
-                  className="max-w-[300px] md:max-w-[350px] bg-white rounded-3xl overflow-hidden mr-6 flex-shrink-0"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{
-                    scale: 1.03,
-                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                  }}
+      <div className="relative mt-16 flex justify-center items-center min-h-[460px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={industries[index].name}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -60 }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-2 gap-6 px-6 max-w-5xl w-full"
+          >
+            {[0, 1].map((offset) => {
+              const i = (index + offset) % industries.length
+              return (
+                <div
+                  key={industries[i].name}
+                  className="relative h-[420px] rounded-3xl shadow-2xl overflow-hidden bg-cover bg-center"
+                  style={{ backgroundImage: `url('${industries[i].bgImage}')` }}
                 >
-                  <div
-                    className="h-48 p-8 flex items-center relative"
-                    style={{
-                      backgroundImage: `url('${industry.bgImage}')`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  >
-                    <motion.h3
-                      className={`text-xl font-bold z-10 ${industry.textColor}`}
-                      initial={{ x: -20, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                      {industry.title}
-                    </motion.h3>
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                    />
+                  <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-0" />
+                  <div className="relative z-10 p-6 h-full flex flex-col justify-end text-left text-white">
+                    <h3 className={`text-xl font-semibold ${industries[i].textColor}`}>
+                      {industries[i].title}
+                    </h3>
+                    <p className="text-sm mt-2 mb-4">{industries[i].description}</p>
+                    <span className="text-cyan-400 text-sm font-medium">{industries[i].name}</span>
                   </div>
-                  <div className="p-8 text-[#1e2942]">
-                    <motion.div
-                      className="flex items-center mb-4"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                    >
-                      <h4 className="text-2xl font-bold">{industry.name}</h4>
-                      <motion.div whileHover={{ rotate: 45 }} transition={{ duration: 0.2 }}>
-                        <ArrowUpRight className="ml-2" />
-                      </motion.div>
-                    </motion.div>
-                    <p className="text-sm">{industry.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+                </div>
+              )
+            })}
           </motion.div>
+        </AnimatePresence>
+      </div>
 
-          {/* Navigation buttons */}
-          <div className="flex justify-center mt-8 gap-4">
-            <motion.button
-              onClick={prevSlide}
-              className="bg-white/10 hover:bg-white/20 text-white p-3 rounded-full"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </motion.button>
-            <div className="flex gap-2 items-center">
-              {industries.map((_, index) => (
-                <motion.button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-white" : "bg-white/30"}`}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                  animate={{ scale: currentIndex === index ? [1, 1.2, 1] : 1 }}
-                  transition={{ duration: 0.5 }}
-                />
-              ))}
-            </div>
-            <motion.button
-              onClick={nextSlide}
-              className="bg-white/10 hover:bg-white/20 text-white p-3 rounded-full"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <ChevronRight className="w-6 h-6" />
-            </motion.button>
-          </div>
-        </div>
+      {/* Modern Gradient Pills as Dots */}
+      <div className="flex justify-center mt-6 gap-3">
+        {industries.map((_, i) => (
+          <motion.button
+            key={`dot-${i}`}
+            onClick={() => setIndex(i)}
+            className={`h-2.5 rounded-full transition-all ${
+              index === i
+                ? "w-6 bg-gradient-to-r from-cyan-400 to-blue-500 shadow-md"
+                : "w-2.5 bg-white/20"
+            }`}
+            whileHover={{ scale: 1.15 }}
+          />
+        ))}
+      </div>
+
+      {/* Left Navigation Arrow */}
+      <div className="absolute top-1/2 left-6 transform -translate-y-1/2 z-10">
+        <button
+          onClick={prev}
+          className="group relative p-3 rounded-full bg-gradient-to-br from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 backdrop-blur-lg transition shadow-xl"
+        >
+          <ChevronLeft size={20} className="text-white group-hover:scale-110 transition" />
+          <span className="absolute inset-0 rounded-full ring-2 ring-white/10 group-hover:ring-cyan-400 transition" />
+        </button>
+      </div>
+
+      {/* Right Navigation Arrow */}
+      <div className="absolute top-1/2 right-6 transform -translate-y-1/2 z-10">
+        <button
+          onClick={next}
+          className="group relative p-3 rounded-full bg-gradient-to-br from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 backdrop-blur-lg transition shadow-xl"
+        >
+          <ChevronRight size={20} className="text-white group-hover:scale-110 transition" />
+          <span className="absolute inset-0 rounded-full ring-2 ring-white/10 group-hover:ring-cyan-400 transition" />
+        </button>
       </div>
     </section>
   )
 }
-
