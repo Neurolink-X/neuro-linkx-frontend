@@ -95,7 +95,7 @@ export default function ChatWidget() {
   }
 
   return (
-    <div className="fixed bottom-20 left-8 z-50 flex flex-col items-start">
+    <div className="fixed bottom-5 left-8 z-50 flex flex-col items-start">
       {!isOpen && (
         <div className="mb-2 bg-white rounded-lg shadow-lg p-3 text-sm animate-fade-in">
           <p className="flex items-center gap-2">

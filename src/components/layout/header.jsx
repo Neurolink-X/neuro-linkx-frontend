@@ -210,10 +210,10 @@ export default function Header() {
               <div className='relative'>
                 <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
                 <div className='relative flex items-center'>
-                  <span className='font-extrabold text-3xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono tracking-tight'>
+                  <span className='font-extrabold  text-3xl max-md:text-2xl  bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono tracking-tight'>
                     NeuroLinkX
                   </span>
-                  <div className='ml-2 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-[#ff3b30] animate-pulse'></div>
+                  <div className='ml-2 mr-2 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-[#ff3b30] animate-pulse'></div>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Header() {
           <NavigationMenu className='hidden lg:flex'>
             <NavigationMenuList className='gap-2'>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className='bg-transparent text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
+                <NavigationMenuTrigger className='bg-transparent text-md text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
                   Cloud Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -235,7 +235,7 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className='bg-transparent text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
+                <NavigationMenuTrigger className='bg-transparent text-md text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
                   Web Development
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -247,7 +247,7 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className='bg-transparent text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
+                <NavigationMenuTrigger className='bg-transparent text-md text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
                   AI & ML Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -259,7 +259,7 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className='bg-transparent text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
+                <NavigationMenuTrigger className='bg-transparent text-md text-white/90 hover:text-white hover:bg-white/5 data-[state=open]:bg-white/5 px-4 py-2 rounded-lg transition-all duration-300 font-medium'>
                   Digital Marketing
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -283,7 +283,7 @@ export default function Header() {
             </Link>
             <Link 
               href='/contact' 
-              className='py-2.5 px-6 rounded-lg text-lg text-nowrap bg-white/5  max-sm:px-2 hover:bg-white/10 text-white font-medium transition-all duration-300 border border-white/10 hover:border-white/20'
+              className='py-2.5 px-6 rounded-lg text-lg max-md:text-md text-nowrap bg-white/5  max-sm:px-2 max-sm:text-sm hover:bg-white/10 text-white font-medium transition-all duration-300 border border-white/10 hover:border-white/20'
             >
               Contact Us
             </Link>
@@ -303,7 +303,7 @@ export default function Header() {
                         <div className='relative'>
                           <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30'></div>
                           <div className='relative'>
-                            <span className='font-extrabold text-xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono'>
+                            <span className='font-extrabold text-2xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono'>
                               NeuroLinkX
                             </span>
                           </div>

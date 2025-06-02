@@ -6,16 +6,16 @@ import { ArrowRight, Sparkles, Brain, Zap, LineChart, ChevronRight } from 'lucid
 
 export default function Hero() {
   return (
-    <section className='relative min-h-screen w-full max-w-[100vw] flex items-center justify-center bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-x-hidden px-4'>
+    <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden px-4'>
       {/* Animated Background */}
-      <div className='absolute inset-0 w-full max-w-[100vw] overflow-x-hidden'>
-        <div className='absolute inset-0 w-full max-w-[100vw] overflow-x-hidden bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.1),transparent_50%)]' />
-        <div className='absolute inset-0 w-full max-w-[100vw] overflow-x-hidden bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
+      <div className='absolute inset-0'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.1),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
       </div>
 
       {/* Content Container */}
-      <div className='container relative mx-auto pt-7 w-full max-w-[100vw] overflow-x-hidden'>
-        <div className='grid md:grid-cols-2 gap-12 items-center w-full max-w-[100vw] overflow-x-hidden'>
+       <div className='container relative mx-auto pt-7 max-w-6xl'>
+        <div className='grid md:grid-cols-2 gap-12 items-center'>
           {/* Left Column - Text Content */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -39,7 +39,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-5xl md:text-7xl font-bold text-white leading-tight mb-6 tracking-tight'
+              className='text-5xl max-md:text-3xl font-bold text-white leading-tight mb-6 tracking-tight'
             >
               From{' '}
               <span className='relative inline-block group'>
@@ -92,7 +92,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className='text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight'
+              className='text-3xl max-md:text-xl   font-bold text-white mb-8 tracking-tight'
             >
               Powered by{' '}
               <span className='bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient'>
@@ -106,10 +106,10 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <button className='group relative px-8 py-4 rounded-full font-medium overflow-hidden transition-all duration-300 shadow-lg shadow-[#ff3b30]/10'>
+              <button className='group relative px-8 py-4 max-md:px-5 rounded-full font-medium overflow-hidden transition-all duration-300 shadow-lg shadow-[#ff3b30]/10'>
                 <div className='absolute inset-0 bg-gradient-to-r from-orange-500 to-[#ff3b30] opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                 <div className='absolute inset-0 bg-[#ff3b30] group-hover:bg-transparent transition-colors duration-300'></div>
-                <span className='relative text-white text-lg flex items-center gap-2'>
+                <span className='relative text-white text-lg max-md:text:md flex items-center gap-2'>
                   Explore More
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </span>
@@ -126,7 +126,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className='space-y-6'
+            className='space-y-6 pb-10'
           >
             {/* Data & AI Card */}
             <motion.div 

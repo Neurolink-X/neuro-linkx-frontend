@@ -13,10 +13,12 @@ export default function Footer() {
     <footer className='bg-slate-900 py-20 px-4 relative'>
       <div className='container mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12'>
-          <div>
+        <div>
+          <div className='text-white text-lg'>
             <Link href='/'>
               NeuroLinkX
             </Link>
+            </div>
             <div className='flex gap-4 text-slate-400'>
               {/* <Link href='#' className='hover:text-white'>
                 <Github className='h-5 w-5' />
@@ -25,7 +27,7 @@ export default function Footer() {
                 <Twitter className='h-5 w-5' />
               </Link> */}
               <a
-                href='https://www.linkedin.com/in/arjun-chaurasiya-837300198'
+                href='https://www.linkedin.com/company/neurolinkx'
                 className='h-10 w-10 flex items-center justify-center rounded-full bg-white text-[#0077B5] hover:bg-blue-100 transition duration-300'
               >
                 <svg
@@ -41,7 +43,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href='https://x.com/your-profile'
+                href='https://x.com/NeurolinkX?t=UlPitlvohaldjEZTv5DJIg&s=09'
                 className='h-10 w-10 flex items-center justify-center rounded-full bg-white text-blue-500 hover:bg-blue-100 transition duration-300'
               >
                 <svg
@@ -57,19 +59,17 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href='https://facebook.com/your-profile'
-                className='h-10 w-10 flex items-center justify-center rounded-full bg-white text-blue-700 hover:bg-blue-100 transition duration-300'
+                href='https://www.instagram.com/neurolinkx?igsh=dmlkNGdyaG1lMnh3'
+                className='h-10 w-10 flex items-center justify-center rounded-full bg-white text-pink-600 hover:bg-pink-100 transition duration-300'
               >
                 <svg
-                  stroke='currentColor'
-                  fill='currentColor'
-                  strokeWidth='0'
-                  viewBox='0 0 320 512'
-                  height='20'
-                  width='20'
-                  xmlns='http://www.w3.org/2000/svg'
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
                 >
-                  <path d='M279.14 288l14.22-92.66h-88.91V135.4c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S265.43 0 225.36 0c-73.19 0-121.04 44.38-121.04 124.72V195.3H22.89V288h81.43v224h100.17V288z' />
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.75 2.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Zm-4 1.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/>
                 </svg>
               </a>
             </div>
