@@ -101,7 +101,7 @@ export default function CloudConsultationPage() {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-24'>
+    <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
       {/* Hero Section with Enhanced Animations */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -360,7 +360,7 @@ export default function CloudConsultationPage() {
                     </div>
 
                     <form onSubmit={handleSubmit} className='space-y-6'>
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='grid grid-cols-2 gap-4'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700 mb-1'>Name</label>
                           <input
@@ -387,7 +387,7 @@ export default function CloudConsultationPage() {
                         </div>
                       </div>
 
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='grid grid-cols-2 gap-4'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700 mb-1'>Company</label>
                           <input
@@ -412,7 +412,7 @@ export default function CloudConsultationPage() {
                         </div>
                       </div>
 
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='grid grid-cols-2 gap-4'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700 mb-1'>Preferred Date</label>
                           <input

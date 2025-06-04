@@ -62,7 +62,7 @@ export default function DigitalMarketingPage() {
           className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative'
         >
           <Link 
-            href='/home'
+            href='/'
             className='inline-flex items-center text-orange-600 hover:text-orange-700 mb-8 group'
           >
             <ArrowLeft className='w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300' />
