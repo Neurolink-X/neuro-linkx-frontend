@@ -116,7 +116,7 @@ export default function Hero() {
               </button>
             </motion.div>
 
-            <p className='text-white/70 text-lg max-w-2xl mx-auto'>
+            <p className='text-white/70 text-lg max-w-2xl mx-auto mt-10'>
               We&apos;re not just another tech company. We&apos;re your partner in innovation.
             </p>
           </motion.div>

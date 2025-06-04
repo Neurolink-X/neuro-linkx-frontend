@@ -24,7 +24,7 @@ const commands = [
 
 export default function TerminalDemo() {
   return (
-    <section className=' w-full max-w-[100vw] overflow-x-hidden py-20 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421]'>
+    <section className='w-full max-w-[100vw] overflow-x-hidden py-20 px-4 bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421]'>
       <div className='container mx-auto max-w-7xl'>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -60,14 +60,19 @@ export default function TerminalDemo() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className='flex items-center gap-4'
+                className='flex items-start gap-4'
               >
-                <Terminal className='w-5 h-5 text-[#ff3b30]' />
+                <Terminal className='w-5 h-5 text-[#ff3b30] mt-1' />
                 <div className='flex-1'>
-                  <code className='text-white font-mono'>{cmd.command}</code>
+                  {/* Wrap the code in a scrolling container */}
+                  <div className='overflow-x-auto'>
+                    <code className='text-white font-mono whitespace-nowrap block'>
+                      {cmd.command}
+                    </code>
+                  </div>
                   <p className='text-white/70 text-sm mt-1'>{cmd.description}</p>
                 </div>
-                <ChevronRight className='w-5 h-5 text-white/50' />
+                <ChevronRight className='w-5 h-5 text-white/50 mt-1' />
               </motion.div>
             ))}
           </div>
@@ -76,5 +81,3 @@ export default function TerminalDemo() {
     </section>
   )
 }
-  
-  
