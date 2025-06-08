@@ -1,34 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { 
-  ArrowLeft, 
-  Facebook, 
-  Instagram, 
-  Search, 
-  Target, 
-  Users, 
-  Globe, 
-  LineChart,
-  TrendingUp,
-  Share2,
-  Bell,
-  Filter,
-  Rocket,
-  Sparkles,
-  ArrowRight,
-  BarChart,
-  Users2,
-  Calendar,
-  Clock,
-  Video,
-  Check,
-  X,
-  ChevronRight
+import { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import {
+  ArrowLeft, Facebook, Instagram, Search, Target, Users, Globe, LineChart,
+  TrendingUp, Share2, Bell, Filter, Rocket, Sparkles, ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
-import { useRef } from 'react';
 
 export default function DigitalMarketingPage() {
   const containerRef = useRef(null);
@@ -44,78 +22,81 @@ export default function DigitalMarketingPage() {
     <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
       {/* Hero Section */}
       <motion.div
-        ref={containerRef}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className='relative overflow-hidden min-h-[90vh] flex items-center'
-      >
+  ref={containerRef}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className='relative overflow-hidden pt-4 pb-10 sm:pt-8 sm:pb-14 md:pt-12 md:pb-20 flex items-start'
+>
         <div className='absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-orange-500/10'></div>
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-transparent'></div>
-        
+
         <motion.div
           style={{ opacity, scale }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative'
+          className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full'
         >
           <Link 
-            href='/'
+            href='/home'
             className='inline-flex items-center text-orange-600 hover:text-orange-700 mb-8 group'
           >
             <ArrowLeft className='w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300' />
             Back to Home
           </Link>
-          
+
           <div className='text-center'>
             <motion.div
               initial={{ scale: 0.8, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-              className='inline-block mb-8 relative'
+              className='inline-block mb-6 sm:mb-8 relative'
             >
               <div className='absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-2xl'></div>
               <div className='relative'>
-                <TrendingUp className='w-24 h-24 text-orange-600' />
+                <TrendingUp className='w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 text-orange-600' />
                 <div className='absolute -top-2 -right-2'>
-                  <Sparkles className='w-8 h-8 text-yellow-400 animate-pulse' />
+                  <Sparkles className='w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-yellow-400 animate-pulse' />
                 </div>
               </div>
             </motion.div>
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-7xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] via-orange-600 to-[#1e2942]'
+              className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#1e2942] mb-6 sm:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] via-orange-600 to-[#1e2942]'
             >
               Digital Marketing Solutions
             </motion.h1>
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12'
+              className='text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12'
             >
               Drive growth and engagement with our comprehensive digital marketing services
             </motion.p>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className='flex justify-center gap-4'
+              className='flex flex-col sm:flex-row justify-center gap-4'
             >
               <Link
                 href='/contact'
-                className='inline-flex items-center px-8 py-4 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-700 transition-colors duration-300 group'
+                className='inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-orange-600 text-white rounded-full font-semibold text-sm sm:text-base hover:bg-orange-700 transition-colors duration-300 group'
               >
                 Get Started
                 <ArrowRight className='w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300' />
               </Link>
               <Link
                 href='#services'
-                className='inline-flex items-center px-8 py-4 bg-white text-orange-600 border-2 border-orange-600 rounded-full font-semibold hover:bg-orange-50 transition-colors duration-300'
+                className='inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-orange-600 border-2 border-orange-600 rounded-full font-semibold text-sm sm:text-base hover:bg-orange-50 transition-colors duration-300'
               >
                 Learn More
               </Link>
@@ -124,6 +105,7 @@ export default function DigitalMarketingPage() {
         </motion.div>
       </motion.div>
 
+ 
       {/* Services Grid */}
       <motion.div
         id='services'
