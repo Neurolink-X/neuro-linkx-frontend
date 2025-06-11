@@ -233,15 +233,15 @@ export default function AuthPage({ initialMode = 'login' }) {
           </div>
 
           <div className="mt-6 grid grid-cols-3 gap-3">
-            <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
+           <a> <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
               <Github className="w-5 h-5" />
-            </button>
-            <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
+            </button></a>
+            <a href='https://x.com/NeurolinkX?t=UlPitlvohaldjEZTv5DJIg&s=09'><button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
               <Twitter className="w-5 h-5" />
-            </button>
-            <button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
+            </button></a>
+            <a href='https://www.linkedin.com/company/neurolinkx'><button className="w-full inline-flex justify-center py-2 px-4 border border-white/10 rounded-lg shadow-sm bg-white/5 text-sm font-medium text-gray-400 hover:bg-white/10 hover:text-white transition-colors">
               <Linkedin className="w-5 h-5" />
-            </button>
+            </button></a>
           </div>
         </div>
 

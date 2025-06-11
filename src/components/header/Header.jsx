@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Brain className="w-8 h-8  text-blue-600" />
             <span className="text-xl max-md:text-md font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">
-              NeurolinkX
+              NeuroLinkX
             </span>
           </Link>
 

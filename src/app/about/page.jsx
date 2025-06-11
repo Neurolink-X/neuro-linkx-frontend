@@ -149,10 +149,10 @@ export default function About() {
         </div>
         <div className="container relative mx-auto max-w-7xl px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight max-sm:text-3xl">
               About{' '}
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
-                NeurolinkX
+                NeuroLinkX
               </span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -245,10 +245,13 @@ export default function About() {
               <p className="text-blue-100 text-lg mb-8 max-w-2xl">
                 Join us in shaping the future of automation and robotics technology.
               </p>
-              <button className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-xl font-medium hover:bg-blue-50 transition-colors duration-300">
+              <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+              >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

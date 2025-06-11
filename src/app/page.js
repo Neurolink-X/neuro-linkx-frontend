@@ -39,7 +39,9 @@ export default function HomePage() {
         <CompanyCulture />
         <WhatMakesUs />
       </main>
+      <div className='max-sm:hidden'>
       <ChatWidget />
+      </div>
       <Footer />
     </div>
   )

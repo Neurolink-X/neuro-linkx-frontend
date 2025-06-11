@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import ChatWidget from '@/components/chat-widget'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +14,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Menu, X, Stars } from 'lucide-react'
+import { Menu, X, Stars,MessageCircle } from 'lucide-react'
 
 // Define dropdown content for each menu item
 const cloudServicesItems = [
@@ -170,6 +171,7 @@ export default function Header() {
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [pullRefresh, setPullRefresh] = useState(false)
+  const [showWedge , setShowWedge] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -404,12 +406,13 @@ export default function Header() {
                     >
                       Let&apos;s Talk AI
                     </Link>
+                    <ChatWidget/>
                     <Link 
                       href='/contact' 
                       className='w-full'
                       onClick={() => setIsOpen(false)}
                     >
-                      <Button variant='outline' className='w-full rounded-lg bg-white/5 text-white mt-5 border-white/10 hover:border-white/20 transition-all duration-300'>
+                      <Button variant='outline' className='w-full rounded-lg bg-white/5 text-white mt-5 border-white/10 hover:border-white/20  transition-all duration-300'>
                         Contact Us
                       </Button>
                     </Link>

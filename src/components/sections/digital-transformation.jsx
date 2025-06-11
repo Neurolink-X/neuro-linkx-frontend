@@ -227,7 +227,7 @@ export default function DigitalTransformation() {
               </div>
             </div>
 
-            <div className='w-full md:w-1/2 mx-auto my-8'>
+            <div className='w-full  mx-auto my-8'>
               <Button 
                 className='w-full bg-gradient-to-r from-[#1e2942] to-[#2d3748] text-white px-8 py-6 rounded-full font-medium hover:from-[#2d3748] hover:to-[#1e2942] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group relative overflow-hidden'
               >

@@ -65,13 +65,13 @@ export default function ContactPage() {
               className="inline-block mb-8 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <MessageSquare className="w-24 h-24 text-blue-600 animate-float" />
+              <MessageSquare className="w-24 h-24 text-blue-600 animate-float max-sm:h-20 max-sm:w-20" />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-5xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-blue-600"
+              className="text-5xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-blue-600 max-sm:text-3xl"
             >
               Get in Touch
             </motion.h1>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#1e2942]">Email Address</h3>
-                    <p className="text-gray-600">arjunchaurasiya1254@gmail.com<br />support@neurolink.com</p>
+                    <p className="text-gray-600">arjunchaurasiya1254@gmail.com<br />support@neurolinkx.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
