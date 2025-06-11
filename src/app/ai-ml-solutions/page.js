@@ -106,7 +106,7 @@ export default function AIMLSolutionsPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className='relative overflow-hidden min-h-screen flex items-center'
+        className='relative overflow-hidden flex items-center'
       >
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 animate-gradient-x'></div>
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
@@ -125,13 +125,13 @@ export default function AIMLSolutionsPage() {
               className='inline-block mb-8 relative'
             >
               <div className='absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-2xl animate-pulse'></div>
-              <Brain className='w-24 h-24 text-purple-600 animate-float' />
+              <Brain className='w-24 h-24 text-purple-600 animate-float max-sm:h-20' />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-purple-600'
+              className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-purple-600 max-sm:text-3xl'
             >
               AI & ML Solutions
             </motion.h1>
@@ -139,7 +139,7 @@ export default function AIMLSolutionsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12'
+              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 max-sm:text-xl'
             >
               Transform your business with cutting-edge artificial intelligence and machine learning
             </motion.p>

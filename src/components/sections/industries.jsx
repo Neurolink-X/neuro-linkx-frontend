@@ -76,7 +76,7 @@ export default function Industries() {
         <AnimatePresence mode="wait">
           <motion.div
             key={`${industries[index].name}-${industries[(index + 1) % industries.length].name}`}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y:40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}

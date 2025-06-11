@@ -48,7 +48,7 @@ export default function DigitalMarketingPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className='relative overflow-hidden min-h-[90vh] flex items-center'
+        className='relative overflow-hidden flex items-center'
       >
         <div className='absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-orange-500/10'></div>
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
@@ -78,9 +78,9 @@ export default function DigitalMarketingPage() {
             >
               <div className='absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-2xl'></div>
               <div className='relative'>
-                <TrendingUp className='w-24 h-24 text-orange-600' />
+                <TrendingUp className='w-24 h-24 text-orange-600 max-sm:h-20' />
                 <div className='absolute -top-2 -right-2'>
-                  <Sparkles className='w-8 h-8 text-yellow-400 animate-pulse' />
+                  <Sparkles className='w-8 h-8 text-yellow-400 animate-pulse max-sm:h-7' />
                 </div>
               </div>
             </motion.div>
@@ -88,7 +88,7 @@ export default function DigitalMarketingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-7xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] via-orange-600 to-[#1e2942]'
+              className='text-7xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] via-orange-600 to-[#1e2942] max-sm:text-3xl'
             >
               Digital Marketing Solutions
             </motion.h1>
@@ -96,7 +96,7 @@ export default function DigitalMarketingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12'
+              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 max-sm:text-xl'
             >
               Drive growth and engagement with our comprehensive digital marketing services
             </motion.p>
