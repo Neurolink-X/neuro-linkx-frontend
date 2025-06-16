@@ -211,7 +211,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#1e2942]">Phone Number</h3>
-                    <p className="text-gray-600">+91 9889305803</p>
+                    <p className="text-gray-600">+91 9889305803<br/>+91 6386345005</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -220,7 +220,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#1e2942]">Email Address</h3>
-                    <p className="text-gray-600">arjunchaurasiya1254@gmail.com<br />support@neurolink.com</p>
+                    <p className="text-gray-600">arjunchaurasiya1254@gmail.com<br />team@neurolinkxtech.com </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
