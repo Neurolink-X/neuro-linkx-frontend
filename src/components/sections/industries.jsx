@@ -73,45 +73,39 @@ export default function Industries() {
         onMouseLeave={() => setIsHovered(false)}
         className="relative mt-20 flex justify-center items-center min-h-[500px]"
       >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`${industries[index].name}-${industries[(index + 1) % industries.length].name}`}
-            initial={{ opacity: 0, y: 40 }}
+         <AnimatePresence mode="wait">
+    <motion.div
+      key={industries[index].name}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -40 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      className="px-6 max-w-xl w-full"
+    >
+      <div
+        className="group relative h-[460px] rounded-3xl overflow-hidden shadow-2xl bg-cover bg-center transition-transform hover:scale-[1.015]"
+        style={{ backgroundImage: `url('${industries[index].bgImage}')` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/70 z-0" />
+        <div className="relative z-10 p-8 h-full flex flex-col justify-end text-white">
+          <motion.h3
+            className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -40 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="grid md:grid-cols-2 gap-10 px-6 max-w-6xl w-full"
+            transition={{ duration: 0.5 }}
           >
-            {[0, 1].map((offset) => {
-              const i = (index + offset) % industries.length
-              return (
-                <div
-                  key={industries[i].name}
-                  className="group relative h-[460px] rounded-3xl overflow-hidden shadow-2xl bg-cover bg-center transition-transform hover:scale-[1.015]"
-                  style={{ backgroundImage: `url('${industries[i].bgImage}')` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/70 z-0" />
-                  <div className="relative z-10 p-8 h-full flex flex-col justify-end text-white">
-                    <motion.h3
-                      className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {industries[i].title}
-                    </motion.h3>
-                    <p className="text-sm md:text-base mt-3 mb-6 text-white/80">
-                      {industries[i].description}
-                    </p>
-                    <span className="uppercase tracking-wider text-xs text-cyan-400 font-medium">
-                      {industries[i].name}
-                    </span>
-                  </div>
-                </div>
-              )
-            })}
-          </motion.div>
-        </AnimatePresence>
+            {industries[index].title}
+          </motion.h3>
+          <p className="text-sm md:text-base mt-3 mb-6 text-white/80">
+            {industries[index].description}
+          </p>
+          <span className="uppercase tracking-wider text-xs text-cyan-400 font-medium">
+            {industries[index].name}
+          </span>
+        </div>
+      </div>
+    </motion.div>
+  </AnimatePresence>
 
         {/* Navigation Arrows */}
         <button
