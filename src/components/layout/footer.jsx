@@ -21,13 +21,13 @@ export default function Footer() {
       </div>
 
       {/* 🌐 Footer Content */}
-      <div className="relative z-10 px-6 md:px-12 lg:px-20 py-20 max-w-screen-xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+      <div className="relative z-10 px-6 md:px-12 lg:px-20 py-12 max-w-screen-xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* 🔶 Logo & Social Icons */}
-          <div className="col-span-1">
+          <div className="col-span-1 mb-8">
             <Link href="/">
               <span className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">
-                Neuro<span className="text-white">LinkX</span><span className="text-white"> •</span>
+                Neuro<span className="text-white">LinkX•</span>
               </span>
             </Link>
 
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
 
         {/* 📄 Copyright */}
-        <div className="mt-16 border-t border-slate-800 pt-6 text-center text-slate-500 text-sm">
+        <div className="mt-12 border-t border-slate-800 pt-6 text-center text-slate-500 text-sm">
           &copy; 2025 NeuroLinkX. All rights reserved.
         </div>
       </div>
