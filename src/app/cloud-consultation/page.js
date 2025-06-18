@@ -101,7 +101,7 @@ export default function CloudConsultationPage() {
   ];
 
   return (
-    <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-24'>
+    <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
       {/* Hero Section with Enhanced Animations */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -134,7 +134,7 @@ export default function CloudConsultationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-5xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-[#ff3b30]'
+              className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-[#ff3b30]'
             >
               Cloud Services Consultation
             </motion.h1>
@@ -142,7 +142,7 @@ export default function CloudConsultationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed'
+              className='text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed'
             >
               Get expert guidance on cloud solutions, server management, and security for your business
             </motion.p>
@@ -226,7 +226,7 @@ export default function CloudConsultationPage() {
       >
         <div className='absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5'></div>
         <div className='text-center mb-12'>
-          <h2 className='text-3xl font-bold text-[#1e2942] mb-4 relative inline-block'>
+          <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-[#1e2942] mb-12 text-center relative'>
             Consultation Options
             <motion.div
               initial={{ width: 0 }}
@@ -252,10 +252,10 @@ export default function CloudConsultationPage() {
               <div className='absolute inset-0 bg-gradient-to-br from-[#ff3b30]/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
               <div className='relative'>
                 <div className='flex items-center justify-between mb-4'>
-                  <h3 className='text-xl font-semibold text-[#1e2942]'>{type.title}</h3>
+                  <h3 className='text-lg sm:text-xl font-semibold text-[#1e2942]'>{type.title}</h3>
                   <span className='text-[#ff3b30] font-semibold'>{type.price}</span>
                 </div>
-                <p className='text-gray-600 mb-6'>{type.description}</p>
+                <p className='text-sm sm:text-base text-gray-600 leading-relaxed'>{type.description}</p>
                 <div className='flex items-center text-gray-500 mb-6'>
                   <Clock className='w-4 h-4 mr-2' />
                   <span>{type.duration}</span>
@@ -280,7 +280,7 @@ export default function CloudConsultationPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className='fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-t shadow-lg py-4 z-50'
+        className='fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-t shadow-lg py-3 sm:py-4 z-50'
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
@@ -297,10 +297,11 @@ export default function CloudConsultationPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowScheduler(true)}
-              className='bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-3 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30'
+              className='bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-5 py-2 sm:px-8 sm:py-3 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30'
             >
               <Calendar className='w-5 h-5' />
-              <span>Schedule Free Consultation</span>
+<span className='text-sm sm:text-base'>Schedule Free Consultation</span>
+
               <ArrowRight className='w-5 h-5' />
             </motion.button>
           </div>
@@ -360,7 +361,7 @@ export default function CloudConsultationPage() {
                     </div>
 
                     <form onSubmit={handleSubmit} className='space-y-6'>
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='grid grid-cols-2 gap-4'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700 mb-1'>Name</label>
                           <input
@@ -387,7 +388,7 @@ export default function CloudConsultationPage() {
                         </div>
                       </div>
 
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='grid grid-cols-2 gap-4'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700 mb-1'>Company</label>
                           <input
@@ -412,7 +413,7 @@ export default function CloudConsultationPage() {
                         </div>
                       </div>
 
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div className='grid grid-cols-2 gap-4'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700 mb-1'>Preferred Date</label>
                           <input
