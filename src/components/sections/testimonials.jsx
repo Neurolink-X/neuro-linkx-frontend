@@ -29,6 +29,18 @@ const testimonials = [
     achievements: ["Global Expansion", "Innovation Leadership", "Digital Transformation"]
   },
   {
+    name: "Rishabh Kumar",
+    role: "Co-Founder at NeurolinkX",
+    image: "https://plus.unsplash.com/premium_photo-1661962911608-ea55ac7785da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: "At Neurolinkx, we're revolutionizing technology solutions with our cutting-edge AI and cloud-native expertise.",
+    rating: 5,
+    company: "Neurolinkx",
+    industry: "Technology Innovation",
+    technologies: ["AI/ML", "Cloud Native", "Global Solutions"],
+    achievements: ["Global Expansion", "Innovation Leadership", "Digital Transformation"]
+  },
+  
+  {
     name: "Anshika Rajput",
     role: "HR at NeuroLinkX",
     image: "/testimonials/riya.jpg",
@@ -248,20 +260,7 @@ export default function Testimonials() {
       </div>
 
       {/* Mobile slider arrows */}
-      <div className="lg:hidden flex justify-center gap-6 mt-6">
-        <button
-          onClick={() => setSliderIndex((sliderIndex - 1 + technologies.length) % technologies.length)}
-          className="p-2 rounded-full bg-white border border-gray-300 hover:border-blue-300 shadow"
-        >
-          <ChevronLeft className="w-5 h-5 text-gray-600" />
-        </button>
-        <button
-          onClick={() => setSliderIndex((sliderIndex + 1) % technologies.length)}
-          className="p-2 rounded-full bg-white border border-gray-300 hover:border-blue-300 shadow"
-        >
-          <ChevronRight className="w-5 h-5 text-gray-600" />
-        </button>
-      </div>
+     
 {/* Technologies */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50/80 to-indigo-50/80 rounded-3xl backdrop-blur-sm" />
@@ -311,9 +310,9 @@ export default function Testimonials() {
                 {technologies[sliderIndex] && (
                   <motion.div
                     key={technologies[sliderIndex].title}
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, x: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -40 }}
+                    exit={{ opacity: 0, x: -30 }}
                     transition={{ duration: 0.5 }}
                   >
                     {(() => {
@@ -355,6 +354,20 @@ export default function Testimonials() {
                   </motion.div>
                 )}
               </AnimatePresence>
+               <div className="lg:hidden flex justify-center gap-6 mt-6">
+        <button
+          onClick={() => setSliderIndex((sliderIndex - 1 + technologies.length) % technologies.length)}
+          className="p-2 rounded-full bg-white border border-gray-300 hover:border-blue-300 shadow"
+        >
+          <ChevronLeft className="w-5 h-5 text-gray-600" />
+        </button>
+        <button
+          onClick={() => setSliderIndex((sliderIndex + 1) % technologies.length)}
+          className="p-2 rounded-full bg-white border border-gray-300 hover:border-blue-300 shadow"
+        >
+          <ChevronRight className="w-5 h-5 text-gray-600" />
+        </button>
+      </div>
             </div>
           </div>
         </div>
