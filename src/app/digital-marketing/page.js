@@ -22,12 +22,14 @@ export default function DigitalMarketingPage() {
     <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
       {/* Hero Section */}
       <motion.div
+
   ref={containerRef}
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8 }}
   className='relative overflow-hidden pt-4 pb-10 sm:pt-8 sm:pb-14 md:pt-12 md:pb-20 flex items-start'
 >
+
         <div className='absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-orange-500/10'></div>
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/5 via-transparent to-transparent'></div>
@@ -40,7 +42,7 @@ export default function DigitalMarketingPage() {
           className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full'
         >
           <Link 
-            href='/home'
+            href='/'
             className='inline-flex items-center text-orange-600 hover:text-orange-700 mb-8 group'
           >
             <ArrowLeft className='w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300' />
@@ -56,9 +58,11 @@ export default function DigitalMarketingPage() {
             >
               <div className='absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-2xl'></div>
               <div className='relative'>
+
                 <TrendingUp className='w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 text-orange-600' />
                 <div className='absolute -top-2 -right-2'>
                   <Sparkles className='w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-yellow-400 animate-pulse' />
+
                 </div>
               </div>
             </motion.div>
@@ -67,7 +71,9 @@ export default function DigitalMarketingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+
               className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#1e2942] mb-6 sm:mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] via-orange-600 to-[#1e2942]'
+
             >
               Digital Marketing Solutions
             </motion.h1>
@@ -76,7 +82,9 @@ export default function DigitalMarketingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+
               className='text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-12'
+
             >
               Drive growth and engagement with our comprehensive digital marketing services
             </motion.p>

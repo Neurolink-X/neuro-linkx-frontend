@@ -4,7 +4,7 @@ import Services from '@/components/sections/services'
 import DigitalTransformation from '@/components/sections/digital-transformation'
 import Industries from '@/components/sections/industries'
 import CompanyStats from '@/components/sections/company-stats'
-//import Clients from '@/components/sections/clients'
+// import Clients from '@/components/sections/clients'
 import Resources from '@/components/sections/resources'
 import CompanyCulture from '@/components/sections/company-culture'
 import ChatWidget from '@/components/chat-widget'
@@ -39,7 +39,9 @@ export default function HomePage() {
         <CompanyCulture />
         <WhatMakesUs />
       </main>
+      <div className='max-sm:hidden'>
       <ChatWidget />
+      </div>
       <Footer />
     </div>
   )

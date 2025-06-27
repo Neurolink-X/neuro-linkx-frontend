@@ -90,6 +90,8 @@ export default function Industries() {
         </p>
       </div>
 
+
+
       <div className="relative mt-16">
         {!isMobile && (
           <>
@@ -107,6 +109,7 @@ export default function Industries() {
             </button>
           </>
         )}
+
 
        <motion.div
           ref={containerRef}

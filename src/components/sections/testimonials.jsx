@@ -19,16 +19,19 @@ import {
 const testimonials = [
   {
     name: "Arjun Chaurasiya",
+
     role: "Founder & CEO at NeurolinkX",
     image: "https://plus.unsplash.com/premium_photo-1661962911608-ea55ac7785da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: "At Neurolinkx, we're revolutionizing technology solutions with our cutting-edge AI and cloud-native expertise.",
+
     rating: 5,
-    company: "Neurolinkx",
+    company: "NeuroLinkX",
     industry: "Technology Innovation",
     technologies: ["AI/ML", "Cloud Native", "Global Solutions"],
     achievements: ["Global Expansion", "Innovation Leadership", "Digital Transformation"]
   },
   {
+
     name: "Rishabh Kumar",
     role: "Co-Founder at NeurolinkX",
     image: "https://plus.unsplash.com/premium_photo-1661962911608-ea55ac7785da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -38,13 +41,16 @@ const testimonials = [
     industry: "Technology Innovation",
     technologies: ["AI/ML", "Cloud Native", "Global Solutions"],
     achievements: ["Global Expansion", "Innovation Leadership", "Digital Transformation"]
+
   },
   
   {
+
     name: "Anshika Rajput",
     role: "HR at NeuroLinkX",
     image: "/testimonials/riya.jpg",
     content: "CloudNova's partnership with NeurolinkX accelerated our cloud-native transformation beyond expectations.",
+
     rating: 5,
     company: "CloudNova",
     industry: "Cloud Infrastructure",
