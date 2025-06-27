@@ -20,7 +20,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/*Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Brain className="w-8 h-8  text-blue-600" />
             <span className="text-xl max-md:text-md font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text">

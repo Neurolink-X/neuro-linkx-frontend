@@ -478,7 +478,7 @@ export default function AIConsultationPage() {
   </div>
 </motion.div>
 
-      {/* Enhanced Bottom CTA Section */}
+      {/*Enhanced Bottom CTA Section */}
       <motion.div 
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}

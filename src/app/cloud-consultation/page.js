@@ -42,7 +42,7 @@ export default function CloudConsultationPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add your form submission logic
+    //Here you can add your form submission logic
     console.log('Form submitted:', formData);
     
     // Show success message

@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function DataBackupPage() {
   return (
     <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
-      {/* Hero Section */}
+      {/*Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

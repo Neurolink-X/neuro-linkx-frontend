@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function CloudHostingPage() {
   return (
     <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
-      {/* Hero Section */}
+      {/* Hero Section */} 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -61,7 +61,7 @@ export default function CloudHostingPage() {
         </motion.div>
       </motion.div>
 
-      {/* Features Section */}
+      {/*Features Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

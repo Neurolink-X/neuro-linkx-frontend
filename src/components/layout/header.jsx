@@ -16,7 +16,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Menu, X, Stars,MessageCircle } from 'lucide-react'
 
-// Define dropdown content for each menu item
+//Define dropdown content for each menu item
 const cloudServicesItems = [
   {
     title: 'Cloud Hosting',
