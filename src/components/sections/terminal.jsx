@@ -65,11 +65,12 @@ export default function TerminalDemo() {
                 <Terminal className='w-5 h-5 text-[#ff3b30] mt-1' />
                 <div className='flex-1'>
                   {/* Wrap the code in a scrolling container */}
-                  <div className='overflow-x-auto'>
-                    <code className='text-white font-mono whitespace-nowrap block'>
-                      {cmd.command}
-                    </code>
-                  </div>
+                 <div className="overflow-x-auto max-w-full">
+  <code className="text-white font-mono break-all block">
+    {cmd.command}
+  </code>
+</div>
+
                   <p className='text-white/70 text-sm mt-1'>{cmd.description}</p>
                 </div>
                 <ChevronRight className='w-5 h-5 text-white/50 mt-1' />

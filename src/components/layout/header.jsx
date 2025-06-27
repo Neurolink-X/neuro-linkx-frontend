@@ -208,17 +208,18 @@ export default function Header() {
       <div className='max-w-7xl mx-auto px-4'>
         <div className='flex items-center justify-between h-20'>
           <Link href='/'>
-            <div className='flex-shrink-0 group'>
-              <div className='relative'>
-                <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
-                <div className='relative flex items-center'>
-                  <span className='font-extrabold  text-3xl max-md:text-2xl  bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono tracking-tight'>
-                    NeuroLinkX
-                  </span>
-                  <div className='ml-2 mr-2 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-[#ff3b30] animate-pulse'></div>
-                </div>
-              </div>
-            </div>
+            <div className='flex-shrink-0 group mr-8'> {/* margin moved here */}
+  <div className='relative'>
+    <div className='absolute -inset-1 bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
+    <div className='relative flex items-center'>
+      <span className='font-extrabold text-3xl max-md:text-2xl bg-gradient-to-r from-orange-500 via-[#ff3b30] to-orange-500 text-transparent bg-clip-text font-mono tracking-tight'>
+        NeuroLinkX
+      </span>
+      <div className='ml-2 mr-2 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-[#ff3b30] animate-pulse'></div>
+    </div>
+  </div>
+</div>
+
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,249 +1,191 @@
 'use client'
 
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { ArrowRight, Zap, Shield, Database, Cloud, Settings, Target, Workflow, Sparkles, CheckCircle2, ArrowUpRight, BarChart2, Users2, Globe, Clock, Target as TargetIcon } from 'lucide-react'
+import {
+  Sparkles,
+  Settings,
+  Database,
+  Shield,
+  Workflow,
+  Target,
+  Cloud,
+  BarChart2,
+  Users2,
+  Globe,
+  Clock,
+  Target as TargetIcon
+} from 'lucide-react'
 
 const challenges = [
   {
-    title: 'Legacy Systems & Infrastructure',
-    icon: <Settings className='w-6 h-6' />,
-    color: 'from-blue-500 to-blue-600',
-    description: 'Modernize your existing systems for better efficiency',
-    stats: '40% faster operations'
+    title: 'Legacy Systems',
+    icon: <Settings className='w-5 h-5' />, 
+    color: 'from-cyan-500 to-blue-600',
+    description: 'Modernize outdated systems to boost productivity.',
+    stats: '40% faster ops'
   },
   {
     title: 'Data Silos',
-    icon: <Database className='w-6 h-6' />,
-    color: 'from-purple-500 to-purple-600',
-    description: 'Break down barriers and unify your data',
-    stats: '60% better data access'
+    icon: <Database className='w-5 h-5' />, 
+    color: 'from-pink-500 to-purple-600',
+    description: 'Integrate disconnected data sources seamlessly.',
+    stats: '60% better access'
   },
   {
-    title: 'Cybersecurity Threats',
-    icon: <Shield className='w-6 h-6' />,
-    color: 'from-red-500 to-red-600',
-    description: 'Protect your digital assets with advanced security',
-    stats: '99.9% security'
+    title: 'Cybersecurity',
+    icon: <Shield className='w-5 h-5' />, 
+    color: 'from-rose-500 to-red-600',
+    description: 'Fortify your infrastructure against threats.',
+    stats: '99.9% secure'
   },
   {
-    title: 'Operational Inefficiencies',
-    icon: <Workflow className='w-6 h-6' />,
-    color: 'from-green-500 to-green-600',
-    description: 'Streamline processes for maximum productivity',
-    stats: '50% cost reduction'
+    title: 'Inefficiencies',
+    icon: <Workflow className='w-5 h-5' />, 
+    color: 'from-lime-500 to-green-600',
+    description: 'Automate and optimize your workflows.',
+    stats: '50% cost savings'
   },
   {
     title: 'Tech Debt',
-    icon: <Target className='w-6 h-6' />,
-    color: 'from-orange-500 to-orange-600',
-    description: 'Address technical debt for sustainable growth',
-    stats: '45% faster development'
+    icon: <Target className='w-5 h-5' />, 
+    color: 'from-yellow-500 to-orange-600',
+    description: 'Refactor legacy codebases for scalability.',
+    stats: '45% faster dev'
   },
   {
-    title: 'Multi-Cloud Management',
-    icon: <Cloud className='w-6 h-6' />,
-    color: 'from-indigo-500 to-indigo-600',
-    description: 'Optimize your cloud infrastructure',
+    title: 'Cloud Chaos',
+    icon: <Cloud className='w-5 h-5' />, 
+    color: 'from-indigo-500 to-blue-700',
+    description: 'Simplify and secure multi-cloud setups.',
     stats: '35% cost savings'
-  },
+  }
 ]
 
 const benefits = [
   {
-    title: 'Increased Efficiency',
-    icon: <BarChart2 className='w-5 h-5' />,
-    description: 'Streamline operations and boost productivity'
+    title: 'Efficiency',
+    icon: <BarChart2 className='w-5 h-5' />, 
+    description: 'Smarter operations for better output.'
   },
   {
-    title: 'Cost Reduction',
-    icon: <TargetIcon className='w-5 h-5' />,
-    description: 'Optimize resources and reduce expenses'
+    title: 'Cost Savings',
+    icon: <TargetIcon className='w-5 h-5' />, 
+    description: 'Strategically reduce overhead.'
   },
   {
-    title: 'Better Customer Experience',
-    icon: <Users2 className='w-5 h-5' />,
-    description: 'Deliver exceptional service to your customers'
+    title: 'Customer Focus',
+    icon: <Users2 className='w-5 h-5' />, 
+    description: 'Prioritize user experience.'
   },
   {
-    title: 'Enhanced Security',
-    icon: <Shield className='w-5 h-5' />,
-    description: 'Protect your business with advanced security'
+    title: 'Security',
+    icon: <Shield className='w-5 h-5' />, 
+    description: 'Protect data and infrastructure.'
   },
   {
-    title: 'Scalable Solutions',
-    icon: <Globe className='w-5 h-5' />,
-    description: 'Grow your business with flexible solutions'
+    title: 'Scalable',
+    icon: <Globe className='w-5 h-5' />, 
+    description: 'Grow without tech bottlenecks.'
   },
   {
-    title: 'Competitive Advantage',
-    icon: <Clock className='w-5 h-5' />,
-    description: 'Stay ahead of your competition'
+    title: 'Agility',
+    icon: <Clock className='w-5 h-5' />, 
+    description: 'Respond swiftly to market needs.'
   }
 ]
 
 export default function DigitalTransformation() {
   return (
-    <section className='w-full max-w-[100vw] overflow-x-hidden py-20 px-4 min-h-[90vh] bg-gradient-to-b from-white to-gray-50 relative overflow-hidden'>
-      {/* Background decorative elements */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl'></div>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-full blur-3xl'></div>
+    <section className='relative w-full bg-gradient-to-br from-white via-gray-50 to-gray-100 py-20 px-6 overflow-hidden'>
+      {/* Floating shapes background */}
+      <div className='absolute top-0 left-0 w-full h-full pointer-events-none -z-10'>
+        <div className='absolute w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30 top-[-5rem] left-[-5rem]'></div>
+        <div className='absolute w-72 h-72 bg-purple-100 rounded-full blur-3xl opacity-30 bottom-[-5rem] right-[-5rem]'></div>
       </div>
 
-      <div className='container mx-auto max-w-7xl relative'>
-        <motion.div 
+      <div className='max-w-7xl mx-auto'>
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className='inline-flex items-center gap-2 px-4 py-2 bg-[#1e2942]/5 rounded-full mb-6 border border-[#1e2942]/10'
-          >
-            <Sparkles className='w-5 h-5 text-[#1e2942]' />
-            <span className='text-[#1e2942] font-medium'>Digital Excellence</span>
-          </motion.div>
-          <h2 className='text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#1e2942] to-[#2d3748] bg-clip-text text-transparent'>
-            Digital Transformation Services
+          <div className='inline-flex items-center gap-2 px-4 py-2 bg-[#1e2942]/5 rounded-full border border-[#1e2942]/10 mb-4'>
+            <Sparkles className='w-4 h-4 text-[#1e2942]' />
+            <span className='text-sm font-medium text-[#1e2942]'>Next-Gen Solutions</span>
+          </div>
+          <h2 className='text-4xl md:text-5xl font-extrabold text-[#1e2942] mb-4'>
+            Empowering Digital Transformation
           </h2>
-          <h3 className='text-2xl md:text-4xl mb-4 text-[#1e2942]'>
-            It&apos;s the nimble who triumph, not just the big!
-          </h3>
-          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-            Transform your business with cutting-edge digital solutions
+          <p className='text-gray-600 text-lg max-w-2xl mx-auto'>
+            We craft future-proof, agile and intelligent digital solutions for modern enterprises.
           </p>
         </motion.div>
 
-        <div className='grid md:grid-cols-2 gap-12 items-center'>
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className='relative h-[400px] bg-gradient-to-br from-[#1e2942] to-[#2d3748] rounded-2xl overflow-hidden shadow-2xl group'
-          >
-            <div className='absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10'></div>
-            <div className='absolute inset-0 flex items-center justify-center'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='bg-white/60 backdrop-blur-md rounded-3xl p-10 shadow-2xl mb-16 border border-gray-200'
+        >
+          <h3 className='text-2xl font-semibold text-[#1e2942] mb-6 text-center'>
+            Key Digital Challenges
+          </h3>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {challenges.map((c, i) => (
               <motion.div
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  opacity: [0.2, 0.3, 0.2]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'easeInOut'
-                }}
+                key={c.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-white p-6 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow'
               >
-                <Zap className='w-24 h-24 text-white' />
+                <div className={`p-2 rounded-md bg-gradient-to-br ${c.color} text-white w-fit mb-3`}>
+                  {c.icon}
+                </div>
+                <h4 className='font-semibold text-[#1e2942]'>{c.title}</h4>
+                <p className='text-sm text-gray-600 mt-1'>{c.description}</p>
+                <p className='text-sm text-[#1e2942] font-medium mt-2'>{c.stats}</p>
               </motion.div>
-            </div>
-            <div className='absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent'>
-              <h4 className='text-white text-xl font-semibold'>Transform Your Business</h4>
-              <p className='text-white/80 mt-2'>Embrace the future of digital innovation</p>
-            </div>
-            <div className='absolute top-4 right-4'>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='text-center'
+        >
+          <h3 className='text-2xl font-bold text-[#1e2942] mb-6'>Strategic Benefits</h3>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
+            {benefits.map((b, i) => (
               <motion.div
-                whileHover={{ scale: 1.1 }}
-                className='bg-white/10 backdrop-blur-sm p-2 rounded-lg'
+                key={b.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className='flex items-start gap-4 p-6 bg-white border rounded-xl hover:bg-gray-50 transition-colors shadow-md'
               >
-                <ArrowUpRight className='w-6 h-6 text-white' />
+                <div className='p-2 rounded-md bg-gradient-to-br from-blue-500 to-purple-500 text-white'>
+                  {b.icon}
+                </div>
+                <div className='text-left'>
+                  <p className='text-sm font-semibold text-[#1e2942]'>{b.title}</p>
+                  <p className='text-xs text-gray-500 mt-1'>{b.description}</p>
+                </div>
               </motion.div>
-            </div>
-          </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className='flex flex-col justify-center items-center'
-          >
-            <div className='grid grid-cols-2 gap-4 w-full'>
-              {challenges.map((challenge, index) => (
-                <motion.div
-                  key={challenge.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className='group p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden border border-gray-100 hover:border-[#1e2942]/20 hover:bg-[#1e2942]/5'
-                >
-                  <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300'
-                    style={{
-                      background: `linear-gradient(to bottom right, ${challenge.color.split(' ')[1]}, ${challenge.color.split(' ')[3]})`,
-                      opacity: '0.1'
-                    }}
-                  ></div>
-                  <div className='relative flex flex-col items-center text-center'>
-                    <div className={`p-2 rounded-lg bg-gradient-to-br ${challenge.color} text-white mb-3`}>
-                      {challenge.icon}
-                    </div>
-                    <h3 className='text-base font-semibold text-[#1e2942] transition-colors duration-300'>
-                      {challenge.title}
-                    </h3>
-                    <p className='text-sm text-gray-600 mt-2 transition-colors duration-300'>
-                      {challenge.description}
-                    </p>
-                    <div className='mt-3 px-3 py-1 bg-[#1e2942]/5 rounded-full group-hover:bg-[#1e2942]/10 transition-colors duration-300'>
-                      <p className='text-sm font-medium text-[#1e2942] transition-colors duration-300'>
-                        {challenge.stats}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            ))}
+          </div>
+        </motion.div>
 
-            <div className='w-full mt-8 p-6 bg-white rounded-xl shadow-lg border border-gray-100'>
-              <h4 className='text-lg font-semibold text-[#1e2942] mb-4'>Key Benefits</h4>
-              <div className='grid grid-cols-2 gap-4'>
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={benefit.title}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className='flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors'
-                  >
-                    <div className='p-2 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 text-white'>
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <p className='text-sm font-medium text-[#1e2942]'>{benefit.title}</p>
-                      <p className='text-xs text-gray-500 mt-1'>{benefit.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            <div className='w-full  mx-auto my-8'>
-              <Button 
-                className='w-full bg-gradient-to-r from-[#1e2942] to-[#2d3748] text-white px-8 py-6 rounded-full font-medium hover:from-[#2d3748] hover:to-[#1e2942] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group relative overflow-hidden'
-              >
-                <div className='absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity'></div>
-                <span className='relative'>Achieve Digital Excellence</span>
-                <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform relative' />
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-
-        <p className='text-black/60 text-lg mb-8'>
-          Our digital transformation services help businesses navigate the complex landscape of modern technology. We&apos;re here to guide you through every step of your digital journey.
-        </p>
       </div>
     </section>
   )
 }
-

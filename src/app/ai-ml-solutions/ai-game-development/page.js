@@ -38,7 +38,7 @@ export default function AIGameDevelopmentPage() {
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
         
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}https://github.com/Neurolink-X/neuro-linkx-frontend/pull/21/conflict?name=src%252Fapp%252Fai-ml-solutions%252Fai-game-development%252Fpage.js&ancestor_oid=34c3c2a3ffc6c3320a31abe0e2ac4027a61b50fe&base_oid=8d72db7ba8022622547a18676670c14bcac9c06a&head_oid=4591b7d2a2d83ea6ad734fea941608c0da1b63c4
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative'
@@ -65,6 +65,7 @@ export default function AIGameDevelopmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+
               className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-blue-600 max-sm:text-3xl'
             >
               AI Game Development

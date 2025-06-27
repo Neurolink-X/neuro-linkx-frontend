@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const industries = [
@@ -38,113 +38,111 @@ const industries = [
 ]
 
 export default function Industries() {
-  const [index, setIndex] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
-  const timeoutRef = useRef(null)
-
-
-  const next = () => setIndex((i) => (i + 1) % industries.length)
-  const prev = () => setIndex((i) => (i - 1 + industries.length) % industries.length)
+  const containerRef = useRef(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    if (isHovered) return
-    timeoutRef.current = setTimeout(next, 6000)
-    return () => timeoutRef.current && clearTimeout(timeoutRef.current)
-  }, [index, isHovered])
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const scrollStep = () => {
+      if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+        container.scrollTo({ left: 0, behavior: "auto" })
+      } else {
+        container.scrollBy({ left: 350, behavior: "smooth" })
+      }
+    }
+
+    const interval = setInterval(scrollStep, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const scrollLeft = () => {
+    containerRef.current?.scrollBy({ left: -400, behavior: "smooth" })
+  }
+
+  const scrollRight = () => {
+    containerRef.current?.scrollBy({ left: 400, behavior: "smooth" })
+  }
+
+  const repeatedList = [...industries, ...industries]
 
   return (
-    <section className="relative w-full bg-black overflow-hidden py-24">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="relative w-full bg-gradient-to-br from-black via-gray-900 to-black py-24 overflow-hidden">
+      <div className="text-center max-w-4xl mx-auto px-6">
         <motion.h2
-          className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-4"
+          className="text-white text-4xl md:text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Transforming Industries with AI
+          Empowering Industries with AI
         </motion.h2>
-        <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">
-          From healthcare to clean energy — solving real-world challenges with intelligent tech.
+        <p className="text-white/70 text-lg md:text-xl">
+          We transform real-world problems into powerful AI-driven solutions.
         </p>
       </div>
 
-      <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="relative mt-20 flex justify-center items-center min-h-[500px]"
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`${industries[index].name}-${industries[(index + 1) % industries.length].name}`}
-            initial={{ opacity: 0, y:40 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -40 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="grid md:grid-cols-2 gap-10 px-6 max-w-6xl w-full"
-          >
-            {[0, 1].map((offset) => {
-              const i = (index + offset) % industries.length
-              return (
-                <div
-                  key={industries[i].name}
-                  className="group relative h-[460px] rounded-3xl overflow-hidden shadow-2xl bg-cover bg-center transition-transform hover:scale-[1.015]"
-                  style={{ backgroundImage: `url('${industries[i].bgImage}')` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/70 z-0" />
-                  <div className="relative z-10 p-8 h-full flex flex-col justify-end text-white">
-                    <motion.h3
-                      className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {industries[i].title}
-                    </motion.h3>
-                    <p className="text-sm md:text-base mt-3 mb-6 text-white/80">
-                      {industries[i].description}
-                    </p>
-                    <span className="uppercase tracking-wider text-xs text-cyan-400 font-medium">
-                      {industries[i].name}
-                    </span>
-                  </div>
+
+
+      <div className="relative mt-16">
+        {!isMobile && (
+          <>
+            <button
+              onClick={scrollLeft}
+              className="absolute left-6 top-1/2 z-20 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md"
+            >
+              <ChevronLeft className="text-white" />
+            </button>
+            <button
+              onClick={scrollRight}
+              className="absolute right-6 top-1/2 z-20 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md"
+            >
+              <ChevronRight className="text-white" />
+            </button>
+          </>
+        )}
+
+
+       <motion.div
+          ref={containerRef}
+          className="flex gap-8 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory no-scrollbar px-6 lg:px-16"
+          drag="x"
+          dragConstraints={{ left: -1000, right: 0 }}
+          whileTap={{ cursor: "grabbing" }}
+        >
+
+          {repeatedList.map((item, i) => (
+            <motion.div
+              key={`${item.name}-${i}`}
+              className="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%-4rem)/3)] rounded-2xl overflow-hidden bg-black shadow-xl transition-transform hover:scale-[1.02]"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+            >
+              <div
+                className="relative h-[420px] bg-cover bg-center"
+                style={{ backgroundImage: `url('${item.bgImage}')` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/80" />
+                <div className="absolute bottom-0 p-6 text-white z-10">
+                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-white/80 text-sm">{item.description}</p>
+                  <span className="inline-block mt-4 text-cyan-400 text-xs uppercase tracking-wide font-medium">
+                    {item.name}
+                  </span>
                 </div>
-              )
-            })}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Navigation Arrows */}
-        <button
-          aria-label="Previous Slide"
-          onClick={prev}
-          className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-lg transition"
-        >
-          <ChevronLeft className="text-white" size={24} />
-        </button>
-        <button
-          aria-label="Next Slide"
-          onClick={next}
-          className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-lg transition"
-        >
-          <ChevronRight className="text-white" size={24} />
-        </button>
-      </div>
-
-      {/* Dot Indicators */}
-      <div className="flex justify-center mt-10 gap-3">
-        {industries.map((_, i) => (
-          <motion.button
-            key={`dot-${i}`}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to ${industries[i].name}`}
-            className={`h-2.5 rounded-full transition-all ${
-              index === i
-                ? "w-6 bg-cyan-400 shadow-md"
-                : "w-2.5 bg-white/20 hover:bg-white/40"
-            }`}
-            whileHover={{ scale: 1.2 }}
-          />
-        ))}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )
