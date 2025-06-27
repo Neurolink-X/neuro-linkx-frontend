@@ -5,7 +5,7 @@ import { Terminal, ChevronRight } from 'lucide-react'
 
 const commands = [
   {
-    command: 'git clone https://github.com/yourusername/yourproject.git',
+    command: 'git clone  https://github.com/yourusername/yourproject.git',
     description: 'Clone the repository'
   },
   {

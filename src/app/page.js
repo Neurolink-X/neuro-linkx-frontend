@@ -18,9 +18,10 @@ import Security from '@/components/sections/security'
 import Stats from '@/components/sections/stats'
 import Terminal from '@/components/sections/terminal'
 import Workflow from '@/components/sections/workflow'
-
+import ClientReview from '@/components/sections/ClientReview'
 import Footer from '@/components/layout/footer'
 import Testimonials from '@/components/sections/testimonials'
+
 
 export default function HomePage() {
   return (
@@ -33,6 +34,7 @@ export default function HomePage() {
         <Industries />
         <CompanyStats /> 
         <Testimonials />
+        <ClientReview />
         <Resources />
         <Terminal />
         <Workflow />

@@ -99,7 +99,12 @@
   outline: 1px solid transparent;
   transition: background-color, color 0.3s ease;
 }
-
+.perspective {
+  perspective: 1200px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
 .main-button:hover {
   background-color: transparent;
   color: #ff3b30;

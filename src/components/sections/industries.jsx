@@ -111,38 +111,37 @@ export default function Industries() {
         )}
 
 
-       <motion.div
-          ref={containerRef}
-          className="flex gap-8 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory no-scrollbar px-6 lg:px-16"
-          drag="x"
-          dragConstraints={{ left: -1000, right: 0 }}
-          whileTap={{ cursor: "grabbing" }}
-        >
+<motion.div
+  ref={containerRef}
+  className="mx-auto max-w-screen-xl px-6 lg:px-12 overflow-hidden"
+>
+  <div className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+    {repeatedList.map((item, i) => (
+      <motion.div
+        key={`${item.name}-${i}`}
+        className="snap-start shrink-0 w-full sm:w-1/2 lg:w-1/3 rounded-2xl overflow-hidden bg-black shadow-xl transition-transform hover:scale-[1.02]"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: i * 0.05 }}
+      >
+        <div
+          className="relative h-[420px] bg-cover bg-center"
+          style={{ backgroundImage: `url('${item.bgImage}')` }}
 
-          {repeatedList.map((item, i) => (
-            <motion.div
-              key={`${item.name}-${i}`}
-              className="snap-start shrink-0 w-[85%] sm:w-[60%] lg:w-[calc((100%-4rem)/3)] rounded-2xl overflow-hidden bg-black shadow-xl transition-transform hover:scale-[1.02]"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-            >
-              <div
-                className="relative h-[420px] bg-cover bg-center"
-                style={{ backgroundImage: `url('${item.bgImage}')` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/80" />
-                <div className="absolute bottom-0 p-6 text-white z-10">
-                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-white/80 text-sm">{item.description}</p>
-                  <span className="inline-block mt-4 text-cyan-400 text-xs uppercase tracking-wide font-medium">
-                    {item.name}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/80" />
+          <div className="absolute bottom-0 p-6 text-white z-10">
+            <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+            <p className="text-white/80 text-sm">{item.description}</p>
+            <span className="inline-block mt-4 text-cyan-400 text-xs uppercase tracking-wide font-medium">
+              {item.name}
+            </span>
+          </div>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</motion.div>
       </div>
     </section>
   )
