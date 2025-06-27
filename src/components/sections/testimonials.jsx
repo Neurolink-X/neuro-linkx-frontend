@@ -172,26 +172,79 @@ export default function Testimonials() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {stats.map((stat) => (
-            <div key={stat.title} className="group relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-100 shadow-lg hover:border-blue-200 transition-all">
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-4`}>
-                <stat.icon className="w-6 h-6 text-white" />
+               <div className="hidden lg:grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {stats.map((stat) => {
+            const Icon = stat.icon
+            return (
+              <div key={stat.title} className="group relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-100 shadow-lg hover:border-blue-200 transition-all">
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-4`}>
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</h3>
+                <p className="text-lg font-semibold text-gray-900">{stat.title}</p>
+                <p className="text-gray-600 mb-4">{stat.description}</p>
+                <ul className="space-y-2">
+                  {stat.details.map((detail) => (
+                    <li key={detail} className="flex items-center gap-2 text-gray-600 text-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</h3>
-              <p className="text-lg font-semibold text-gray-900">{stat.title}</p>
-              <p className="text-gray-600 mb-4">{stat.description}</p>
-              <ul className="space-y-2">
-                {stat.details.map((detail) => (
-                  <li key={detail} className="flex items-center gap-2 text-gray-600 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                    {detail}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            )
+          })}
         </div>
+
+        {/* STATS MOBILE SLIDER */}
+        <div className="lg:hidden mb-20 relative max-w-sm mx-auto">
+          <AnimatePresence mode="wait">
+            {stats[sliderIndex] && (
+              <motion.div
+                key={stats[sliderIndex].title}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="group relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-100 shadow-lg">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stats[sliderIndex].color} flex items-center justify-center mb-4`}>
+                    {(() => {
+                      const Icon = stats[sliderIndex].icon
+                      return <Icon className="w-6 h-6 text-white" />
+                    })()}
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">{stats[sliderIndex].value}</h3>
+                  <p className="text-lg font-semibold text-gray-900">{stats[sliderIndex].title}</p>
+                  <p className="text-gray-600 mb-4">{stats[sliderIndex].description}</p>
+                  <ul className="space-y-2">
+                    {stats[sliderIndex].details.map((detail) => (
+                      <li key={detail} className="flex items-center gap-2 text-gray-600 text-sm">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className="flex justify-center gap-6 mt-6">
+            <button
+              onClick={() => setSliderIndex((sliderIndex - 1 + stats.length) % stats.length)}
+              className="p-2 rounded-full bg-white border border-gray-300 hover:border-blue-300 shadow"
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
+            </button>
+            <button
+              onClick={() => setSliderIndex((sliderIndex + 1) % stats.length)}
+              className="p-2 rounded-full bg-white border border-gray-300 hover:border-blue-300 shadow"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
+        </div>
+
 
         {/* Testimonial Card */}
         <div className="relative mb-20">
@@ -199,7 +252,7 @@ export default function Testimonials() {
         <div className="relative p-12 rounded-3xl border border-blue-200 overflow-hidden">
           {/* Full Card Background Image */}
           <img
-            src="https://images.unsplash.com/photo-1471039497385-b6d6ba609f9c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Card Background"
             className="absolute inset-0 w-full h-full object-cover opacity-10 z-0 pointer-events-none"
           />

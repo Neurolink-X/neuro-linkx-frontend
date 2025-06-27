@@ -11,6 +11,9 @@ module.exports = {
 		fontFamily: {
 			mono: ["JetBrains Mono", "monospace", "Menlo", "Monaco", "Courier New",],
 		},
+		colors: {
+    gold: '#FFD700',
+  },
 		blur: {
 			'120px': '120px',
 			'160px': '160px',
