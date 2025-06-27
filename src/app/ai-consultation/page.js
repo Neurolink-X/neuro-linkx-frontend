@@ -383,14 +383,14 @@ export default function AIConsultationPage() {
           ))}
         </div>
 
-        <motion.a
+        {/* <motion.a
           href={service.link}
           whileHover={{ x: 5 }}
           className="flex items-center text-purple-600 group-hover:text-purple-700 transition-colors duration-300 font-medium group"
         >
           <span className="text-sm sm:text-base">Learn more</span>
           <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-        </motion.a>
+        </motion.a> */}
 
         {activeService === service.id && (
           <motion.div

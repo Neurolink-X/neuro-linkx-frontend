@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain, Zap, LineChart, ChevronRight, Sparkles, Code2, Database, Network,
-  Shield, Cpu, Cloud, GitBranch, Boxes, Server, Globe, Rocket, BarChart
+  Shield, Cpu, Cloud, GitBranch, Boxes, Server, Globe, Rocket, BarChart,
+  
 } from 'lucide-react'
+import Link from "next/link"
 
 const tabs = ['Gen AI', 'DevOps', 'CloudOps', 'Data Engineering', 'Product Lifecycle', 'Enterprise App']
 
@@ -189,10 +191,11 @@ export default function Services() {
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-orange-500 to-[#ff3b30] opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                 <div className='absolute inset-0 bg-[#ff3b30] group-hover:bg-transparent transition-colors duration-300'></div>
-                <span className='relative text-white text-lg flex items-center gap-2'>
+                <Link href='/about'
+                 className='relative text-white text-lg flex items-center gap-2'>
                   Learn More
                   <ChevronRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                </span>
+                </Link>
               </motion.button>
             </div>
 
