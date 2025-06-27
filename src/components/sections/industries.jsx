@@ -90,6 +90,8 @@ export default function Industries() {
         </p>
       </div>
 
+
+
       <div className="relative mt-16">
         {!isMobile && (
           <>
@@ -108,6 +110,7 @@ export default function Industries() {
           </>
         )}
 
+
 <motion.div
   ref={containerRef}
   className="mx-auto max-w-screen-xl px-6 lg:px-12 overflow-hidden"
@@ -124,6 +127,7 @@ export default function Industries() {
         <div
           className="relative h-[420px] bg-cover bg-center"
           style={{ backgroundImage: `url('${item.bgImage}')` }}
+
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/80" />
           <div className="absolute bottom-0 p-6 text-white z-10">

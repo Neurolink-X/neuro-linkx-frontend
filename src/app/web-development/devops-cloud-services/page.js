@@ -12,7 +12,7 @@ export default function DevOpsCloudServicesPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className='relative overflow-hidden min-h-[60vh] flex items-center'
+        className='relative overflow-hidden flex items-center'
       >
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 animate-gradient-x'></div>
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
@@ -39,13 +39,15 @@ export default function DevOpsCloudServicesPage() {
               className='inline-block mb-8 relative'
             >
               <div className='absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-2xl animate-pulse'></div>
-              <Cloud className='w-24 h-24 text-indigo-600 animate-float' />
+              <Cloud className='w-24 h-24 text-indigo-600 animate-float max-sm:h-20 max-sm:w-20' />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-indigo-600 max-sm:text-4xl'
+
+              className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-indigo-600 max-sm:text-3xl'
+
             >
               DevOps & Cloud Services
             </motion.h1>
@@ -53,7 +55,7 @@ export default function DevOpsCloudServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12'
+              className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 max-sm:text-xl'
             >
               Streamline your development and deployment process with modern DevOps practices
             </motion.p>

@@ -151,13 +151,13 @@ export default function Services() {
       <div className="container relative mx-auto max-w-7xl px-4">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight max-sm:text-3xl">
             Our Advanced{' '}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
               Services
             </span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto max-sm:text-md">
             Discover our cutting-edge solutions powered by the latest technologies
           </p>
         </div>

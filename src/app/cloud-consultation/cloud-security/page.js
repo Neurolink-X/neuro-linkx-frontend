@@ -1,39 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { 
-  ArrowLeft,
-  Code2,
-  Network,
-  Shield,
-  Zap,
-  BarChart2,
-  Settings,
-  Lock,
-  GitBranch,
-  Sparkles,
-  Target,
-  LineChart,
-  BrainCircuit,
-  CheckCircle2,
-  Globe,
-  Languages,
-  Clock,
-  Users2
-} from 'lucide-react';
+import { ArrowLeft, Network, Code, Shield, Zap, GitBranch, Lock, Settings, Globe, Database, Cpu, BarChart2 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function AISoftwareDevelopmentPage() {
+export default function CloudSecurityPage() {
   return (
     <div className='min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50'>
-      {/* Hero Section */}
+      {/*Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         className='relative overflow-hidden flex items-center'
       >
-        <div className='absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 animate-gradient-x'></div>
+        <div className='absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-gradient-x'></div>
         <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
         
         <motion.div
@@ -43,8 +24,8 @@ export default function AISoftwareDevelopmentPage() {
           className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative'
         >
           <Link 
-            href='/ai-ml-solutions'
-            className='inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-8 group'
+            href='/cloud-consultation'
+            className='inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 group'
           >
             <ArrowLeft className='w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300' />
             Back to Services
@@ -57,18 +38,16 @@ export default function AISoftwareDevelopmentPage() {
               transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
               className='inline-block mb-8 relative'
             >
-              <div className='absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full blur-2xl animate-pulse'></div>
-              <Code2 className='w-24 h-24 text-yellow-600 animate-float max-sm:h-20' />
+              <div className='absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl animate-pulse'></div>
+              <Shield className='w-24 h-24 text-blue-600 animate-float max-sm:h-20 max-sm:w-20' />
             </motion.div>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-
-              className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-yellow-600 max-sm:text-3xl'
-
+              className='text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-blue-600 max-sm:text-3xl'
             >
-              AI Software Development
+              Cloud Security
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -76,7 +55,7 @@ export default function AISoftwareDevelopmentPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className='text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12 max-sm:text-xl'
             >
-              Create AI-powered software solutions for various industries
+              Comprehensive cloud security and compliance services
             </motion.p>
           </div>
         </motion.div>
@@ -90,51 +69,51 @@ export default function AISoftwareDevelopmentPage() {
         className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32'
       >
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {/* AI Integration */}
+          {/* Advanced Cloud Security Solutions */}
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
             <div className='flex items-center space-x-3 mb-6'>
-              <div className='p-2 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg text-white'>
-                <BrainCircuit className='w-6 h-6' />
+              <div className='p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg text-white'>
+                <Code className='w-6 h-6' />
               </div>
-              <h3 className='text-xl font-semibold text-[#1e2942]'>AI Integration</h3>
+              <h3 className='text-xl font-semibold text-[#1e2942]'>Advanced Cloud Security Solutions</h3>
             </div>
             <p className='text-gray-600'>
-              Seamless integration of AI capabilities into software systems.
+              Protect your cloud infrastructure, applications, and data with enterprise-grade security measures.
             </p>
           </motion.div>
 
-          {/* API Development */}
+          {/* Comprehensive Threat Protection */}
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
             <div className='flex items-center space-x-3 mb-6'>
-              <div className='p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg text-white'>
-                <Network className='w-6 h-6' />
+              <div className='p-2 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg text-white'>
+                <GitBranch className='w-6 h-6' />
               </div>
-              <h3 className='text-xl font-semibold text-[#1e2942]'>API Development</h3>
+              <h3 className='text-xl font-semibold text-[#1e2942]'>Comprehensive Threat Protection</h3>
             </div>
             <p className='text-gray-600'>
-              Robust APIs for AI-powered services and applications.
+              Defend against unauthorized access, data breaches, and malware with proactive cloud security services.
             </p>
           </motion.div>
 
-          {/* System Architecture */}
+          {/* Compliance & Risk Management */}
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
             <div className='flex items-center space-x-3 mb-6'>
-              <div className='p-2 bg-gradient-to-br from-red-500 to-red-600 rounded-lg text-white'>
-                <Globe className='w-6 h-6' />
+              <div className='p-2 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg text-white'>
+                <Shield className='w-6 h-6' />
               </div>
-              <h3 className='text-xl font-semibold text-[#1e2942]'>System Architecture</h3>
+              <h3 className='text-xl font-semibold text-[#1e2942]'>Compliance & Risk Management</h3>
             </div>
             <p className='text-gray-600'>
-              Scalable and efficient AI system architecture design.
+              Meet industry compliance standards and reduce security risks with robust cloud governance tools.
             </p>
           </motion.div>
         </div>
@@ -147,50 +126,50 @@ export default function AISoftwareDevelopmentPage() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32'
       >
-        <h2 className='text-4xl font-bold text-[#1e2942] mb-12 text-center'>Why Choose Our AI Software Development?</h2>
+        <h2 className='text-4xl font-bold text-[#1e2942] mb-12 text-center'>Why Choose Our Cloud Security Services?</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 rounded-lg w-fit mb-4'>
-              <Target className='w-6 h-6 text-yellow-600' />
+            <div className='p-3 bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-lg w-fit mb-4'>
+              <Zap className='w-6 h-6 text-blue-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Custom Solutions</h3>
-            <p className='text-gray-600'>Tailored AI software for your needs.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>End-to-End Protection</h3>
+            <p className='text-gray-600'>Secure everything from your data and apps to your network and APIs with a unified security approach.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-lg w-fit mb-4'>
-              <BarChart2 className='w-6 h-6 text-orange-600' />
+            <div className='p-3 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-lg w-fit mb-4'>
+              <Lock className='w-6 h-6 text-purple-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Performance</h3>
-            <p className='text-gray-600'>Optimized for speed and efficiency.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Real-Time Threat Monitoring</h3>
+            <p className='text-gray-600'>24/7 threat detection and response powered by AI and modern security tools.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-red-500/10 to-red-600/10 rounded-lg w-fit mb-4'>
-              <LineChart className='w-6 h-6 text-red-600' />
+            <div className='p-3 bg-gradient-to-br from-indigo-500/10 to-indigo-600/10 rounded-lg w-fit mb-4'>
+              <Settings className='w-6 h-6 text-indigo-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Scalability</h3>
-            <p className='text-gray-600'>Built to grow with your business.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Zero Trust Architecture</h3>
+            <p className='text-gray-600'>Minimize risk with identity-first access controls, least privilege policies, and segmented environments.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 rounded-lg w-fit mb-4'>
-              <Shield className='w-6 h-6 text-yellow-600' />
+            <div className='p-3 bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-lg w-fit mb-4'>
+              <BarChart2 className='w-6 h-6 text-blue-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Security</h3>
-            <p className='text-gray-600'>Enterprise-grade security features.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Regulatory Compliance</h3>
+            <p className='text-gray-600'>Ensure your cloud operations meet GDPR, HIPAA, ISO 27001, and other industry standards.</p>
           </motion.div>
         </div>
       </motion.div>
@@ -208,33 +187,33 @@ export default function AISoftwareDevelopmentPage() {
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 rounded-lg w-fit mb-4'>
-              <GitBranch className='w-6 h-6 text-yellow-600' />
+            <div className='p-3 bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-lg w-fit mb-4'>
+              <Globe className='w-6 h-6 text-blue-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Version Control</h3>
-            <p className='text-gray-600'>Advanced version control for AI models.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Data Encryption</h3>
+            <p className='text-gray-600'>Encrypt data at rest and in transit using advanced cryptographic protocols.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-orange-500/10 to-orange-600/10 rounded-lg w-fit mb-4'>
-              <Lock className='w-6 h-6 text-orange-600' />
+            <div className='p-3 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-lg w-fit mb-4'>
+              <Database className='w-6 h-6 text-purple-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Data Protection</h3>
-            <p className='text-gray-600'>Secure handling of sensitive data.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Identity & Access Management (IAM)</h3>
+            <p className='text-gray-600'>Control user access with multi-factor authentication (MFA) and role-based access policies.</p>
           </motion.div>
 
           <motion.div
             whileHover={{ y: -5, scale: 1.02 }}
             className='bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300'
           >
-            <div className='p-3 bg-gradient-to-br from-red-500/10 to-red-600/10 rounded-lg w-fit mb-4'>
-              <Settings className='w-6 h-6 text-red-600' />
+            <div className='p-3 bg-gradient-to-br from-indigo-500/10 to-indigo-600/10 rounded-lg w-fit mb-4'>
+              <Cpu className='w-6 h-6 text-indigo-600' />
             </div>
-            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Easy Integration</h3>
-            <p className='text-gray-600'>Seamless integration with existing systems.</p>
+            <h3 className='text-lg font-semibold text-[#1e2942] mb-2'>Firewall & Intrusion Detection</h3>
+            <p className='text-gray-600'>Deploy intelligent firewalls and IDS/IPS systems to detect and block malicious activity.</p>
           </motion.div>
         </div>
       </motion.div>
@@ -246,16 +225,16 @@ export default function AISoftwareDevelopmentPage() {
         transition={{ duration: 0.5, delay: 0.7 }}
         className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32'
       >
-        <div className='bg-gradient-to-r from-yellow-600 to-orange-600 rounded-3xl p-12 text-center relative overflow-hidden'>
+        <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center relative overflow-hidden'>
           <div className='absolute inset-0 bg-[url(/grid.svg)] opacity-10'></div>
           <div className='relative'>
-            <h2 className='text-4xl font-bold text-white mb-6'>Ready to Build AI-Powered Software?</h2>
+            <h2 className='text-4xl font-bold text-white mb-6'>Ready to  Secure Your Cloud Environment?</h2>
             <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Let &apos;s create innovative software solutions that leverage AI technology.
+             Protect your business with powerful cloud security built for modern digital operations.
             </p>
             <Link
               href='/contact'
-              className='inline-flex items-center px-8 py-4 bg-white text-yellow-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300'
+              className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300'
             >
               Get Started
               <ArrowLeft className='w-5 h-5 ml-2 transform rotate-180' />

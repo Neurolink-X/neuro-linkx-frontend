@@ -3,12 +3,22 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Cloud, Server, Shield, Database, Calendar, Clock, Video, Check, X, Sparkles, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
+function getServicePath(title) {
+  const paths = {
+    'Cloud Hosting': 'cloud-hosting',
+    'Server Management': 'server-management',
+    'Data Backup': 'data-backup',
+    'Cloud Security': 'cloud-security'
+  };
+  return paths[title] || title.toLowerCase().replace(/\s+/g, '-');
+}
 export default function CloudConsultationPage() {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
-  
+   const [activeService, setActiveService] = useState(null);
   const [selectedService, setSelectedService] = useState(null);
   const [showScheduler, setShowScheduler] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -32,7 +42,7 @@ export default function CloudConsultationPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add your form submission logic
+    //Here you can add your form submission logic
     console.log('Form submitted:', formData);
     
     // Show success message
@@ -107,7 +117,7 @@ export default function CloudConsultationPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className='relative overflow-hidden min-h-[80vh] flex items-center'
+        className='relative overflow-hidden flex items-center'
         style={{ opacity, scale }}
       >
         <div className='absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-gradient-x'></div>
@@ -134,7 +144,9 @@ export default function CloudConsultationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-[#ff3b30]'
+
+              className='text-5xl font-bold text-[#1e2942] mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-[#ff3b30] max-sm:text-4xl'
+
             >
               Cloud Services Consultation
             </motion.h1>
@@ -142,7 +154,9 @@ export default function CloudConsultationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className='text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed'
+
+              className='text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed '
+
             >
               Get expert guidance on cloud solutions, server management, and security for your business
             </motion.p>
@@ -156,7 +170,7 @@ export default function CloudConsultationPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowScheduler(true)}
-                className='bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-4 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 mx-auto'
+                className='bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-4 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 mx-auto max-sm:px-4'
               >
                 <Calendar className='w-5 h-5' />
                 <span>Schedule Free Consultation</span>
@@ -203,15 +217,17 @@ export default function CloudConsultationPage() {
               </div>
               <h3 className='text-xl font-semibold text-[#1e2942] mb-3'>{service.title}</h3>
               <p className='text-gray-600 leading-relaxed'>{service.description}</p>
-              <motion.div
+              <motion.button
+                whileHover={{ x: 5 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
                 className='mt-4 flex items-center text-[#ff3b30] group-hover:translate-x-2 transition-transform duration-300'
               >
-                <span className='text-sm font-medium'>Learn more</span>
+                <Link href={`/cloud-consultation/${getServicePath(service.title)}`}
+                className='text-sm font-medium'>Learn more</Link>
                 <ChevronRight className='w-4 h-4 ml-1' />
-              </motion.div>
+              </motion.button>
             </motion.div>
           ))}
         </div>
@@ -280,10 +296,12 @@ export default function CloudConsultationPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className='fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-t shadow-lg py-3 sm:py-4 z-50'
+
+        className='fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-t shadow-lg py-4 z-50 max-sm:py-2'
+
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
+          <div className='flex flex-col sm:flex-row justify-between items-center gap-4 max-sm:gap-3'>
             <div className='flex items-center space-x-2'>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
@@ -297,7 +315,9 @@ export default function CloudConsultationPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowScheduler(true)}
-              className='bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-5 py-2 sm:px-8 sm:py-3 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30'
+
+              className='bg-gradient-to-r from-[#ff3b30] to-orange-500 text-white px-8 py-3 rounded-full font-medium flex items-center space-x-2 hover:from-[#ff3b30]/90 hover:to-orange-500/90 transition-all duration-300 shadow-lg shadow-[#ff3b30]/20 hover:shadow-xl hover:shadow-[#ff3b30]/30 max-sm:px-2'
+
             >
               <Calendar className='w-5 h-5' />
 <span className='text-sm sm:text-base'>Schedule Free Consultation</span>
@@ -357,7 +377,7 @@ export default function CloudConsultationPage() {
                   <>
                     <div className='text-center mb-8'>
                       <h2 className='text-2xl font-bold text-[#1e2942] mb-3'>Schedule Your Free Consultation</h2>
-                      <p className='text-gray-600'>Fill out the form below and we &apos;ll get back to you within 24 hours to confirm your appointment.</p>
+                      <p className='text-gray-600'>Fill out the form below and we&apos;ll get back to you within 24 hours to confirm your appointment.</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className='space-y-6'>

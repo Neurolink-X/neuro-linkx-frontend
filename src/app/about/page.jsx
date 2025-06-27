@@ -149,10 +149,10 @@ export default function About() {
         </div>
         <div className="container relative mx-auto max-w-7xl px-4">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight max-sm:text-3xl">
               About{' '}
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 text-transparent bg-clip-text bg-[length:200%_auto] animate-gradient">
-                NeurolinkX
+                NeuroLinkX
               </span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">

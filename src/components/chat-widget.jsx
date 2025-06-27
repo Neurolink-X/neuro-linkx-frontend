@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const ChatMessage = ({ message, isUser }) => (
   <div className={cn(
@@ -97,10 +98,10 @@ export default function ChatWidget() {
   return (
     <div className="fixed bottom-5 left-8 z-50 flex flex-col items-start">
       {!isOpen && (
-        <div className="mb-2 bg-white rounded-lg shadow-lg p-3 text-sm animate-fade-in">
+        <div className="hidden md:flex lg:flex mb-2 bg-white rounded-lg shadow-lg p-3 text-sm animate-fade-in">
           <p className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-blue-500" />
-            Need help? Let&apos;s chat!
+            Let&apos;s chat!
           </p>
         </div>
       )}
@@ -167,11 +168,26 @@ export default function ChatWidget() {
       
       <Button
         size="lg"
-        className="rounded-full h-14 w-14 shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group relative"
+        className="hidden md:flex lg:flex rounded-full h-14 w-14 shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group relative"
         onClick={() => setIsOpen(!isOpen)}
       >
         <MessageCircle className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
       </Button>
+      
+
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant='ghost'
+                  className="flex md:hidden lg:hidden justify-center right-4 bottom-16 mb-1 text-white text-md shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group fixed"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+
+                  Let's Chat
+                </Button>
+              </SheetTrigger>
+      </Sheet>
+
     </div>
   )
 }
