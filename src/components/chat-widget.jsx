@@ -179,7 +179,7 @@ export default function ChatWidget() {
               <SheetTrigger asChild>
                 <Button
                   variant='ghost'
-                  className="hidden max-sm:flex justify-center w-1/2 mb-11 ml-52 mr-2 p-0 text-white text-md shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group"
+                  className="flex md:hidden lg:hidden justify-center right-4 bottom-16 mb-1 text-white text-md shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group fixed"
                   onClick={() => setIsOpen(!isOpen)}
                 >
 
