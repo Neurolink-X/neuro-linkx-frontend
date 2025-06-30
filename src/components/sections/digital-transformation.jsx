@@ -180,9 +180,11 @@ export default function DigitalTransformation() {
                   <p className='text-xs text-gray-500 mt-1'>{b.description}</p>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </motion.div>
+
       </div>
     </section>
   )

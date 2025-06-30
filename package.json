@@ -20,7 +20,7 @@
     "detect-node-es": "^1.1.0",
     "framer-motion": "^12.6.2",
     "lucide-react": "^0.482.0",
-    "next": "^14.2.29",
+    "next": "^15.3.3",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^3.0.2",

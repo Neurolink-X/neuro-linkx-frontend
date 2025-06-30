@@ -4,6 +4,17 @@ import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ArrowRight, Brain, Code, Zap, Shield, BarChart, Calendar, Clock, Check, X, Sparkles, Star, ChevronRight, ArrowUpRight, Users, Target, Rocket } from 'lucide-react';
 
+
+function getServicePath(title) {
+  const paths = {
+    'AI Strategy Development': 'ai-strategy-development',
+    'Custom AI Solutions': 'custom-ai-solutions',
+    'AI Integration': 'ai-itegration',
+    'AI Security & Compliance': 'cloud-security',
+    'AI Performance Analytics': 'ai-performance-analytics'
+  };
+  return paths[title] || title.toLowerCase().replace(/\s+/g, '-');
+}
 export default function AIConsultationPage() {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -205,7 +216,7 @@ export default function AIConsultationPage() {
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8 }}
-  className="relative overflow-hidden min-h-screen flex items-center"
+  className="relative overflow-hidden flex items-center"
   style={{ opacity, scale: springScale }}
 >
   <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 animate-gradient-x"></div>
@@ -233,7 +244,7 @@ export default function AIConsultationPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-purple-600"
+        className="text-4xl max-sm:text-3xl md:text-6xl font-bold text-[#1e2942] mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#1e2942] to-purple-600"
       >
         AI Solutions Consultation
       </motion.h1>
@@ -372,14 +383,14 @@ export default function AIConsultationPage() {
           ))}
         </div>
 
-        <motion.a
+        {/* <motion.a
           href={service.link}
           whileHover={{ x: 5 }}
           className="flex items-center text-purple-600 group-hover:text-purple-700 transition-colors duration-300 font-medium group"
         >
           <span className="text-sm sm:text-base">Learn more</span>
           <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-        </motion.a>
+        </motion.a> */}
 
         {activeService === service.id && (
           <motion.div
@@ -467,7 +478,7 @@ export default function AIConsultationPage() {
   </div>
 </motion.div>
 
-      {/* Enhanced Bottom CTA Section */}
+      {/*Enhanced Bottom CTA Section */}
       <motion.div 
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
