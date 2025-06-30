@@ -364,55 +364,57 @@ export default function Testimonials() {
             </div>
 
             {/* Mobile slider */}
-            <div className="lg:hidden relative max-w-sm mx-auto">
-              <AnimatePresence mode="wait">
-                {technologies[sliderIndex] && (
-                  <motion.div
-                    key={technologies[sliderIndex].title}
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, x: -30 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {(() => {
-                      const tech = technologies[sliderIndex]
-                      const Icon = tech.icon
-                      return (
-                        <div className="group relative p-6 rounded-xl bg-white/80 backdrop-blur-sm border border-blue-100 transition-all">
-                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tech.color} flex items-center justify-center mb-4`}>
-                            <Icon className="w-6 h-6 text-white" />
-                          </div>
-                          <h4 className="text-lg font-semibold text-gray-900 mb-2">{tech.title}</h4>
-                          <div className="space-y-4">
-                            <div>
-                              <h5 className="text-sm font-medium text-gray-500 mb-2">Current Features</h5>
-                              <ul className="space-y-2">
-                                {tech.features.map((feature) => (
-                                  <li key={feature} className="flex items-center gap-2 text-gray-600 text-sm">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
-                                    {feature}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                            <div>
-                              <h5 className="text-sm font-medium text-gray-500 mb-2">Future Roadmap</h5>
-                              <ul className="space-y-2">
-                                {tech.future.map((f) => (
-                                  <li key={f} className="flex items-center gap-2 text-gray-600 text-sm">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-purple-600" />
-                                    {f}
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      )
-                    })()}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+          <div className="lg:hidden relative max-w-sm mx-auto">
+  <AnimatePresence mode="wait">
+    {technologies[sliderIndex] && (
+      <motion.div
+        key={technologies[sliderIndex].title}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -30 }}
+        transition={{ duration: 0.5 }}
+        className="w-full flex justify-center" // Add this
+      >
+        {(() => {
+          const tech = technologies[sliderIndex]
+          const Icon = tech.icon
+          return (
+            <div className="w-full group relative p-6 rounded-xl bg-white/80 backdrop-blur-sm border border-blue-100 transition-all">
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tech.color} flex items-center justify-center mb-4`}>
+                <Icon className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">{tech.title}</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="text-sm font-medium text-gray-500 mb-2">Current Features</h5>
+                  <ul className="space-y-2">
+                    {tech.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-gray-600 text-sm">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="text-sm font-medium text-gray-500 mb-2">Future Roadmap</h5>
+                  <ul className="space-y-2">
+                    {tech.future.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-gray-600 text-sm">
+                        <div className="w-1.5 h-1.5 rounded-full bg-purple-600" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )
+        })()}
+      </motion.div>
+    )}
+  </AnimatePresence>
+
                <div className="lg:hidden flex justify-center gap-6 mt-6">
         <button
           onClick={() => setSliderIndex((sliderIndex - 1 + technologies.length) % technologies.length)}

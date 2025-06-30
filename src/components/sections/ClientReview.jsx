@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import { useMotionValue, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -23,32 +24,84 @@ const testimonials = [
     text: "They crafted UI so natural, our users thought we had read their minds.",
     avatar: "https://i.pravatar.cc/150?img=3",
   },
-  ...Array(9).fill({
-    name: "Tanish Rao",
-    title: "Founder @MotionLabs",
-    text: "Animations, feedback loops, responsiveness — it all felt magical and frictionless.",
+  {
+    name: "Rohan Mehta",
+    title: "CTO @NovaEdge",
+    text: "Their work didn’t just meet expectations—it redefined what we thought was possible.",
     avatar: "https://i.pravatar.cc/150?img=4",
-  }),
+  },
+  {
+    name: "Tanya Bansal",
+    title: "UX Director @Vanta",
+    text: "Every interaction was smooth, every design choice felt human. A masterclass in digital empathy.",
+    avatar: "https://i.pravatar.cc/150?img=5",
+  },
+  {
+    name: "Kabir Shah",
+    title: "Founder @LoopLab",
+    text: "They built a product so clean and fluid, our demo felt like a live art installation.",
+    avatar: "https://i.pravatar.cc/150?img=6",
+  },
+  {
+    name: "Simran Verma",
+    title: "Growth Lead @BrewApps",
+    text: "From kickoff to launch, they were relentless in their attention to detail. It paid off big time.",
+    avatar: "https://i.pravatar.cc/150?img=7",
+  },
+  {
+    name: "Arjun Das",
+    title: "COO @Syncly",
+    text: "Not just designers—visionaries. Our user engagement doubled within a month.",
+    avatar: "https://i.pravatar.cc/150?img=8",
+  },
+  {
+    name: "Mira Joseph",
+    title: "Head of Product @Quanta",
+    text: "Their design felt alive—dynamic, functional, and undeniably elegant.",
+    avatar: "https://i.pravatar.cc/150?img=9",
+  },
+  {
+    name: "Dhruv Patel",
+    title: "Marketing Head @UpNext",
+    text: "They didn’t just build a UI. They told a story through every screen.",
+    avatar: "https://i.pravatar.cc/150?img=10",
+  },
 ];
 
 export default function ClientReview() {
+  const radius = 250;
   const [angle, setAngle] = useState(0);
+  const motionAngle = useMotionValue(0);
   const isDragging = useRef(false);
   const lastX = useRef(0);
   const [isMobile, setIsMobile] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Detect mobile layout
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const radius = 250;
+  // Sync motionAngle to angle state
+  useEffect(() => {
+    const unsubscribe = motionAngle.on("change", (v) => setAngle(v % 360));
+    return unsubscribe;
+  }, []);
 
+  // Auto rotate
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isDragging.current && !isMobile) {
+        motionAngle.set((motionAngle.get() + 0.3) % 360);
+      }
+    }, 30);
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
+  // Handle drag
   const handlePointerDown = (e) => {
     isDragging.current = true;
     lastX.current = e.clientX || e.touches?.[0]?.clientX;
@@ -59,21 +112,12 @@ export default function ClientReview() {
     const x = e.clientX || e.touches?.[0]?.clientX;
     const delta = x - lastX.current;
     lastX.current = x;
-    setAngle((prev) => prev + delta * 0.4);
+    motionAngle.set((motionAngle.get() + delta * 0.4) % 360);
   };
 
   const handlePointerUp = () => {
     isDragging.current = false;
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isDragging.current && !isMobile) {
-        setAngle((prev) => prev + 0.3);
-      }
-    }, 30);
-    return () => clearInterval(interval);
-  }, [isMobile]);
 
   useEffect(() => {
     window.addEventListener("pointerup", handlePointerUp);
@@ -93,7 +137,7 @@ export default function ClientReview() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c0c1c] flex items-center justify-center px-4 py-12">
+    <div className="relative z-10 min-h-screen pt-24 bg-[#0c0c1c] flex items-center justify-center px-4 py-12">
       <div className="flex flex-col md:flex-row items-center gap-12 max-w-7xl w-full">
         {/* LEFT TEXT */}
         <div className="flex-1 text-white text-center md:text-left">
@@ -111,7 +155,6 @@ export default function ClientReview() {
         {/* RIGHT SIDE */}
         <div className="flex-1 w-full">
           {isMobile ? (
-            // 🌐 MOBILE - SINGLE CARD + ARROWS
             <div className="relative w-full flex items-center justify-center">
               <button
                 onClick={prevSlide}
@@ -151,7 +194,6 @@ export default function ClientReview() {
               </button>
             </div>
           ) : (
-            // 💻 DESKTOP - 3D CIRCULAR LAYOUT
             <div
               className="relative h-[600px] w-full max-w-[600px] cursor-grab active:cursor-grabbing"
               onPointerDown={handlePointerDown}
@@ -162,12 +204,13 @@ export default function ClientReview() {
               {testimonials.map((item, i) => {
                 const a = ((360 / testimonials.length) * i + angle) % 360;
                 const rad = (a * Math.PI) / 180;
-                const x = Math.cos(rad) * radius;
-                const y = Math.sin(rad) * radius;
-
-                const scale = 1 + 0.5 * Math.cos(rad);
-                const opacity = 0.4 + 0.6 * Math.cos(rad);
-                const zIndex = Math.round(100 + 100 * Math.cos(rad));
+                const cos = Math.cos(rad);
+                const sin = Math.sin(rad);
+                const x = cos * radius;
+                const y = sin * radius;
+                const scale = 1 + 0.5 * cos;
+                const opacity = 0.4 + 0.6 * cos;
+                const zIndex = 10 + Math.round(10 * cos) + i;
 
                 return (
                   <motion.div
