@@ -96,7 +96,7 @@ export default function ChatWidget() {
   }
 
   return (
-    <div className="fixed bottom-5 left-8 z-50 flex flex-col items-start">
+    <div className="fixed bottom-5 left-8 z-50 flex flex-col max-sm:left-2 items-start">
       {!isOpen && (
         <div className="hidden md:flex lg:flex mb-2 bg-white rounded-lg shadow-lg p-3 text-sm animate-fade-in">
           <p className="flex items-center gap-2">
@@ -106,7 +106,8 @@ export default function ChatWidget() {
         </div>
       )}
       {isOpen && (
-        <div className="bg-white rounded-lg shadow-xl p-4 mb-4 w-96 h-[500px] flex flex-col animate-slide-up">
+        <div className="bg-white rounded-lg max-sm:
+         shadow-xl p-4 mb-4 max-sm:mb-24 w-96 h-[500px] flex flex-col animate-slide-up">
           <div className="flex justify-between items-center mb-4 pb-2 border-b">
             <div className="flex items-center gap-2">
               <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-1.5 rounded-lg">
@@ -179,7 +180,7 @@ export default function ChatWidget() {
               <SheetTrigger asChild>
                 <Button
                   variant='ghost'
-                  className="flex md:hidden lg:hidden justify-center right-4 bottom-16 mb-1 text-white text-md shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group fixed"
+                  className="flex md:hidden lg:hidden justify-center right-5 bottom-16 py-5 text-white text-md shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 group fixed"
                   onClick={() => setIsOpen(!isOpen)}
                 >
 
