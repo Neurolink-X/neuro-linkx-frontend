@@ -7,7 +7,7 @@ import { ArrowRight, Sparkles, Brain, Zap, LineChart, ChevronRight } from 'lucid
 export default function Hero() {
   return (
     <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#1e2942] via-[#1a2436] to-[#0e1421] overflow-hidden px-4'>
-      {/* Animated Background */}
+      {/*Animated Background */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,59,48,0.1),transparent_50%)]' />
         <div className='absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000000_70%,transparent_100%)]' />
@@ -188,4 +188,3 @@ export default function Hero() {
    
   )
 }
-
