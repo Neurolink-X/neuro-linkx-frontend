@@ -56,42 +56,74 @@ export default function AIConsultationPage() {
     }));
   }, []);
 
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-    if (isSubmitting) return;
+ const handleSubmit = useCallback(async (e) => {
+  e.preventDefault();
 
-    setIsSubmitting(true);
-    try {
-      // Here you can add your form submission logic
-      console.log('Form submitted:', formData);
-      
-      // Show success message
-      setShowSuccess(true);
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        preferredDate: '',
-        preferredTime: '',
-        message: ''
-      });
+  if (isSubmitting) return;
 
-      // Close modal after 3 seconds
-      const timer = setTimeout(() => {
-        setShowSuccess(false);
-        setShowScheduler(false);
-      }, 3000);
+  setIsSubmitting(true);
 
-      return () => clearTimeout(timer);
-    } catch (error) {
-      console.error('Form submission error:', error);
-    } finally {
-      setIsSubmitting(false);
+  try {
+    const payload = {
+      username: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+      prefferedDate: formData.preferredDate,
+      prefferedTime: formData.preferredTime,
+      message: formData.message,
+    };
+
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/v1/consultation`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        result.message || 'Failed to submit consultation request'
+      );
     }
-  }, [formData, isSubmitting]);
+
+    console.log('Consultation submitted successfully:', result);
+
+    setShowSuccess(true);
+
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      preferredDate: '',
+      preferredTime: '',
+      message: '',
+    });
+
+    setTimeout(() => {
+      setShowSuccess(false);
+      setShowScheduler(false);
+    }, 3000);
+
+  } catch (error) {
+    console.error('Consultation submission error:', error);
+
+    alert(
+      error.message ||
+      'Unable to submit consultation request. Please try again.'
+    );
+
+  } finally {
+    setIsSubmitting(false);
+  }
+}, [formData, isSubmitting]);
 
   const handleCloseModal = useCallback(() => {
     setShowScheduler(false);
